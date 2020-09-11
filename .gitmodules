@@ -1,0 +1,4 @@
+[submodule "synbiohub.github.io"]
+	path = synbiohub.github.io
+	url = https://github.com/synbiohub/synbiohub.github.io.git
+	branch = master
