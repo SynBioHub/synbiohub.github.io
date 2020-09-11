@@ -1,1 +1,0 @@
-# synbiohub-docs
