@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SynBioHub-Documentation</title>
-    <link>synbiohub.github.io/</link>
+    <link>https://synbiohub.github.io/</link>
     <description>Recent content on SynBioHub-Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© SynBioHub 2020</copyright>
+    <lastBuildDate>Fri, 04 Sep 2020 20:30:59 +0530</lastBuildDate>
     
-	<atom:link href="synbiohub.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://synbiohub.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Further References on SynBioHub-Documentation</title>
-    <link>https://synbiohub.github.io/furtherreferences/</link>
-    <description>Recent content in Further References on SynBioHub-Documentation</description>
+    <title>Plugins on SynBioHub-Documentation</title>
+    <link>https://synbiohub.github.io/plugins/</link>
+    <description>Recent content in Plugins on SynBioHub-Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© SynBioHub 2020</copyright>
     <lastBuildDate>Fri, 04 Sep 2020 20:30:59 +0530</lastBuildDate>
     
-	<atom:link href="https://synbiohub.github.io/furtherreferences/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://synbiohub.github.io/plugins/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
