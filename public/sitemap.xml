@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/</loc>
+    <lastmod>2020-09-04T20:30:59+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/aboutsynbiohub/</loc>
+    <lastmod>2020-09-04T20:30:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/apidocumentation/</loc>
+    <lastmod>2020-09-04T20:30:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/furtherreferences/</loc>
+    <lastmod>2020-09-04T20:30:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/installation/</loc>
+    <lastmod>2020-09-04T20:30:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/plugins/</loc>
+    <lastmod>2020-09-04T20:30:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/troubleshooting/</loc>
+    <lastmod>2020-09-04T20:30:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/userdocumentation/</loc>
+    <lastmod>2020-09-04T20:30:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>htttps://synbiohub.github.io/tags/</loc>
+  </url>
+  
+</urlset>
