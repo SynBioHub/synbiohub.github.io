@@ -47,10 +47,10 @@
                 <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
             </form>
          <ul class="navbar-nav flex-column pt-3">
-    <li data-nav-id="/furtherreferences/" class="nav-item my-1
+    <li data-nav-id="/references/" class="nav-item my-1
         ">
         
-        <a class="nav-link p-0" href="https://synbiohub.github.io/furtherreferences/"><h6> References</h6></a>
+        <a class="nav-link p-0" href="https://synbiohub.github.io/references/"><h6> References</h6></a>
     </li>
     <li data-nav-id="/aboutsynbiohub/" class="nav-item my-1
         ">
@@ -102,6 +102,7 @@
         <li><a href="#implementation">Implementation</a></li>
       </ul>
     </li>
+    <li><a href="#plugins-table">Plugins-Table:</a></li>
   </ul>
 </nav>
 </div>
@@ -178,6 +179,128 @@ The plugin should respond with an HTTP response and file attachment, which repre
 5. `size`: a number representing an estimate of the size of the object, probably triple count
 </code></pre>
 <p>The plugin should respond with an HTML page to be rendered in-frame on the corresponding SynBioHub page.</p>
+<h2 id="plugins-table">Plugins-Table:</h2>
+<p>This is a sortable table with plugin information. Click on the header to sort by that column.
+
+<div class="table " role="alert">
+    <table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Port</th>
+<th>Language</th>
+<th>Test</th>
+<th>Description</th>
+<th>Multi-Endpoint</th>
+<th>Repository</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DownloadSnapgene</td>
+<td>Download</td>
+<td>8083</td>
+<td>Python</td>
+<td>No</td>
+<td></td>
+<td></td>
+<td>Plugin-Download-Snapgene</td>
+<td>docker-compose.pluginDownloadSnapgene.yml</td>
+</tr>
+<tr>
+<td>SubmitSnapgene</td>
+<td>Submit</td>
+<td>8084</td>
+<td>Python</td>
+<td>No</td>
+<td></td>
+<td></td>
+<td>Plugin-Submit-Snapgene</td>
+<td>docker-compose.pluginSubmitSnapgene.yml</td>
+</tr>
+<tr>
+<td>SubmitTest</td>
+<td>Submit</td>
+<td>8087</td>
+<td>Python</td>
+<td>Yes</td>
+<td>Simply indicates that submit plugins are working and provides a framework to play with for plugin developers</td>
+<td>No</td>
+<td>Plugin-Submit-Test</td>
+<td>docker-compose.pluginSubmitTest.yml</td>
+</tr>
+<tr>
+<td>VisualComponentUse</td>
+<td>Visual</td>
+<td>8080</td>
+<td>Python</td>
+<td>No</td>
+<td>Containing a co-use component sankey diagram, and the most used components bar graph endpoints</td>
+<td>Yes</td>
+<td>Plugin-Visual-Component-Use</td>
+<td>docker-compose.pluginVisualComponentUse.yml</td>
+</tr>
+<tr>
+<td>VisualIgem</td>
+<td>Visual</td>
+<td>3000</td>
+<td>TypeScript</td>
+<td>No</td>
+<td>Containing endpoints for iGEM Main Page, iGEM Design Page, and iGEM Experience Page</td>
+<td>Yes</td>
+<td>Plugin-Visual-Igem</td>
+<td>docker-compose.pluginVisualIgem.yml</td>
+</tr>
+<tr>
+<td>VisualSeqviz</td>
+<td>Visual</td>
+<td>8085</td>
+<td>Javascript</td>
+<td>No</td>
+<td>Shows the plasmid view and sequence view of components</td>
+<td>No</td>
+<td>sequence-view-plugin</td>
+<td>docker-compose.pluginVisualSeqviz.yml</td>
+</tr>
+<tr>
+<td>VisualServelet</td>
+<td>Visual</td>
+<td>8086</td>
+<td>Javascript</td>
+<td>Yes</td>
+<td>Allows testing of file serving and provides a framework to play with for plugin developers</td>
+<td>No</td>
+<td>Plugin-Visual-Serve-Test-js</td>
+<td>docker-compose.pluginVisualServelet.yml</td>
+</tr>
+<tr>
+<td>VisualTest</td>
+<td>Visual</td>
+<td>8081</td>
+<td>Python</td>
+<td>Yes</td>
+<td>Smply indicates that visualisation plugins are working and provides a framework to play with for plugin developers</td>
+<td>No</td>
+<td>Plugin-Visual-Test</td>
+<td>docker-compose.pluginVisualTest.yml</td>
+</tr>
+<tr>
+<td>VisualTestJS</td>
+<td>Visual</td>
+<td>8082</td>
+<td>Javascript</td>
+<td>Yes</td>
+<td>Aimply indicates that submit plugins are working and provides a framework to play with for plugin developers</td>
+<td>No</td>
+<td>Plugin-Visual-Test-js</td>
+<td>docker-compose.pluginVisualTestJS.yml</td>
+</tr>
+</tbody>
+</table>
+</div>
+</p>
 
 
     
