@@ -100,6 +100,7 @@
       <ul>
         <li><a href="#install-docker">Install Docker</a></li>
         <li><a href="#for-mac-os">For Mac OS:</a></li>
+        <li><a href="#for-linux-ubuntu-2004">For Linux-Ubuntu 20.04:</a></li>
         <li><a href="#general">General</a></li>
         <li><a href="#with-explorer">With Explorer</a></li>
         <li><a href="#with-plugins">With Plugins</a></li>
@@ -123,7 +124,7 @@
 <p>Install <a href="https://docs.docker.com/get-docker/">Docker</a> and <a href="https://docs.docker.com/compose/install/">Docker-Compose</a> on your System.</p>
 <h3 id="for-mac-os">For Mac OS:</h3>
 <p>The following instructions are to be followed for installaing SynBioHub locally onto you system:-</p>
-<p>a) Download git onto your Mac using <code>brew install git</code> and then configure you name and email using the following commands:</p>
+<p>a) Download git onto your Mac using <code>brew install git</code> and then configure your name and email using the following commands:</p>
 <p><code>git config --global user.name &quot;&lt;your name&gt;&quot;</code>  and <code>git config --global user.name &quot;&lt;your email&gt;&quot; </code> respectively.</p>
 <p>b) Download Docker for Mac OS from <a href="https://docs.docker.com/docker-for-mac/install/">here</a>.</p>
 <p>c) Start Docker-desktop.</p>
@@ -134,6 +135,20 @@
 <p><code>sysctl -w vm.max_map_count=262144</code></p>
 <p><code>docker-compose --file ./synbiohub-docker/docker-compose.yml --file ./synbiohub-docker/docker-compose.explorer.yml up</code>.</p>
 <p>g) In your browser search for localhost:7777 and it&rsquo;ll take you to a setup page when you&rsquo;ll run it for the very first time.</p>
+<h3 id="for-linux-ubuntu-2004">For Linux-Ubuntu 20.04:</h3>
+<p>The following instructions are to be followed for installaing SynBioHub locally onto you system:-</p>
+<p>a) Download git onto your PC and then configure your name and email using the following commands:</p>
+<p><code>git config --global user.name &quot;&lt;your name&gt;&quot;</code>  and <code>git config --global user.name &quot;&lt;your email&gt;&quot; </code> respectively.</p>
+<p>b) Download Docker for Ubuntu from <a href="https://docs.docker.com/engine/install/ubuntu/">here</a>.</p>
+<p>c) Open your terminal and enter <code>cd</code> just to make sure that you&rsquo;re in your home directory at that instant.</p>
+<p>d) Start Docker-desktop by entering &lsquo;systemctl start docker&rsquo;</p>
+<p>e) Clone the synbiohub-docker repo using the following command :</p>
+<p><code>git clone https://github.com/synbiohub/synbiohub-docker</code>.</p>
+<p>f) Start a synbiohub instance with <code>docker-compose --file ./synbiohub-docker/docker-compose.yml up</code> or you may follow the alternate method, i.e using SBOL explorer. For installing SynBioHub through SBOL explorer use the following commands:-</p>
+<p><code>sysctl -w vm.max_map_count=262144</code></p>
+<p><code>docker-compose --file ./synbiohub-docker/docker-compose.yml --file ./synbiohub-docker/docker-compose.explorer.yml up</code>.</p>
+<p>g) In your browser search for localhost:7777 and it&rsquo;ll take you to a setup page when you&rsquo;ll run it for the very first time.</p>
+<p>(If in any case while installing SynBioHub locally onto your system, you face permission errors, just include sudo before every statement)</p>
 <h3 id="general">General</h3>
 <p>The docker-compose files in this repository represent various configurations for deploying SynBioHub.
 The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docker.com/compose/reference/overview/#specifying-multiple-compose-file">multiple file</a> capabilities.</p>
