@@ -112,8 +112,41 @@
     <li><a href="#writing-plugins">Writing Plugins</a>
       <ul>
         <li><a href="#naming-convention">Naming convention</a></li>
-        <li><a href="#plugin-specifications">Plugin Specifications</a></li>
-        <li><a href="#implementation">Implementation</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-app">Basic App</a>
+      <ul>
+        <li><a href="#status">Status</a></li>
+        <li><a href="#evaluate">Evaluate</a></li>
+        <li><a href="#run">Run</a></li>
+      </ul>
+    </li>
+    <li><a href="#submit">Submit</a>
+      <ul>
+        <li><a href="#status-1">Status</a></li>
+        <li><a href="#evaluate-1">Evaluate</a></li>
+        <li><a href="#run-1">Run</a></li>
+        <li><a href="#examples-1">Examples</a></li>
+      </ul>
+    </li>
+    <li><a href="#download">Download</a>
+      <ul>
+        <li><a href="#status-2">Status</a></li>
+        <li><a href="#evaluate-2">Evaluate</a></li>
+        <li><a href="#run-2">Run</a></li>
+        <li><a href="#returns-8">Returns</a></li>
+        <li><a href="#examples-2">Examples</a></li>
+      </ul>
+    </li>
+    <li><a href="#writing-an-app-by-copying-the-examples">Writing an app by copying the examples</a>
+      <ul>
+        <li><a href="#with-virtual-environment">With Virtual Environment</a></li>
+        <li><a href="#without-virtual-environment">Without Virtual Environment</a></li>
+        <li><a href="#stackoverflow-link">Stackoverflow link</a></li>
+        <li><a href="#best-practices">Best practices</a></li>
+        <li><a href="#advanced-possibilities">Advanced possibilities</a></li>
+        <li><a href="#dockerising">Dockerising</a></li>
+        <li><a href="#genetic-logic-lab-synbiohub-plugins">Genetic Logic Lab Synbiohub plugins</a></li>
       </ul>
     </li>
     <li><a href="#plugins-table">Plugins-Table</a></li>
@@ -269,8 +302,8 @@ The server should then be accessible at http://localhost:5000/status. Hence open
 <p>For <em>Type</em> it is: Submit, Visual, Download</p>
 <p>For <em>Test</em>: add the Test to the name if it is a framework plugin simply showing off how to write a particular plugin type</p>
 <p>For <em>language</em>:</p>
-<p>Python: no addition</p>
-<p>Javascript: add &ldquo;js&rdquo;</p>
+<p>Python: Nothing is to be added here.</p>
+<p>Javascript: Add &ldquo;js&rdquo; in place of language.</p>
 <p>Examples:</p>
 <ul>
 <li>Plugin-Submit-Excel-Library</li>
@@ -282,73 +315,400 @@ Repository: Plugin-Visual-Component-Use
 Docker Compose File: docker-compose.pluginVisualComponentUse.yml (Note that the plugin is lowercase and then the rest of the words are capitalized but there aren&rsquo;t any spaces or dashes).</li>
 </ul>
 <p>Docker Image Name: synbiohub/plugin-visual-component-use:snapshot (Note that there are no capitals in the docker image name).</p>
-<h3 id="plugin-specifications">Plugin Specifications</h3>
-<p>Plugins must provide three endpoints, /status, /evaluate, and /run.</p>
-<p><em>Status endpoint</em>
-The status endpoint should listen for HTTP GET requests and return an HTTP 200 OK and (optionally) a short message if the plugin service is ready to handle requests. Otherwise, an HTTP error code and short error message should be returned.</p>
-<p><em>Evaluate endpoint</em>
-The evaluate endpoint should listen for HTTP POST requests, and return an HTTP 200 OK if the request can be handled by the run endpoint.
-The body of evaluate requests sent to each plugin type is described below.</p>
-<p><em>Run endpoint</em>
-The run endpoint should listen for HTTP POST requests, and return an HTTP 200 OK with the result of the plugin operation.
-The body of run requests sent to each plugin type is described below.</p>
-<h3 id="implementation">Implementation</h3>
-<p>Plugins and SynBioHub will communicate using HTTP. The end user’s browser will not communicate with the plugin server.</p>
-<h4 id="submission">Submission</h4>
-<p>For both the <code>evaluate</code> and <code>run</code> endpoints, SynBioHub will send a JSON object structured as follows:</p>
-<p><code>{ manifest: { files: [ ... ] } }</code></p>
-<p>Each file in <code>files</code> will have the following parameters:</p>
-<pre><code>1. `filename`: The name of the file
+<h2 id="basic-app">Basic App</h2>
+<p>In this section <em>what the server receives</em> and the <em>format of its response</em> is defined. Below is a section about writing a server/plugin by simply copying and editing the example type.
+###Visual
+** Content Yet to be added**</p>
+<h3 id="status">Status</h3>
+<h4 id="recieves">Recieves</h4>
+<p>Nothing is received (It is just a simple get request).</p>
+<h4 id="returns">Returns</h4>
+<p>If it is up and running, then it should return a 200 status to a get request.</p>
+<h3 id="evaluate">Evaluate</h3>
+<h4 id="recieves-1">Recieves</h4>
+<p>type: The RDF type of the top-level object
+Common RDF types are:</p>
+<p>&lsquo;Activity&rsquo;, &lsquo;Agent&rsquo;, &lsquo;Association&rsquo;, &lsquo;Attachment&rsquo;, &lsquo;Collection&rsquo;, &lsquo;CombinatorialDerivation&rsquo;, &lsquo;Component&rsquo;, &lsquo;ComponentDefinition&rsquo;, &lsquo;Cut&rsquo;, &lsquo;Experiment&rsquo;, &lsquo;ExperimentalData&rsquo;, &lsquo;FunctionalComponent&rsquo;,&lsquo;GenericLocation&rsquo;, &lsquo;Implementation&rsquo;, &lsquo;Interaction&rsquo;, &lsquo;Location&rsquo;, &lsquo;MapsTo&rsquo;, &lsquo;Measure&rsquo;, &lsquo;Model&rsquo;, &lsquo;Module&rsquo;, &lsquo;ModuleDefinition&rsquo;, &lsquo;Participation&rsquo;, &lsquo;Plan&rsquo;, &lsquo;Range&rsquo;, &lsquo;Sequence&rsquo;, &lsquo;SequenceAnnotation&rsquo;, &lsquo;SequenceConstraint&rsquo;, &lsquo;Usage&rsquo;, &lsquo;VariableComponent&rsquo;</p>
+<ul>
+<li>Example 1:
+{&lsquo;type&rsquo;: &lsquo;Component&rsquo;}</li>
+</ul>
+<h5 id="returns-1">Returns</h5>
+<p>Return a status of 200 if the type is acceptable and a 4xx status if it isn’t</p>
+<h3 id="run">Run</h3>
+<h4 id="recieves-2">Recieves</h4>
+<ol>
+<li>complete_sbol: The single-use URL for the complete object to operate on</li>
+<li>shallow_sbol: The single-use URL for a summarized or truncated view of the object</li>
+<li>genbank: The single-use URL for the Genbank of the object (<strong>Note</strong>: This will be a blank website for all types other than Component)</li>
+<li>top_level: The top-level URL of the SBOL object</li>
+<li>instanceUrl: The top-level URL of the synbiohub instance</li>
+<li>size: A number representing an estimate of the size of the object, probably triple count</li>
+<li>type: The RDF type of the top-level object</li>
+</ol>
+<p>Common RDF types are:
+&lsquo;Activity&rsquo;, &lsquo;Agent&rsquo;, &lsquo;Association&rsquo;, &lsquo;Attachment&rsquo;, &lsquo;Collection&rsquo;, &lsquo;CombinatorialDerivation&rsquo;, &lsquo;Component&rsquo;, &lsquo;ComponentDefinition&rsquo;, &lsquo;Cut&rsquo;, &lsquo;Experiment&rsquo;, &lsquo;ExperimentalData&rsquo;, &lsquo;FunctionalComponent&rsquo;,&lsquo;GenericLocation&rsquo;, &lsquo;Implementation&rsquo;, &lsquo;Interaction&rsquo;, &lsquo;Location&rsquo;, &lsquo;MapsTo&rsquo;, &lsquo;Measure&rsquo;, &lsquo;Model&rsquo;, &lsquo;Module&rsquo;, &lsquo;ModuleDefinition&rsquo;, &lsquo;Participation&rsquo;, &lsquo;Plan&rsquo;, &lsquo;Range&rsquo;, &lsquo;Sequence&rsquo;, &lsquo;SequenceAnnotation&rsquo;, &lsquo;SequenceConstraint&rsquo;, &lsquo;Usage&rsquo;, &lsquo;VariableComponent&rsquo;</p>
+<ul>
+<li>
+<p>Example 1:
+{&lsquo;complete_sbol&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/public/igem/BBa_E0040/1/sbol',">https://dev.synbiohub.org/public/igem/BBa_E0040/1/sbol',</a>
+&lsquo;shallow_sbol&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/public/igem/BBa_E0040/1/sbolnr',">https://dev.synbiohub.org/public/igem/BBa_E0040/1/sbolnr',</a>
+&lsquo;genbank&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/public/igem/BBa_E0040/1/gb',">https://dev.synbiohub.org/public/igem/BBa_E0040/1/gb',</a>
+&lsquo;top_level&rsquo;: &lsquo;<a href="https://synbiohub.org/public/igem/BBa_E0040/1',">https://synbiohub.org/public/igem/BBa_E0040/1',</a>
+&lsquo;size&rsquo;: 5,
+&lsquo;type&rsquo;: &lsquo;Component&rsquo;,
+&lsquo;instanceUrl&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/'%7D">https://dev.synbiohub.org/'}</a></p>
+</li>
+<li>
+<p>Example 2:
+{&lsquo;complete_sbol&rsquo;: &lsquo;<a href="https://synbiohub.org/public/igem/BBa_E0240_sequence/1/sbol',">https://synbiohub.org/public/igem/BBa_E0240_sequence/1/sbol',</a>
+&lsquo;shallow_sbol&rsquo;: &lsquo;<a href="https://synbiohub.org/public/igem/BBa_E0240_sequence/1/sbolnr',">https://synbiohub.org/public/igem/BBa_E0240_sequence/1/sbolnr',</a>
+&lsquo;genbank&rsquo;: &lsquo;<a href="https://synbiohub.org/public/igem/BBa_E0240_sequence/1/gb',">https://synbiohub.org/public/igem/BBa_E0240_sequence/1/gb',</a>
+&lsquo;top_level&rsquo;: &lsquo;<a href="https://synbiohub.org/public/igem/BBa_E0240_sequence/1',">https://synbiohub.org/public/igem/BBa_E0240_sequence/1',</a>
+&lsquo;size&rsquo;: 2,
+&lsquo;type&rsquo;: &lsquo;Sequence&rsquo;,
+&lsquo;instanceUrl&rsquo;: &lsquo;<a href="https://synbiohub.org/'%7D">https://synbiohub.org/'}</a></p>
+</li>
+</ul>
+<h5 id="returns-2">Returns</h5>
+<p>The plugin should respond with an HTML page to be rendered <em>in-frame</em> on the corresponding SynBioHub page.</p>
+<h4 id="examples">Examples</h4>
+<h5 id="python">Python</h5>
+<p>A full example of a visual plugin can be found at: <code>https://github.com/SynBioHub/Plugin-Visual-Test</code></p>
+<h5 id="javascript">Javascript</h5>
+<p>A full example of a visual plugin can be found at: <code>https://github.com/SynBioHub/Plugin-Visual-Test-js</code></p>
+<h2 id="submit">Submit</h2>
+<h3 id="status-1">Status</h3>
+<h4 id="recieves-3">Recieves</h4>
+<p>Nothing is received (It is just a simple get request)</p>
+<h4 id="returns-3">Returns</h4>
+<p>If it is up and running it should return a 200 status to a get request</p>
+<h3 id="evaluate-1">Evaluate</h3>
+<h4 id="recieves-4">Recieves</h4>
+<p>A dictionary with entries:
+{‘manifest’</p>
+<pre><code>{‘files’
 
-2. `type`: the Content-Type of the file
+   [List of dictionaries (one for every file). *Each dictionary has the keys*:
 
-3. `url`: A URL where the file can be accessed
+   ‘url’ the single-use URL for the file submitted
+
+   ‘filename’ the encrypted file name (with correct extension)
+
+   ‘type’ the mime of the file (see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
 </code></pre>
-<p><em>Evaluate endpoint</em></p>
-<p>SynBioHub will send an HTTP POST request containing the manifest to the submit plugin&rsquo;s evaluate endpoint.
-The plugin should respond with HTTP 200 OK if the plugin can handle the submission.</p>
-<p><em>Run endpoint</em></p>
-<p>SynBioHub will send an HTTP POST request containing the manifest to the submit plugin&rsquo;s run endpoint.
-It will also send the <code>instanceUrl</code> parameter.
-The plugin should respond with an HTTP response and file attachment, which represents the submission.</p>
-<h4 id="download">Download</h4>
-<p><em>Evaluate endpoint</em></p>
-<p>SynBioHub will send an HTTP POST request to the download plugin&rsquo;s evaluate endpoint. The body of the request will contain a <strong>JSON</strong> containing:</p>
-<pre><code>1. `type`: The RDF type of the top-level object
+<ul>
+<li>
+<p>Example 1:
+{&ldquo;manifest&rdquo;: {&ldquo;files&rdquo;:[</p>
+<p>{&ldquo;url&rdquo;: &ldquo;<a href="http://synbiohub.org/expose/b41e63d6-10f4-4cac-b1c8-285f71156b56%22,">http://synbiohub.org/expose/b41e63d6-10f4-4cac-b1c8-285f71156b56&quot;,</a> &ldquo;filename&rdquo;: &ldquo;asdfasdf.xls&rdquo;, &ldquo;type&rdquo;: &ldquo;application/vnd.ms-excel&rdquo;},</p>
+<p>{&ldquo;url&rdquo;: &ldquo;<a href="http://synbiohub.org/expose/jkl9d8s7ufjqhoer8u709s%22,">http://synbiohub.org/expose/jkl9d8s7ufjqhoer8u709s&quot;,</a> &ldquo;filename&rdquo;: &ldquo;file_name1.dna&rdquo;, &ldquo;type&rdquo;: &ldquo;application/xml&rdquo;},</p>
+<p>{&ldquo;url&rdquo;: &ldquo;<a href="http://synbiohub.org/expose/basdf-11230948f4-12344cac%22,">http://synbiohub.org/expose/basdf-11230948f4-12344cac&quot;,</a> &ldquo;filename&rdquo;: &ldquo;file_name2.xml&rdquo;, &ldquo;type&rdquo;: &ldquo;application/xml&rdquo;},</p>
+<p>{&ldquo;url&rdquo;: &ldquo;<a href="http://synbiohub.org/expose/09uj2k3j0%22,">http://synbiohub.org/expose/09uj2k3j0&quot;,</a> &ldquo;filename&rdquo;: &ldquo;file_name3.xml&rdquo;, &ldquo;type&rdquo;: &ldquo;application/xml&rdquo;},</p>
+<p>{&ldquo;url&rdquo;: &ldquo;<a href="http://synbiohub.org/expose/asdfasdf56%22,">http://synbiohub.org/expose/asdfasdf56&quot;,</a> &ldquo;filename&rdquo;: &ldquo;file_name4.xml&rdquo;, &ldquo;type&rdquo;: &ldquo;application/xml&rdquo;}]}}</p>
+</li>
+<li>
+<p>Example 2:
+{&ldquo;manifest&rdquo;:</p>
+</li>
+</ul>
+<p>{&ldquo;files&rdquo;:[</p>
+<p>{&ldquo;url&rdquo;: &ldquo;<a href="http://synbiohub.org/expose/93c25d15-9fe2-4862-b602-ddbdac2c4333%22,">http://synbiohub.org/expose/93c25d15-9fe2-4862-b602-ddbdac2c4333&quot;,</a> &ldquo;filename&rdquo;: &ldquo;mbr5wW6CIseoq-0Y4MkM8DTM.xml&rdquo;, &ldquo;type&rdquo;: &ldquo;application/xml&rdquo;}]}}</p>
+<h4 id="returns-4">Returns</h4>
+<p>{‘manifest’:[
+Dictionaries each of which contains
+‘filename’: the encrypted file name (with correct extension) that matches the original filename sent in the manifest from synbiohub
+‘requirement’: a number which indicates whether or not the file can be used the numbers mean: 2-file will be converted to sbol, 1-file will be used to convert other files to sbol, 0-file cannot be handled/is not useful</p>
+<ul>
+<li>
+<p>Example 1:
+{&ldquo;manifest&rdquo;: [
+{
+&ldquo;filename&rdquo;: &quot; asdfasdf.xls &ldquo;,
+&ldquo;requirement&rdquo;: 2
+},
+{
+&ldquo;filename&rdquo;: &ldquo;file_name1.dna&rdquo;,
+&ldquo;requirement&rdquo;: 1
+},
+{
+&ldquo;filename&rdquo;: &ldquo;file_name2.xml&rdquo;,
+&ldquo;requirement&rdquo;: 0
+},
+{
+&ldquo;filename&rdquo;: &ldquo;file_name3.xml&rdquo;,
+&ldquo;requirement&rdquo;: 0
+},
+{
+&ldquo;filename&rdquo;: &ldquo;file_name4.xml&rdquo;,
+&ldquo;requirement&rdquo;: 0
+}
+]
+}</p>
+</li>
+<li>
+<p>Example 2:
+{
+&ldquo;manifest&rdquo;: [
+{
+&ldquo;filename&rdquo;: &quot; mbr5wW6CIseoq-0Y4MkM8DTM.xml &ldquo;,
+&ldquo;requirement&rdquo;: 2
+}
+]
+}</p>
+</li>
+</ul>
+<h3 id="run-1">Run</h3>
+<h4 id="recieves-5">Recieves</h4>
+<p>A dictionary with entries:
+{‘manifest’
+{‘files’</p>
+<pre><code>  [List of dictionaries (one for every file). Each dictionary has the keys:
+ 
+   ‘url’ the single-use URL for the file submitted
+ 
+   ‘filename’ the encrypted file name (with correct extension)
+ 
+   ‘type’ the mime of the file (see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+ 
+   ‘instanceUrl’  the top-level URL of the synbiohub instance
 </code></pre>
-<p>The plugin should respond with an HTTP 200 OK if the request can be handled.</p>
-<p><em>Run endpoint</em></p>
-<p>SynBioHub will send an HTTP POST request to the dwonload plugin’s run endpoint. The body of the request will contain a <strong>JSON</strong> object containing:</p>
-<pre><code>1. `complete_sbol`: the single-use URL for the complete object to operate on
-
-2. `shallow_sbol`: the single-use URL for a summarized or truncated view of the object
-
-3. `top_level`: the top-level URL of the SBOL object
-
-4. `instanceUrl`: the top-level URL of the SBOL object 
-
-5. `size`: a number representing an estimate of the size of the object, probably triple count
+<ul>
+<li>
+<p>Example 1:
+{&lsquo;manifest&rsquo;:</p>
+<p>{&lsquo;files&rsquo;:</p>
+<p>[{&lsquo;filename&rsquo;: &lsquo;0WaHXIKZD10gRGdC8U7weHWC.html&rsquo;,</p>
+<pre><code> 'type': 'text/html', 
 </code></pre>
+<p>&lsquo;url&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/expose/e9665a54-dbdd-485e-a20b-574e46412fc4'%7D%5D%7D,">https://dev.synbiohub.org/expose/e9665a54-dbdd-485e-a20b-574e46412fc4'}]},</a></p>
+<p>&lsquo;instanceUrl&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/'%7D">https://dev.synbiohub.org/'}</a></p>
+</li>
+<li>
+<p>Example 2:
+{&ldquo;manifest&rdquo;: {&ldquo;files&rdquo;:[{&ldquo;url&rdquo;: &ldquo;https://synbiohub.org/expose/kl98ahnj0fa9u03945r&rdquo;,</p>
+<pre><code>          &quot;filename&quot;: &quot;oijwpjrpokk98um098m.xlsx&quot;, 
+
+          &quot;type&quot;: &quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;},
+
+       {&quot;url&quot;: &quot;https://synbiohub.org/98ja0s98dufjml.dna&quot;, 
+         
+          &quot;filename&quot;: &quot;as9d8j0asd9j23fc.dna&quot;, 
+         
+          &quot;type&quot;: &quot; application/xml &quot;}]},
+         
+          &quot;instanceUrl&quot;: &quot;http://localhost:7777/&quot;}
+</code></pre>
+</li>
+</ul>
+<h4 id="returns-5">Returns</h4>
+<p>A zip file which contains the generated SBOL files and a file called manifest.json which contains a json response manifest of the form:
+{‘results’</p>
+<p>[List of dictionaries (one for every file). Each dictionary has the keys:</p>
+<p>‘filename’ name of the file within the zipfile</p>
+<p>‘sources’ a list of filenames received from synbiohub that were used to generate the file</p>
+<ul>
+<li>
+<p>Example 1:
+{&lsquo;results&rsquo;: [{&lsquo;filename&rsquo;: &lsquo;0WaHXIKZD10gRGdC8U7weHWC.html.converted&rsquo;, &lsquo;sources&rsquo;: [&lsquo;0WaHXIKZD10gRGdC8U7weHWC.html &lsquo;]}]}</p>
+</li>
+<li>
+<p>Example 2:
+{&lsquo;results&rsquo;:</p>
+</li>
+</ul>
+<p>[{&lsquo;filename&rsquo;: oijwpjrpokk98um098m.xlsx.converted&rsquo;,</p>
+<p>&lsquo;sources&rsquo;: [‘oijwpjrpokk98um098m.xlsx&rsquo;]},</p>
+<p>{&lsquo;filename&rsquo;: ' as9d8j0asd9j23fc.dna.converted&rsquo;,</p>
+<p>&lsquo;sources&rsquo;: [&rsquo; as9d8j0asd9j23fc.dna’]}]}</p>
+<p><strong>NOTE</strong>: list of sources could contain more than one file (if any of the files in the evaluate endpoint were flagged as 1 they might be added to the sources for one of the other file conversions)</p>
+<h3 id="examples-1">Examples</h3>
+<h4 id="python-1">Python</h4>
+<p>A full example of a submit plugin can be found at: <a href="https://github.com/SynBioHub/Plugin-Submit-Test">https://github.com/SynBioHub/Plugin-Submit-Test</a></p>
+<h4 id="javascript-1">Javascript</h4>
+<p>A full example of a submit plugin can be found at: <a href="https://github.com/SynBioHub/Plugin-Submit-Test-js">https://github.com/SynBioHub/Plugin-Submit-Test-js</a></p>
+<h2 id="download">Download</h2>
+<h3 id="status-2">Status</h3>
+<h4 id="recieves-6">Recieves</h4>
+<p>Nothing is received (it is a simple get request)</p>
+<h4 id="returns-6">Returns</h4>
+<p>If it is up and running it should return a 200 status to a get request</p>
+<h3 id="evaluate-2">Evaluate</h3>
+<h4 id="recieves-7">Recieves</h4>
+<p>type: The RDF type of the top-level object</p>
+<p>Common RDF types are:
+&lsquo;Activity&rsquo;, &lsquo;Agent&rsquo;, &lsquo;Association&rsquo;, &lsquo;Attachment&rsquo;, &lsquo;Collection&rsquo;, &lsquo;CombinatorialDerivation&rsquo;, &lsquo;Component&rsquo;, &lsquo;ComponentDefinition&rsquo;, &lsquo;Cut&rsquo;, &lsquo;Experiment&rsquo;, &lsquo;ExperimentalData&rsquo;, &lsquo;FunctionalComponent&rsquo;,&lsquo;GenericLocation&rsquo;, &lsquo;Implementation&rsquo;, &lsquo;Interaction&rsquo;, &lsquo;Location&rsquo;, &lsquo;MapsTo&rsquo;, &lsquo;Measure&rsquo;, &lsquo;Model&rsquo;, &lsquo;Module&rsquo;, &lsquo;ModuleDefinition&rsquo;, &lsquo;Participation&rsquo;, &lsquo;Plan&rsquo;, &lsquo;Range&rsquo;, &lsquo;Sequence&rsquo;, &lsquo;SequenceAnnotation&rsquo;, &lsquo;SequenceConstraint&rsquo;, &lsquo;Usage&rsquo;, &lsquo;VariableComponent&rsquo;</p>
+<ul>
+<li>Example 1:
+{&lsquo;type&rsquo;: &lsquo;Component&rsquo;}</li>
+</ul>
+<h4 id="returns-7">Returns</h4>
+<p>Return a status of 200 if the type is acceptable and a 4xx status if it isn’t</p>
+<h3 id="run-2">Run</h3>
+<h4 id="recieves-8">Recieves</h4>
+<p>complete_sbol: the single-use URL for the complete object to operate on</p>
+<p>shallow_sbol: the single-use URL for a summarized or truncated view of the object</p>
+<p>genbank: the single-use URL for the Genbank of the object (Note this will be a blank website for all types other than Component)</p>
+<p>top_level: the top-level URL of the SBOL object</p>
+<p>instanceUrl: the top-level URL of the synbiohub instance</p>
+<p>size: a number representing an estimate of the size of the object, probably triple count</p>
+<p>type: The RDF type of the top-level object</p>
+<p>Common RDF types are:</p>
+<p>&lsquo;Activity&rsquo;, &lsquo;Agent&rsquo;, &lsquo;Association&rsquo;, &lsquo;Attachment&rsquo;, &lsquo;Collection&rsquo;, &lsquo;CombinatorialDerivation&rsquo;, &lsquo;Component&rsquo;, &lsquo;ComponentDefinition&rsquo;, &lsquo;Cut&rsquo;, &lsquo;Experiment&rsquo;, &lsquo;ExperimentalData&rsquo;, &lsquo;FunctionalComponent&rsquo;,&lsquo;GenericLocation&rsquo;, &lsquo;Implementation&rsquo;, &lsquo;Interaction&rsquo;, &lsquo;Location&rsquo;, &lsquo;MapsTo&rsquo;, &lsquo;Measure&rsquo;, &lsquo;Model&rsquo;, &lsquo;Module&rsquo;, &lsquo;ModuleDefinition&rsquo;, &lsquo;Participation&rsquo;, &lsquo;Plan&rsquo;, &lsquo;Range&rsquo;, &lsquo;Sequence&rsquo;, &lsquo;SequenceAnnotation&rsquo;, &lsquo;SequenceConstraint&rsquo;, &lsquo;Usage&rsquo;, &lsquo;VariableComponent&rsquo;</p>
+<ul>
+<li>
+<p>Example 1:
+{&lsquo;complete_sbol&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/public/igem/BBa_E0240/1/sbol',">https://dev.synbiohub.org/public/igem/BBa_E0240/1/sbol',</a> &lsquo;shallow_sbol&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/public/igem/BBa_E0240/1/sbolnr',">https://dev.synbiohub.org/public/igem/BBa_E0240/1/sbolnr',</a> &lsquo;genbank&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/public/igem/BBa_E0240/1/gb',">https://dev.synbiohub.org/public/igem/BBa_E0240/1/gb',</a> &lsquo;top_level&rsquo;: &lsquo;<a href="https://synbiohub.org/public/igem/BBa_E0240/1',">https://synbiohub.org/public/igem/BBa_E0240/1',</a> &lsquo;size&rsquo;: 39, &lsquo;type&rsquo;: &lsquo;Component&rsquo;, &lsquo;instanceUrl&rsquo;: &lsquo;<a href="https://dev.synbiohub.org/'%7D">https://dev.synbiohub.org/'}</a></p>
+</li>
+<li>
+<p>Example 2:
+{&lsquo;complete_sbol&rsquo;: &lsquo;https:// synbiohub.org/public/igem/BBa_E0240/1/sbol&rsquo;, &lsquo;shallow_sbol&rsquo;: &lsquo;https:// synbiohub.org/public/igem/BBa_E0240/1/sbolnr&rsquo;, &lsquo;genbank&rsquo;: &lsquo;https:// synbiohub.org/public/igem/BBa_E0240/1/gb&rsquo;, &lsquo;top_level&rsquo;: &lsquo;<a href="https://synbiohub.org/public/igem/BBa_E0240/1',">https://synbiohub.org/public/igem/BBa_E0240/1',</a> &lsquo;size&rsquo;: 39, &lsquo;type&rsquo;: &lsquo;Component&rsquo;, &lsquo;instanceUrl&rsquo;: &lsquo;https:// synbiohub.org/'}</p>
+</li>
+</ul>
+<h3 id="returns-8">Returns</h3>
 <p>The plugin should respond with an HTTP request and file attachment which represents the object.</p>
-<h4 id="visualization">Visualization</h4>
-<p>The response of visualization plugins should be <strong>HTML</strong> which will be displayed on the top-level page. Rendering responses may be cached to improve performance.</p>
-<p><em>Evaluate endpoint</em></p>
-<p>SynBioHub will send an HTTP POST request to the visualization plugin&rsquo;s evaluate endpoint. The body of the request will contain a <strong>JSON</strong> containing:</p>
-<pre><code>1. `type`: The RDF type of the top-level object
-</code></pre>
-<p><em>Run endpoint</em></p>
-<p>SynBioHub will send an HTTP POST request to the visualization plugin’s run endpoint. The body of the request will contain a <strong>JSON</strong> object containing:</p>
-<pre><code>1. `complete_sbol`: the single-use URL for the complete object to operate on
-
-2. `shallow_sbol`: the single-use URL for a summarized or truncated view of the object
-
-3. `top_level`: the top-level URL of the SBOL object
-
-4. `instanceUrl`: the top-level URL of the SBOL object 
-
-5. `size`: a number representing an estimate of the size of the object, probably triple count
-</code></pre>
-<p>The plugin should respond with an HTML page to be rendered in-frame on the corresponding SynBioHub page.</p>
+<h3 id="examples-2">Examples</h3>
+<h4 id="python-2">Python</h4>
+<p>A full example of a download plugin can be found <a href="https://github.com/SynBioHub/Plugin-Download-Test">here</a>.</p>
+<h4 id="javascript-2">Javascript</h4>
+<p>A full example of a download plugin can be found <a href="https://github.com/SynBioHub/Plugin-Download-Test-js">here</a>.</p>
+<h2 id="writing-an-app-by-copying-the-examples">Writing an app by copying the examples</h2>
+<ol>
+<li>Copy the relevant repository (make sure it includes the docker actions to automatically build)</li>
+<li>Change the docker image name in release.yml in line 17 and 24</li>
+<li>Ensure that the repository has the docker username and docker password as secrets in the repository (will happen automatically if you are creating a repository in the synbiohub project)</li>
+<li>Update the license.</li>
+<li>Change the readme.md file</li>
+<li>Edit the sections of the code in app.py that say edit within here (should be a section under the evaluate endpoint and under the run endpoint). Can import further functions at the top of the file and do most of the code writing in a second file to leave the structure between plugins as similar as possible</li>
+<li>Create a new requirements.txt or packages.json to match what you now have (packages.json should happen mostly automatically). For requirements.txt there are several methods:</li>
+</ol>
+<h3 id="with-virtual-environment">With Virtual Environment</h3>
+<h4 id="1-for-anaconda">1. For Anaconda:</h4>
+<p>The following steps should be followed:-</p>
+<ol>
+<li>pip3 install virtualenv</li>
+<li>python3 -m venv <!-- raw HTML omitted --></li>
+<li>conda list -e &gt; requirements.txt</li>
+</ol>
+<h3 id="without-virtual-environment">Without Virtual Environment</h3>
+<p>Try the <strong>pipreqs</strong> package (used from anaconda prompt if using anaconda)</p>
+<h3 id="stackoverflow-link">Stackoverflow link</h3>
+<p><a href="https://stackoverflow.com/questions/31684375/automatically-create-requirements-txt">This</a> provides further suggestions and ideas.</p>
+<h3 id="best-practices">Best practices</h3>
+<ol>
+<li>Always write files to temporary files or directories (prevents overwriting if you have multiple calls to the same plugin concurrently)</li>
+<li>Never use “file” as a variable name in python (it causes deeper issues)</li>
+<li>Make code modular and comment well</li>
+<li>Adhere to standards and best practices of the language you write in</li>
+</ol>
+<h3 id="advanced-possibilities">Advanced possibilities</h3>
+<ol>
+<li>It is possible to use the url to pass parameters to the plugin see (<a href="https://github.com/SynBioHub/Plugin-Visual-Component-Use">https://github.com/SynBioHub/Plugin-Visual-Component-Use</a>)</li>
+<li>It is possible to have files served from the plugin (<a href="https://github.com/SynBioHub/Plugin-Visual-Serve-Test">https://github.com/SynBioHub/Plugin-Visual-Serve-Test</a> and <a href="https://github.com/SynBioHub/Plugin-Visual-Serve-Test-js">https://github.com/SynBioHub/Plugin-Visual-Serve-Test-js</a>)</li>
+</ol>
+<h3 id="dockerising">Dockerising</h3>
+<h4 id="simple-overview-of-docker">Simple overview of docker</h4>
+<ul>
+<li>Source code is used in docker file which is used to build an image which can be pushed to docker hub (LIKE GITHUB). Image (can have been pulled from dockerhub) can be run on its own or with others like autoheal in a docker compose file.</li>
+<li>When an image/docker compose file is run it creates a container.</li>
+<li>Caddy (or other webserver like engineX, httpd, apache) listens to https port (443) and converts https to http and routes it to port on which the container is listening which it container thinks is port 80 (http port - generally the default over https, you could map out from a different port depending on what the webserver inside the container thinks it is listening too e.g. synbiohub thinks it listens to port 7777). Container maps its port to host and caddy forwards from 443 to the host port that the container is listening on.</li>
+</ul>
+<h4 id="idea-of-architecture">Idea of architecture:</h4>
+<ul>
+<li>caddy is a webserver which reroutes requests to containers containers may or may not contain images which are also webservers (dockercompse files describe a set of containers which also may or may not contain webservers)</li>
+<li>High ports are over 1024 and &lsquo;non-reserved&rsquo; ports. ssh is to 22 (generally).</li>
+<li>Key points understand that docker has: images, containers, volumes, and networks (especially important to understand what sticks around and what doesn’t when you try and refresh the containers a very useful command is prune: <a href="https://takacsmark.com/docker-prune/">https://takacsmark.com/docker-prune/</a></li>
+</ul>
+<h4 id="steps-for-dockerising-a-plugin">Steps for dockerising a plugin</h4>
+<ul>
+<li>After having installed docker desktop and making sure it is up and running using an administrator account. Note that the docker website has a tutorial with mor information.</li>
+</ul>
+<p><strong>How to dockerise plugin code</strong> (things in &lt;&gt; signs should be replaced with your specific variable names)</p>
+<ol>
+<li>run command window as admin</li>
+<li>git clone the github repository containing everything into a local directory (git clone <!-- raw HTML omitted -->)</li>
+<li>cd into directory that was just cloned (cd <!-- raw HTML omitted -->)</li>
+<li>create a file named &ldquo;.dockerignore&rdquo; with the contents &ldquo;Dockerfile&rdquo; (echo Dockerfile&gt;.dockerignore )</li>
+<li>create a file named &ldquo;Dockerfile&rdquo; (echo &gt;Dockerfile)</li>
+<li>Edit the Dockerfile to contain the appropriate text (I use notepad++ for this - note for python plugins a requirements.txt is required and for js plugins a package.json file is required)</li>
+<li>Build your docker image (docker build &ndash;tag synbiohub/<!-- raw HTML omitted -->:snapshot .) Note the full stop at the end of the command!</li>
+<li>Run the docker image (docker run &ndash;publish <!-- raw HTML omitted -->:5000 &ndash;detach &ndash;name <!-- raw HTML omitted --> synbiohub/<!-- raw HTML omitted -->:snapshot)</li>
+<li>check the run was sucessful (docker ps), if not shown there check (docker ps -all) and then check the logs (docker logs <!-- raw HTML omitted -->)</li>
+<li>based on error logs fix the errors, then remove the current container (docker rm <!-- raw HTML omitted -->) and repeat steps 7 and 8</li>
+<li>If docker ps shows your plugin running then navigate to localhost:/status. Can also test the run end point using a program like postman to submit a query and look at the response.</li>
+<li>If all is well stop the docker container ( docker stop <!-- raw HTML omitted --> ) and remove it ( docker rm <!-- raw HTML omitted --> )</li>
+<li>Upload the newly added files (Dockerfile and .dockerignore) to the github repo</li>
+<li>Add github action to push image to dockerhub (called release.yml in my plugins)</li>
+<li>under setting&gt;secrets add secrets containing the username and password</li>
+<li>update the readme and wait for the new image to push to docker hub (you will see a green check next to commit when this has happened)</li>
+<li>check the uploaded image works by downloading and running it ( docker run &ndash;publish 8080:5000 &ndash;detach &ndash;name <!-- raw HTML omitted --> synbiohub/<!-- raw HTML omitted -->:snapshot ) and repeating steps 9-12.</li>
+</ol>
+<h4 id="useful-commands-for-docker-debug">Useful commands for docker debug</h4>
+<ul>
+<li>docker system prune -a &ndash;volumes</li>
+<li>docker system prune -a</li>
+<li>docker images purge</li>
+<li>docker network inspect synbiohub-docker_default</li>
+<li>copy docker files to local location to debug: docker cp <!-- raw HTML omitted -->:<!-- raw HTML omitted --> <!-- raw HTML omitted --></li>
+<li>Enter into a docker file to edit it: docker exec -it synbiohub-docker_pluginVisualSeqviz_1 /bin/bash
+** exit by simply typing: exit
+** for synbiohub testing look at plugin.js or view.js in home directory</li>
+<li>docker volume ls</li>
+<li>docker volume prune</li>
+</ul>
+<h3 id="genetic-logic-lab-synbiohub-plugins">Genetic Logic Lab Synbiohub plugins</h3>
+<p>To get access to genetic logic lab SynBioHub plugins, follow the following steps:</p>
+<ol>
+<li>ssh <a href="mailto:editors@sbolstandard.org">editors@sbolstandard.org</a></li>
+<li>Password can be found in lab documentation</li>
+<li>cd /opt/synbiohub-docker</li>
+<li>git status check (see it is master)</li>
+<li>sudo git pull (making sure compose files are the latest)</li>
+<li>cd /etc/systemd/system</li>
+<li>sudo emacs synbiohub.service</li>
+<li>add -f docker compose into file</li>
+<li>save: ctrl x ctrl s</li>
+<li>exit: ctrl x ctrl c</li>
+<li>sudo systemctl daemon-reload</li>
+<li>sudo systemctl restart synbiohub</li>
+<li>sudo docker ps (check the container is now listed)</li>
+<li>can check the plugin is okay using: curl localhost:<!-- raw HTML omitted -->/status</li>
+<li>to give real ip address:</li>
+</ol>
+<ul>
+<li>cd /etc/caddy</li>
+<li>sudo emacs Caddyfile</li>
+<li>copy and paste the igem one and change the name and port number</li>
+<li>save</li>
+<li>exit</li>
+<li>sudo systemctl restart caddy</li>
+<li>in browser go to azure.microsoft.com: sign in using the credentials from lab documentation</li>
+<li>go to portal, dns zones</li>
+<li>go to synbiohub.org</li>
+<li>set up a new domain: record set, name = seqviz, ip adress: 13.82.19.198, TTL 1 hour, type A, alias record set no.</li>
+<li>give it a minute to go through then</li>
+<li>command line: sudo systemctl restart caddy</li>
+<li>sudo systemctl status caddy</li>
+<li>q</li>
+</ul>
+<ol start="16">
+<li>In admin panel on synbiohub:</li>
+</ol>
+<ul>
+<li>Adding to dev.synbiohub: http://localhost:8095/sankey</li>
+<li>adding to synbiohub.org: http://synbiohub-docker_pluginSubmitExcelLibrary_1:5000/</li>
+</ul>
+<p>If you want To <strong>Update an Existing Plugin</strong>, the following steps need to be followed:</p>
+<ol>
+<li>ssh <a href="mailto:editors@sbolstandard.org">editors@sbolstandard.org</a></li>
+<li>Password from lab documentation</li>
+<li>docker ps</li>
+<li>docker stop relevant_container</li>
+<li>docker system prune –a (removes all stopped containers)</li>
+<li>sudo systemctl daemon-reload</li>
+<li>sudo systemctl restart synbiohub</li>
+<li>can check the plugin is okay using: curl localhost:<!-- raw HTML omitted -->/status</li>
+</ol>
 <h2 id="plugins-table">Plugins-Table</h2>
 <p>The sortable table has already been implemented and can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
 
