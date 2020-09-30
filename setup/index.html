@@ -57,6 +57,11 @@
         
         <a class="nav-link p-0" href="https://synbiohub.github.io/installation/"><h6>Installation</h6></a>
     </li>
+    <li data-nav-id="/setup/" class="nav-item my-1 parent active
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/setup/"><h6>Setup</h6></a>
+    </li>
     <li data-nav-id="/userdocumentation/" class="nav-item my-1
         ">
         
@@ -77,11 +82,6 @@
         
         <a class="nav-link p-0" href="https://synbiohub.github.io/troubleshooting/"><h6>Troubleshooting </h6></a>
     </li>
-    <li data-nav-id="/setup/" class="nav-item my-1 parent active
-        ">
-        
-        <a class="nav-link p-0" href="https://synbiohub.github.io/setup/"><h6>Setup</h6></a>
-    </li>
     <li data-nav-id="/references/" class="nav-item my-1
         ">
         
@@ -99,6 +99,7 @@
     <li>
       <ul>
         <li><a href="#web-of-registries-in-synbiohub">Web-Of-Registries in SynBioHub</a></li>
+        <li><a href="#setting-up-sendgrid">Setting up Sendgrid</a></li>
       </ul>
     </li>
   </ul>
@@ -116,6 +117,43 @@
 <p>Any SynBioHub can access the Web Of Registries to determine information about all registered SynBioHub instances. If a design references a part within another synbiohub instance, the information about this part can be fetched in order to render this design information locally and provide links to the corresponding design information page for this part.</p>
 <p>When a new SynBioHub instance wishes to join the Web of Registries, it sends its information to the Web of Registries service, and all the Web of Registries curators are alerted via email that there is a new repository pending approval. Once the repository has been approved, its information is broadcast to all other registries in the Web of Registries. Anybody can access the current list of registries through an HTTP GET request. Once registered, an instance of SynBioHub is able to locate designs within any other instance that is registered with the Web of Registries.</p>
 <p>SynBioHub demonstrates the application of this harmonized data exchange through existing repositories, hence envisaging a wider, integrated ecosystem of biological part information shared across a plethora of different repositories with different capabilities.</p>
+<h3 id="setting-up-sendgrid">Setting up Sendgrid</h3>
+<p>The following steps need to be executed, in order to setup Sendgrid:-</p>
+<ol>
+<li>
+<p>Visit <a href="www.sendgrid.com">this</a> website</p>
+</li>
+<li>
+<p>Select the <em>Sign up</em> option, in case you&rsquo;re using it for the first time.</p>
+</li>
+<li>
+<p>Enter you Email Address and password as well as select the captcha for verification.</p>
+</li>
+<li>
+<p>Fill up all the details about yourself on the &ldquo;Tell Us About Yourself&rdquo; page.</p>
+</li>
+<li>
+<p>Then, after filling up all the details correctly it&rsquo;ll re-direct you to your dashboard.</p>
+</li>
+<li>
+<p>Click on the <em>Settings</em> options on left hand side of the page.</p>
+</li>
+<li>
+<p>Then select the *Create an API key option&rdquo;.</p>
+</li>
+<li>
+<p>It&rsquo;ll prompt you to give your API key a name. Also, you can customize the API key permissions.</p>
+</li>
+<li>
+<p>After completing these steps, click on Create and View.</p>
+</li>
+<li>
+<p>The API key is shown only for once due to security reasons, so try to save it at a safe place.</p>
+</li>
+<li>
+<p>Your API key has been created, and hence ready to use!!</p>
+</li>
+</ol>
 
 
     
@@ -127,8 +165,8 @@
 
     <h4 class="text-white text-center">Read more</h4>
 
-    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="https://synbiohub.github.io/troubleshooting/" title="Troubleshooting "><i class="fas fa-chevron-left p-1"></i>Troubleshooting </a>
-        <a class="p-1 ml-3 d-inline-block text-white text-right" href="https://synbiohub.github.io/references/" title=" References"> References<i class="fas fa-chevron-right p-1"></i></a>
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="https://synbiohub.github.io/installation/" title="Installation"><i class="fas fa-chevron-left p-1"></i>Installation</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="https://synbiohub.github.io/userdocumentation/" title="User Documentation">User Documentation<i class="fas fa-chevron-right p-1"></i></a>
     </div>
 </div>
 
