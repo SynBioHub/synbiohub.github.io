@@ -199,17 +199,8 @@
 <h2 id="22-installation">2.2 Installation</h2>
 <p>As the plugins are standalone servers &amp; they don&rsquo;t have to be used in conjunction with SynBioHub. Though plugins have been developed to interface directly with SynBioHub, it is possible to install them and then interact with them via the API (from the command line or via a GUI interface such as <a href="https://www.postman.com/">Postman</a>). Different methods of installation are discussed below. For those who&rsquo;re less-experienced with Programming, it is suggested that you should be using plugins with SynBioHub.</p>
 <h3 id="221-using-synbiohub">2.2.1 Using SynBioHub</h3>
-<p>To install plugins with synbiohub the easiest way is to use Docker Compose’s multiple file capabilities. (Note you will need to install docker desktop and open it as an administrator before the commands bellow can be carried out, hence refer to the installation page.) Carry out the following commands: -</p>
-<ol>
-<li>Open the terminal.</li>
-<li>Change to a directory to where can pull the SynBioHub-docker files.</li>
-<li>Enter the folllowing command: <code>git clone https://github.com/synbiohub/synbiohub-docker</code></li>
-<li>After executing the previous command, then paste the following command:-</li>
-</ol>
-<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
-<p>Note that all plugins are added before the up and each is preceeded by -f . This -f denotes files. For example, to run the configuration with the VisualIgem plugins and the VisualSeqviz plugin run the following command:-</p>
-<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.pluginVisualIgem.yml -f ./synbiohub-docker/docker-compose.pluginVisualSeqviz.yml up</code></p>
-<p>A full list of plugin file names and their descriptions can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
+<p>A detailed explaination on how to install SynBioHub on various Operating Systems is written <a href="https://synbiohub.github.io/installation/">here</a>
+A full list of plugin file names and their descriptions can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
 <h4 id="2211-common-problems">2.2.1.1 Common problems</h4>
 <p>The most common problems that you may face while executing the commands mentioned above are as follows:-</p>
 <ol>
