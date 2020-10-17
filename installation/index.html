@@ -96,20 +96,15 @@
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
 	<nav id="TableOfContents">
   <ul>
-    <li><a href="#from-prebuilt-image">From Prebuilt Image</a>
+    <li>
       <ul>
-        <li><a href="#install-docker">Install Docker</a></li>
-        <li><a href="#for-mac-os">For Mac OS:</a></li>
-        <li><a href="#for-linux-ubuntu-2004">For Linux-Ubuntu 20.04:</a></li>
         <li><a href="#general">General</a></li>
-        <li><a href="#with-explorer">With Explorer</a></li>
+        <li><a href="#with-sbolexplorer">With SBOLExplorer</a></li>
         <li><a href="#with-plugins">With Plugins</a></li>
-        <li><a href="#with-developmental-synbiohub">With Developmental SynBioHub</a></li>
       </ul>
     </li>
     <li><a href="#plugins">Plugins</a></li>
     <li><a href="#from-source">From Source</a></li>
-    <li><a href="#nginx-configuration">NGINX configuration</a></li>
   </ul>
 </nav>
 </div>
@@ -119,80 +114,74 @@
 
 <h1>Installation</h1>
 
-<h2 id="from-prebuilt-image">From Prebuilt Image</h2>
-<h3 id="install-docker">Install Docker</h3>
-<p>Install <a href="https://docs.docker.com/get-docker/">Docker</a> and <a href="https://docs.docker.com/compose/install/">Docker-Compose</a> on your System.</p>
-<h3 id="for-mac-os">For Mac OS:</h3>
-<p>The following instructions are to be followed for installaing SynBioHub locally onto you system:-</p>
-<p>a) Download git onto your Mac using <code>brew install git</code> and then configure your name and email using the following commands:</p>
-<p><code>git config --global user.name &quot;&lt;your name&gt;&quot;</code>  and <code>git config --global user.name &quot;&lt;your email&gt;&quot; </code> respectively.</p>
-<p>b) Download Docker for Mac OS from <a href="https://docs.docker.com/docker-for-mac/install/">here</a>.</p>
-<p>c) Start Docker-desktop.</p>
-<p>d) Open your terminal and enter <code>cd</code> just to make sure that you&rsquo;re in your home directory at that instant.</p>
-<p>e) Clone the synbiohub-docker repo using the following command :</p>
-<p><code>git clone https://github.com/synbiohub/synbiohub-docker</code>.</p>
-<p>f) Start a synbiohub instance with <code>docker-compose --file ./synbiohub-docker/docker-compose.yml up</code> or you may follow the alternate method, i.e using SBOL explorer. For installing SynBioHub through SBOL explorer use the following commands:-</p>
-<p><code>sysctl -w vm.max_map_count=262144</code></p>
-<p><code>docker-compose --file ./synbiohub-docker/docker-compose.yml --file ./synbiohub-docker/docker-compose.explorer.yml up</code>.</p>
-<p>g) In your browser search for localhost:7777 and it&rsquo;ll take you to a setup page when you&rsquo;ll run it for the very first time.</p>
-<h3 id="for-linux-ubuntu-2004">For Linux-Ubuntu 20.04:</h3>
-<p>The following instructions are to be followed for installing SynBioHub locally onto you system:-</p>
-<p>a) Download git onto your PC and then configure your name and email using the following commands:</p>
-<p><code>git config --global user.name &quot;&lt;your name&gt;&quot;</code>  and <code>git config --global user.name &quot;&lt;your email&gt;&quot; </code> respectively.</p>
-<p>b) Download Docker for Ubuntu from <a href="https://docs.docker.com/engine/install/ubuntu/">here</a>.</p>
-<p>c) Open your terminal and enter <code>cd</code> just to make sure that you&rsquo;re in your home directory at that instant.</p>
-<p>d) Start Docker-desktop by entering &lsquo;systemctl start docker&rsquo;</p>
-<p>e) Clone the synbiohub-docker repo using the following command :</p>
-<p><code>git clone https://github.com/synbiohub/synbiohub-docker</code>.</p>
-<p>f) Start a synbiohub instance with <code>docker-compose --file ./synbiohub-docker/docker-compose.yml up</code> or you may follow the alternate method, i.e using SBOL explorer. For installing SynBioHub through SBOL explorer use the following commands:-</p>
-<p><code>sysctl -w vm.max_map_count=262144</code></p>
-<p><code>docker-compose --file ./synbiohub-docker/docker-compose.yml --file ./synbiohub-docker/docker-compose.explorer.yml up</code>.</p>
-<p>g) In your browser search for localhost:7777 and it&rsquo;ll take you to a setup page when you&rsquo;ll run it for the very first time.</p>
-<p>(If in any case while installing SynBioHub locally onto your system, you face permission errors, just include sudo before every statement)</p>
 <h3 id="general">General</h3>
 <p>The docker-compose files in this repository represent various configurations for deploying SynBioHub.
 The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docker.com/compose/reference/overview/#specifying-multiple-compose-file">multiple file</a> capabilities.</p>
 <p>The base configuration, described with <code>docker-compose.yml</code>, is simply SynBioHub, its graph database Virtuoso, and an autohealer.</p>
 <p>To run the base configuration:</p>
 <ol>
-<li>Open terminal</li>
-<li><code>git clone https://github.com/synbiohub/synbiohub-docker</code></li>
-<li><code>docker-compose --f ./synbiohub-docker/docker-compose.yml up</code></li>
+<li>Before trying to run SynBioHub locally on your PC, Make sure that you&rsquo;ve Git and Docker installed.</li>
 </ol>
-<h3 id="with-explorer">With Explorer</h3>
-<p>To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 3 run <code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up</code></p>
+<ul>
+<li>
+<p>Git:-</p>
+<p>For MacOS, click <a href="https://git-scm.com/download/mac">here</a>.</p>
+<p>For Windows OS, click <a href="https://git-scm.com/download/win">here</a></p>
+<p>For Linux/Unix OS, click <a href="https://git-scm.com/download/linux">here</a>.</p>
+</li>
+<li>
+<p>Docker:-</p>
+<p>For MacOS, click <a href="https://docs.docker.com/docker-for-mac/install/">here</a>.</p>
+<p>For Windows OS, click <a href="https://docs.docker.com/docker-for-windows/install/">here</a>.</p>
+<p>For Linux OS, click <a href="https://docs.docker.com/engine/install/">here</a>.</p>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>Open the terminal/cmd.</p>
+</li>
+<li>
+<p>Navigate to the directory where you want to install SynBioHub.</p>
+</li>
+<li>
+<p>Subsequently, enter the following command into your terminal:</p>
+<p><code>git clone https://github.com/synbiohub/synbiohub-docker</code></p>
+</li>
+<li>
+<p>Then, enter the follwoing commands to start the local instance of SynBioHub:</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>For Mac/Linux/Unix: There are 2 ways of running the local instance of SynBioHub for these Operating Systems. They&rsquo;re stated as follows:</p>
+<p>1st Method:-</p>
+<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml up</code></p>
+<p>2nd Method:-</p>
+<p><code>sysctl -w vm.max_map_count=262144</code></p>
+<p><code>docker-compose --file ./synbiohub-docker/docker-compose.yml --file ./synbiohub-docker/docker-compose.explorer.yml up</code>.</p>
+</li>
+<li>
+<p>For Windows OS:</p>
+</li>
+</ul>
+<ol start="5">
+<li>
+<p>In your browser search for localhost:7777 and it&rsquo;ll take you to a setup page when you&rsquo;ll run it for the very first time.</p>
+<p>In case of Linux OS, if you face any permission errors, then simple insert <strong>sudo</strong> before every statement.</p>
+</li>
+</ol>
+<h3 id="with-sbolexplorer">With SBOLExplorer</h3>
+<p>To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 3 run the following command:</p>
+<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up</code></p>
 <h3 id="with-plugins">With Plugins</h3>
-<p>To add plugins to the configuration change step 3 to: <code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
+<p>To add plugins to the configuration, change the command mentioned in step 3 to:</p>
+<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
 <p>Note that all plugins are added before the <code>up</code> and each is preceeded by <code>-f </code>. For example, to run the configuration with the VisualIgem plugins and the VisualSeqviz plugin run:</p>
 <p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.pluginVisualIgem.yml -f ./synbiohub-docker/docker-compose.pluginVisualSeqviz.yml up</code></p>
-<h3 id="with-developmental-synbiohub">With Developmental SynBioHub</h3>
-<p>The <code>docker-compose.version.yml</code> can be added to another configuration, and simply contains the latest version of the SynBioHub docker image.
-This version does not even contain the Virtuoso image, so it should only be used by someone who knows what they are doing.</p>
 <h2 id="plugins">Plugins</h2>
-<p>The table has been moved to the plugins section.</p>
+<p>The sortable plugins table can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
 <h2 id="from-source">From Source</h2>
 <p>Follow the instructions on the following <a href="https://github.com/synbiohub/synbiohub">GitHub README</a> to install SynBioHub locally onto your system.</p>
-<h2 id="nginx-configuration">NGINX configuration</h2>
-<p>Instructions for managing nginx server blocks can be found <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04#step-three-create-server-block-files-for-each-domain">here</a>.</p>
-<p>The server block for a SynBioHub installation listening on port 7777 is to the right</p>
-<pre><code>client_max_body_size 800m;
-proxy_connect_timeout 6000;
-proxy_send_timeout 6000;
-proxy_read_timeout 6000;
-send_timeout 6000;
-server {
-        listen 80;
-        server_name _;
-
-        location / {
-                proxy_set_header X-Real-IP  $remote_addr;
-                proxy_set_header X-Forwarded-Server $host;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header Host $host;
-                proxy_pass http://127.0.0.1:7777$request_uri;
-        }
-}
-</code></pre><p>This is most useful when you would like to host SynBioHub on a subdomain alongside other content (using nginx as an HTTP proxy) or using HTTPS.</p>
 
 
     
