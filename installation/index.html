@@ -177,15 +177,12 @@ The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docke
 </ol>
 <h3 id="with-sbolexplorer">With SBOLExplorer</h3>
 <p>To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 3 run the following command:</p>
-<pre><code>`docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up`
-</code></pre>
+<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up</code></p>
 <h3 id="with-plugins">With Plugins</h3>
 <p>To add plugins to the configuration, change the command mentioned in step 3 to:</p>
-<pre><code>`docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up`
-</code></pre>
+<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
 <p>Note that all plugins are added before the <code>up</code> and each is preceeded by <code>-f </code>. For example, to run the configuration with the VisualIgem plugins and the VisualSeqviz plugin run:</p>
-<pre><code>`docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.pluginVisualIgem.yml -f ./synbiohub-docker/docker-compose.pluginVisualSeqviz.yml up`
-</code></pre>
+<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.pluginVisualIgem.yml -f ./synbiohub-docker/docker-compose.pluginVisualSeqviz.yml up</code></p>
 <h2 id="plugins">Plugins</h2>
 <p>The sortable plugins table can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
 <h2 id="from-source">From Source</h2>
