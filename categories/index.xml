@@ -6,10 +6,6 @@
     <description>Recent content in Categories on SynBioHub-Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© SynBioHub 2020</copyright>
-    
-	<atom:link href="https://synbiohub.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>© SynBioHub 2020</copyright><atom:link href="https://synbiohub.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
