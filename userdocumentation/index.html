@@ -96,18 +96,18 @@
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
 	<nav id="TableOfContents">
   <ul>
-    <li><a href="#1-registering--updating-your-account">1. Registering &amp; Updating your account</a>
+    <li><a href="#1-searching-for-information">1. Searching for Information</a>
       <ul>
-        <li><a href="#11-registering-your-account">1.1 Registering your Account</a></li>
-        <li><a href="#12-updating-your-account">1.2 Updating your Account</a></li>
+        <li><a href="#11-searching-using-keywords">1.1 Searching using keywords</a></li>
+        <li><a href="#12-sequence-search">1.2 Sequence Search</a></li>
+        <li><a href="#13-advanced-search">1.3 Advanced Search</a></li>
+        <li><a href="#14-sparql-search">1.4 SPARQL Search</a></li>
       </ul>
     </li>
-    <li><a href="#2-searching-for-information">2. Searching for Information</a>
+    <li><a href="#2-registering--updating-an-account">2. Registering &amp; Updating an account</a>
       <ul>
-        <li><a href="#21-searching-with-the-help-of-keywords">2.1 Searching with the help of Keywords</a></li>
-        <li><a href="#22-sequence-search">2.2 Sequence Search</a></li>
-        <li><a href="#23-advanced-search">2.3 Advanced Search</a></li>
-        <li><a href="#24-sparql-search">2.4 SPARQL Search</a></li>
+        <li><a href="#21-registering-an-account">2.1 Registering an account</a></li>
+        <li><a href="#22-updating-an-account">2.2 Updating an Account</a></li>
       </ul>
     </li>
     <li><a href="#3-viewing--downloading-the-information">3. Viewing &amp; Downloading the Information</a>
@@ -139,118 +139,151 @@
 
 <h1>User Documentation</h1>
 
-<p>This section contains instructions on how you can implement various operations ranging from Registering onto SynBioHub to uploading your genetic designs on SynBioHub, by using the User Interface of SynBiohub. The Sub-sections are as follows:</p>
-<h2 id="1-registering--updating-your-account">1. Registering &amp; Updating your account</h2>
-<h3 id="11-registering-your-account">1.1 Registering your Account</h3>
-<p>Following Steps need to be followed for registering onto SynBioHub:</p>
+<p>This section contains instructions on how you can implement various operations ranging from registering onto SynBioHub to uploading your genetic designs on SynBioHub, by using the user interface of SynBiohub. The sub-sections are as follows:</p>
+<h2 id="1-searching-for-information">1. Searching for Information</h2>
+<h3 id="11-searching-using-keywords">1.1 Searching using keywords</h3>
+<p>To search amongst various resources, follow these steps:</p>
 <ol>
 <li>
-<p>Go to <a href="https://synbiohub.org/">SynBioHub</a>.</p>
+<p>Navigate to SynBioHub&rsquo;s home page.</p>
 </li>
 <li>
-<p>Click on the <strong>Login or Register</strong> option on the top Right Hand Side of your Screen.</p>
+<p>In the search box, enter the keywords for the resource you want to search for and click on the search button.</p>
 </li>
 <li>
-<p>Enter the following details to complete your registration process: Full Name, Affiliation(Optional), Email Address, Username &amp; the password.</p>
+<p>Subsequently, a list of resources matching the keywords that you&rsquo;ve entered shall appear on your screen.</p>
 </li>
 <li>
-<p>When you need to login into your SynBioHub Account, click on the &ldquo;Login or Register&rdquo; option. Then you need to enter your Email Address and your password to Access your account.</p>
+<p>Select the desired resource from the list.</p>
 </li>
 </ol>
-<h3 id="12-updating-your-account">1.2 Updating your Account</h3>
-<p>If you ever need to update your Account, the following steps need to be followed:</p>
+<h3 id="12-sequence-search">1.2 Sequence Search</h3>
+<p>To search using a sequence, follow these steps:</p>
 <ol>
 <li>
-<p>You need to be logged in to perform the updation, so follow the previous set of steps to login, if you aren&rsquo;t logged in to your account.</p>
+<p>Navigate to SynBioHub&rsquo;s home page.</p>
 </li>
 <li>
-<p>Then, click on the <strong>Profile</strong> option. It&rsquo;ll redirect you onto a page, which contains your profile.</p>
+<p>Click on the <em>search</em> option. It&rsquo;ll direct you to a page containing a list of resources.</p>
 </li>
 <li>
-<p>On this page, update whichever section you want to, and the click on the <strong>Save</strong> option at the bottom to successfully update your profile.</p>
+<p>Located just below the search box are the various means through which you can search for the desired resources. In this case, click on <em>sequence search</em>.</p>
+</li>
+<li>
+<p>Enter the sequence or upload a <em>FASTA/FASTQ</em> file, by clicking the choose file option just below the box. This shall search only for exact matches of the sequence. Your entry must be the first key/value pair. To know more about about FASTA files, click <a href="https://en.wikipedia.org/wikiFASTA_format#:~:text=In%20bioinformatics%20and%20biochemistry%2C%20the,comments%20to%20precede%20the%20sequences">here</a>.</p>
+</li>
+<li>
+<p>Then, you can choose the perspective of your search. You can perform a <strong>global</strong> search or an <strong>exact</strong> search. The exact search shall display, those resources which are really close to the sequences that you&rsquo;ve entered and the global search search will display those results which have even the smallest of the similarities to the sequence that you&rsquo;ve entered.</p>
+</li>
+<li>
+<p>Subsequently, you may customise the number of results, the value for which must not exceed 10,000. Then you need to enter the minimum and the maximum length of the sequence for which you want to search for. Values for both of these parameters should not exceed 100,000.</p>
+</li>
+<li>
+<p>Then, you need to enter the maximum number of non-matching target sequences, that are to be considered before the search is halted. This option works in pair with the flag above. The search process sorts the target sequences by decreasing number of k-mers they have in common with the query sequence, using that information as a proxy for sequence similarity. After pairwise alignments, if none of the first x examined target sequences pass the acceptation criteria, the search process stops for that query (no hit). If this flag is set to a higher value, more target sequences are considered. If the flag above and this flag are both set to 0, the complete database is searched.</p>
+</li>
+<li>
+<p>Fill up the <em>percentage match</em>, by entering a value between 0 &amp; 1. This depicts the percentage that you want the result to match your query.</p>
+</li>
+<li>
+<p>Finally, select the <em>pairwise identity definition</em>. You may select the value for this attribute from the following options:</p>
 </li>
 </ol>
-<h2 id="2-searching-for-information">2. Searching for Information</h2>
-<h3 id="21-searching-with-the-help-of-keywords">2.1 Searching with the help of Keywords</h3>
-<p>To Search amongst various Designs and Collections, follow these steps:</p>
-<ol>
-<li>
-<p>Go to SynBioHub&rsquo;s <a href="https://synbiohub.org/">Home Page</a>.</p>
-</li>
-<li>
-<p>In the Search box, enter the Keywords for the design you want to search for and click on the search button.</p>
-</li>
-<li>
-<p>Subsequently, a list of results matching the keywords that you&rsquo;ve entered shall appear on your screen.</p>
-</li>
-<li>
-<p>Select the desired Collection/Design from the list.</p>
-</li>
-</ol>
-<h3 id="22-sequence-search">2.2 Sequence Search</h3>
-<p>To Search using a Sequence, follow these steps:</p>
-<ol>
-<li>
-<p>Click on the <em>Sequence Search</em> option, available right below the Search Box, which appears after you search for a keyword.</p>
-</li>
-<li>
-<p>Enter the Sequence in the box given at the top or upload a <em>FASTA/FASTQ</em> file, by clicking the choose file option just below the box.</p>
-</li>
-<li>
-<p>Then, choose the type of <em>Search method</em> from <strong>Global</strong> or <strong>Exact</strong>.</p>
-</li>
-<li>
-<p>Subsequently, customise the <em>Number of Results</em>, <em>Minimum length of the Sequence</em> &amp; the <em>Maximum length of the Sequence</em>.</p>
-</li>
-<li>
-<p>Then, set the value for <em>Number of failed hits</em> before stopping. To understand its significance, hover the pointer over the info button to its immediate right.</p>
-</li>
-<li>
-<p>Fill up the <em>percentage match</em>, by entering a value between 0 &amp; 1.</p>
-</li>
-<li>
-<p>Finally, select the <em>Pairwise Identity definition</em>. To understand its significance, hover the pointer over the info button to its immediate right.</p>
-</li>
-</ol>
-<h3 id="23-advanced-search">2.3 Advanced Search</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>Edits distance excluding the terminal gaps</td>
+</tr>
+<tr>
+<td>CD-HIT definition</td>
+<td>Considers the following ratio: (matching columns) / (shortest sequence length)</td>
+</tr>
+<tr>
+<td>Marine Biological Lab definition</td>
+<td>counts each gap opening (internal or terminal) as a single mismatch, whether or not the gap was extended: 1.0 - [(mismatches + gap openings)/(longest sequence length)]</td>
+</tr>
+<tr>
+<td>BLAST Definition</td>
+<td>equivalent to edit distance for global pairwise alignments</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-advanced-search">1.3 Advanced Search</h3>
 <p>To perform an Advanced Search, follow these steps:</p>
 <ol>
 <li>
-<p>Click on <em>Advanced Search</em> option, available right below the Search Box, which appears after you search for a keyword.</p>
+<p>Navigate to SynBioHub&rsquo;s home page.</p>
 </li>
 <li>
-<p>Now, select the <em>Object Type</em> &amp; <em>Creator</em> for the design you want to search for.</p>
+<p>Click on the <em>search</em> option. It&rsquo;ll direct you to a page containing a list of resources.</p>
 </li>
 <li>
-<p>Then, fill up the <em>Created After</em> &amp; the <em>Created Before</em> options.</p>
+<p>Located just below the search box are the various means through which you can search for the desired resources. In this case, click on <em>advanced search</em>.</p>
 </li>
 <li>
-<p>Also, fill up the <em>Modified After</em> &amp; the <em>Modified Before</em> options.</p>
+<p>Now, select the type of the resource you want to search for i.e, a collection, design, activity or a sequence.</p>
 </li>
 <li>
-<p>Fill up an ID/Name/Description for the design you want to search for.</p>
+<p>Then, select the username of the design&rsquo;s creator.</p>
 </li>
 <li>
-<p>Select it&rsquo;s <em>type</em> as well as the <em>role</em> from the dropdown.</p>
+<p>Enter the timeframe between which the resource was created, by entering the <em>created after</em> and <em>created before</em> attributes. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format.</p>
 </li>
 <li>
-<p>Also, try to select some <em>collections</em>, that you think that design might be a part of.</p>
+<p>If the resource has been modified, make sure to enter the <em>modified after</em> and <em>modified before</em> attributes as well. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format.</p>
 </li>
 <li>
-<p>You may apply customized filters for the design you want to search for. For that purpose, a few blank filtering columns have been provided.</p>
+<p>Enter the ID or the name or the description of the resource, which you want to search for.</p>
+</li>
+<li>
+<p>Select the <em>type</em> of the resource, from the following available options in the dropdown menu:</p>
 </li>
 </ol>
-<h3 id="24-sparql-search">2.4 SPARQL Search</h3>
+<ul>
+<li>
+<p>No filter</p>
+</li>
+<li>
+<p>biopax:Complex</p>
+</li>
+<li>
+<p>biopax:DnaRegion</p>
+</li>
+<li>
+<p>biopax:Protein</p>
+</li>
+<li>
+<p>so:circular</p>
+<p>Subsequently, select the <em>role</em> of the resource from this dropdown menu. It contains various sub-categories of igem or 	SO.
+To learn more about <strong>igem</strong>, visit <a href="https://igem.org/Main_Page">this page</a> and for <strong>SO</strong>, visit <a href="http://www.sequenceontology.org/miso/current_release/term/SO:0000316">this page</a></p>
+</li>
+</ul>
+<ol start="10">
+<li>
+<p>You may select any number of collections, based on your convenience. To select a collection, click on the value attribute of collection and select it from the drop down menu.</p>
+</li>
+<li>
+<p>You may apply customised filters for the design you want to search for. For that purpose, a few blank filtering columns have been provided.
+As soon as you&rsquo;ll click on an empty filter, a drop down menu shall appear having various parameters for filtering. Select your preference, and then click on filter. This shall reload the page and then select the value of the filter, from the drop down on the right hand side. You may provide as many as 5 customised filters which&rsquo;er optional.</p>
+</li>
+</ol>
+<h3 id="14-sparql-search">1.4 SPARQL Search</h3>
 <p>To perform a SPARQL Search, the following steps should be followed:</p>
 <ol>
 <li>
-<p>Go to SynBioHub&rsquo;s <a href="https://synbiohub.org/sparql">SPARQL Search Page</a>.</p>
+<p>Navigate to SynBioHub&rsquo;s <a href="https://synbiohub.org/sparql">SPARQL Search Page</a>.</p>
 </li>
 <li>
 <p>Since, SPARQL is a query language, hence it&rsquo;ll query Synbiohub&rsquo;s databases for the designs that you&rsquo;re looking for.</p>
 </li>
 <li>
-<p>You need to provide a <strong>SELECT</strong> statement, the syntax for which is as follows:</p>
+<p>Following is an example how a sample SPARQL query is written:</p>
 </li>
 </ol>
 <pre><code>  SELECT  # makes up the headers of the table
@@ -281,23 +314,321 @@
 
 	 OPTIONAL {?def dcterms:title ?title} 
   }
-</code></pre><p><em>In the previous section, we&rsquo;ve discussed the case of searching for SBOL components. Therefore, if you want to search for other types of designs, just replace SBOL with your prefered type.</em></p>
-<h2 id="3-viewing--downloading-the-information">3. Viewing &amp; Downloading the Information</h2>
-<h3 id="31-viewing-the-information">3.1 Viewing the Information</h3>
+</code></pre><p><em>The query selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your prefered type.</em></p>
+<p>To learn more about SPARQL, visit <a href="https://www.w3.org/TR/sparql11-query/">this page</a>.</p>
+<h2 id="2-registering--updating-an-account">2. Registering &amp; Updating an account</h2>
+<h3 id="21-registering-an-account">2.1 Registering an account</h3>
+<p>Following Steps need to be followed for registering onto SynBioHub:</p>
 <ol>
 <li>
-<p>Go to <a href="https://synbiohub.org/">SynBioHub&rsquo;s home page</a>.</p>
+<p>Navigate to SynBioHub&rsquo;s home page.</p>
 </li>
 <li>
-<p>Search for the design or click on <em>browse the collections</em>.</p>
+<p>Click on the <strong>Login or Register</strong> option on the top right hand side of your Screen.</p>
 </li>
 <li>
-<p>In case of collections, you can search and view the various designs under each respective collection. Also, several other details such as references, attachments, &amp; various other properties can be viewed.</p>
-</li>
-<li>
-<p>In the case of designs, select the design for which you want to view the Information. Similar to collections, you can view the various details such as references, functional components, interactions, the collection to which this design belongs to, attachments and various other properties.</p>
+<p>Enter the following details to complete your registration process:</p>
 </li>
 </ol>
+<ul>
+<li>
+<p>Full Name,</p>
+</li>
+<li>
+<p>Affiliation(Optional),</p>
+</li>
+<li>
+<p>Email Address,</p>
+</li>
+<li>
+<p>Username &amp;</p>
+</li>
+<li>
+<p>Password</p>
+</li>
+</ul>
+<ol start="4">
+<li>When you need to login into your SynBioHub account, click on the &ldquo;login or Register&rdquo; option. Then you need to enter your email address and your password to access your account.</li>
+</ol>
+<h3 id="22-updating-an-account">2.2 Updating an Account</h3>
+<p>If you ever need to update your account, the following steps need to be followed:</p>
+<ol>
+<li>
+<p>You need to be logged in order to update your account. Follow the previous set of steps to login, if you aren&rsquo;t logged in to your account.</p>
+</li>
+<li>
+<p>Then, click on the <strong>profile</strong> option. It&rsquo;ll redirect you onto a page, which contains your profile.</p>
+</li>
+<li>
+<p>On this page, update whichever section you want to, and then click on the <strong>save</strong> option at the bottom to successfully update your profile.</p>
+</li>
+</ol>
+<h2 id="3-viewing--downloading-the-information">3. Viewing &amp; Downloading the Information</h2>
+<h3 id="31-viewing-the-information">3.1 Viewing the Information</h3>
+<p>There are various types of resources on SynBioHub. They&rsquo;ve been divided into the following sub-categories:</p>
+<h4 id="311-viewing-a-collection">3.1.1 Viewing a collection</h4>
+<ol>
+<li>
+<p>Navigate to SynBioHub&rsquo;s home page.</p>
+</li>
+<li>
+<p>Then, you can search for a specific collection or select <strong>browse the collections</strong> option. It&rsquo;ll direct you to a set of collections based on what you&rsquo;ve searched for.</p>
+</li>
+<li>
+<p>Select the collection which you want to view.</p>
+</li>
+<li>
+<p>On the collection&rsquo;s home page, you&rsquo;ll be able to view to view the following parameters in this order:</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Name: Represents the name of the collection, which you want to view.</p>
+</li>
+<li>
+<p>ID and version: The next line represents the ID and the version of the collection. Every collection has a specific ID associated with it and a version which represents the number of times; it has been modified.</p>
+</li>
+<li>
+<p>Resource type: This represents the type of resource. For this section, it should be a <strong>collection</strong>.</p>
+</li>
+<li>
+<p>Created by: Displays the name of the collection&rsquo;s creator.</p>
+</li>
+<li>
+<p>Date created: Displays the date and time when the design was created.</p>
+</li>
+<li>
+<p>Subsequently, we have a brief description of the collection that is provided by the creator of the collection.</p>
+</li>
+<li>
+<p>Then, we&rsquo;ve got two clickable options, that are <strong>download</strong> and <strong>back</strong>. Back navigates you to the search page and the download option consists of the ways in which you can download the collection. They&rsquo;re as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SBOL</td>
+<td>The Synthetic Biology Open Language (SBOL) has been developed as a standard to support the         specification and exchange of biological design information in synthetic biology. To know more about SBOl, visit <a href="https://sbolstandard.org/datamodel-about/">this page</a></td>
+</tr>
+<tr>
+<td>Combine Archive</td>
+<td>A COMBINE archive is a single file containing the various documents (and in the future, references to documents), necessary for the description of a model and all associated data and procedures. This includes for instance, but not limited to, simulation experiment descriptions, all models needed to run the simulations and associated data files. The archive is encoded using the Open Modeling EXchange format (OMEX). To know more about Combine archive, visit <a href="http://co.mbine.org/documents/archive">this page</a>.</td>
+</tr>
+<tr>
+<td>Annotated Genbank</td>
+<td>GenBank format (GenBank Flat File Format) consists of an annotation section and a sequence section. The start of the annotation section is marked by a line beginning with the word &ldquo;LOCUS&rdquo;. The start of sequence section is marked by a line beginning with the word &ldquo;ORIGIN&rdquo; and the end of the section is marked by a line with only &ldquo;//&rdquo; To know more about Annotated genbank format, visit <a href="http://quma.cdb.riken.jp/help/gbHelp.html">this page</a>,</td>
+</tr>
+<tr>
+<td>Annotated Plasmid Map</td>
+<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://en.wikipedia.org/wiki/Plasmid">this page</a></td>
+</tr>
+<tr>
+<td>Plasmid map</td>
+<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://www.snapgene.com/resources/plasmid-files/">this page</a>.</td>
+</tr>
+<tr>
+<td>Annotated zip</td>
+<td>ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed. To know more about zip, visit <a href="https://en.wikipedia.org/wiki/Zip_(file_format)">this page</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>Then, you can view the members of that specific collection. There is also an option to filter the members. Click on the option to filter, and a drop down menu shall appear. You may choose the filters based on your convenience. There is also an option to search for a specific member of the collection by entering the name or ID of the member into the search box and clicking search. You may also choose the number of entries that you want to display on that page.
+The list of members is sortable and can be sorted on the basis of name, identifier, type as well as description.
+The list consists of the name, identifier, type as well as description of respective the members.</p>
+</li>
+<li>
+<p>You can also view details about that specific collection, in the next section. This section contains references as well as citations.</p>
+</li>
+<li>
+<p>Subsequently, you can also view various other properties concerning a particular collection. This specifically conatains information about the various owners of that collection.</p>
+</li>
+<li>
+<p>Finally, you can also view the various attachments that are there in that particular collection.</p>
+</li>
+</ul>
+<h4 id="312-viewing-an-engineered-regionpromoteractivator">3.1.2 Viewing an Engineered Region/Promoter/Activator</h4>
+<ol>
+<li>
+<p>Navigate to SynBioHub&rsquo;s home page.</p>
+</li>
+<li>
+<p>Then, you can search for a specific collection or select <strong>browse the collections</strong> option. It&rsquo;ll direct you to a set of collections based on what you&rsquo;ve searched for.</p>
+</li>
+<li>
+<p>Select the collection which you want to view. Then it&rsquo;ll direct you to the collection&rsquo;s home page. You can select the engineered region, which you want to view.</p>
+</li>
+<li>
+<p>On the engineered region&rsquo;s page, you&rsquo;ll be able to view to view the following parameters in this order:</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Name: Represents the name of that particular engineered region.</p>
+</li>
+<li>
+<p>ID and version: The next line represents the ID and the version of that engineered region. Every engineered region has a specific ID associated with it and a version which represents the number of time; it has been modified.</p>
+</li>
+<li>
+<p>Generated from: Represents the source from where that engineered design had been generated from.</p>
+</li>
+<li>
+<p>Then, we&rsquo;ve got five clickable options, that are:</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>Download</strong></p>
+</li>
+<li>
+<p><strong>Search</strong>,</p>
+</li>
+<li>
+<p><strong>Share</strong>,</p>
+</li>
+<li>
+<p><strong>Back</strong></p>
+</li>
+<li>
+<p><strong>Add to a collection</strong></p>
+</li>
+</ol>
+<p>The download option consists of the ways in which you can download the collection. They&rsquo;re as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SBOL</td>
+<td>The Synthetic Biology Open Language (SBOL) has been developed as a standard to support the         specification and exchange of biological design information in synthetic biology. To know more about SBOl, visit <a href="https://sbolstandard.org/datamodel-about/">this page</a></td>
+</tr>
+<tr>
+<td>Combine Archive</td>
+<td>A COMBINE archive is a single file containing the various documents (and in the future, references to documents), necessary for the description of a model and all associated data and procedures. This includes for instance, but not limited to, simulation experiment descriptions, all models needed to run the simulations and associated data files. The archive is encoded using the Open Modeling EXchange format (OMEX). To know more about Combine archive, visit <a href="http://co.mbine.org/documents/archive">this page</a>.</td>
+</tr>
+<tr>
+<td>Annotated Genbank</td>
+<td>GenBank format (GenBank Flat File Format) consists of an annotation section and a sequence section. The start of the annotation section is marked by a line beginning with the word &ldquo;LOCUS&rdquo;. The start of sequence section is marked by a line beginning with the word &ldquo;ORIGIN&rdquo; and the end of the section is marked by a line with only &ldquo;//&rdquo; To know more about Annotated genbank format, visit <a href="http://quma.cdb.riken.jp/help/gbHelp.html">this page</a>,</td>
+</tr>
+<tr>
+<td>Annotated Plasmid Map</td>
+<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://en.wikipedia.org/wiki/Plasmid">this page</a></td>
+</tr>
+<tr>
+<td>Plasmid map</td>
+<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://www.snapgene.com/resources/plasmid-files/">this page</a>.</td>
+</tr>
+<tr>
+<td>Annotated zip</td>
+<td>ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed. To know more about zip, visit <a href="https://en.wikipedia.org/wiki/Zip_(file_format)">this page</a></td>
+</tr>
+<tr>
+<td>GFF3</td>
+<td>The GFF (General Feature Format) format consists of one line per feature, each containing 9 columns of data, plus optional track definition lines. To know more about GFF3, click <a href="http://asia.ensembl.org/info/website/upload/gff3.html">here</a>.</td>
+</tr>
+<tr>
+<td>FASTA</td>
+<td>In bioinformatics and biochemistry, the FASTA format is a text-based format for representing either nucleotide sequences or amino acid (protein) sequences, in which nucleotides or amino acids are represented using single-letter codes. The format also allows for sequence names and comments to precede the sequences. The format originates from the FASTA software package, but has now become a near universal standard in the field of bioinformatics. To know more about FATSA file format, click <a href="https://en.wikipedia.org/wiki/FASTA_format">here</a></td>
+</tr>
+<tr>
+<td>Image</td>
+<td>An image is an artifact that depicts visual perception, such as a photograph or other two-dimensional picture, that resembles a subject—usually a physical object—and thus provides a depiction of it. In the context of signal processing, an image is a distributed amplitude of color(s). A pictorial script is a writing system that employs images as symbols for various semantic entities, rather than the abstract signs used by alphabets</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Then is the <strong>search</strong> option. There are three ways you can use the search option. They&rsquo;re as follows:</p>
+<ol>
+<li>
+<p>Find Uses: This returns any other object that refers to this object that the user has given as an input, for example, if this is an engineered region, then it will return all other components that use this as a sub-component.</p>
+</li>
+<li>
+<p>Find Twins:  This returns other components, if and only if they have the same sequence as the input by the user.</p>
+</li>
+<li>
+<p>Find Similar: This returns other components that have similar sequences.</p>
+</li>
+</ol>
+<p>The third option is that of <strong>sharing</strong> your engineered region. There are 2 ways by which you can share your engineered region. They&rsquo;re as follows:</p>
+<ol>
+<li>
+<p>Send to Benchling: For using Benchling to share your engineered region, you need to configure a Benchling remote. The Benchling Life Sciences R&amp;D Cloud is an informatics platform to accelerate, measure, and forecast R&amp;D from discovery through bioprocessing. To know more about Benchling and how you can configure a benching remote, click <a href="https://www.benchling.com/">here</a>.</p>
+</li>
+<li>
+<p>Send to ICE: ICE is a registry platform that provides robust data storage for DNA components, integrated tools for part characterization, as well as mechanisms for secure access and information sharing with other users and software tools.
+ICE is built upon the idea of a Web of Registries, and thus provides strong support for distributed, interconnected use. It includes several useful graphical applications for sequence annotation, manipulation and analysis. To know more about ICE, click <a href="https://public-registry.jbei.org/login">here</a>.</p>
+</li>
+</ol>
+<p>Fourth is the <strong>back</strong> option. This option navigates back to the main page of the collection, which this engineered region is a part of.</p>
+<p>Finally, we have the <strong>Add to collection</strong> option. This option adds your engineered region to a specific collection. Clicking on this option, would take you to a page that shall display the collections, that you would&rsquo;ve created. Select the collection, to which you want to add this engineered region to and then click on add to collection. This shall add your engineered region to the selected collection.</p>
+<ul>
+<li>
+<p>Next we have is the VisBOL Navigator, with zooming capabilities. This, graphically represents the structure of the engineered region. By hovering your pointer over this structure, you can view the following attributes of that particular engineered region: type of resource, identifier, name and role of the engineered region.</p>
+</li>
+<li>
+<p>Then we have the details of that engineered region. This consists of the following:</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Type: This specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design. To know more about Type, click <a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">here</a>.</p>
+</li>
+<li>
+<p>Role: Clarifies the potential function of an entity in a biochemical or physical context. When it is used for ComponentDefinitions, it MUST identify terms from ontologies that are consistent with the types property of the ComponentDefinition.To know more about role, click <a href="https://dissys.github.io/sbol-owl/sbol-owl.html#role">here</a>.</p>
+</li>
+<li>
+<p>Sequence: The purpose of the Sequence class is to represent the primary structure of a ComponentDefinition object and the manner in which it is encoded. This representation is accomplished by means of the elements property and encoding property. To know more about Sequences, click <a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Sequence">here</a>.</p>
+</li>
+<li>
+<p>Also, you can view reference as well as citations.</p>
+</li>
+</ol>
+<ul>
+<li>Then, we have the section named, <strong>other properties</strong>. This consists of the following attributes:</li>
+</ul>
+<ol>
+<li>
+<p>Ontology for Biomedical Investigations(OBI): A centrally registered identifier symbol used to uniquely identify objects given by International DOI Foundation. The DOI system is particularly used for electronic documents such as journal articles. To know more about OBI, click <a href="http://www.ontobee.org/ontology/OBI?iri=http://purl.obolibrary.org/obo/OBI_0002110">here</a>.</p>
+</li>
+<li>
+<p>data_1179</p>
+</li>
+<li>
+<p>SynBioHub#Owned_by: Username of the design owner.</p>
+</li>
+<li>
+<p>SynBioHub#TopLevel</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Subsequently, we have the section titled as, <strong>Member of these collections</strong>. This section contains the list of collection&rsquo;s to which that particular engineered design belongs to.</p>
+</li>
+<li>
+<p>Then, we have the <strong>attachments</strong> page. In this section, you can view the various attachments, of an engineered region.</p>
+</li>
+<li>
+<p>The next 3 sections are igem main page, Igem design page and the experience page.</p>
+</li>
+<li>
+<p>Then is the section that contains, <strong>Sequence Visualisation</strong> of the engineered region.</p>
+</li>
+<li>
+<p>Finally, we have the component Sankey and component bar.</p>
+</li>
+</ul>
 <h3 id="32-downloading-the-information">3.2 Downloading the Information</h3>
 <ol>
 <li>
