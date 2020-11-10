@@ -104,48 +104,21 @@
     <li><a href="#2-how-do-they-work">2. How do they work?</a>
       <ul>
         <li><a href="#21-overview">2.1 Overview</a></li>
-      </ul>
-    </li>
-    <li><a href="#22-installation">2.2 Installation</a>
-      <ul>
-        <li><a href="#221-using-synbiohub">2.2.1 Using SynBioHub</a></li>
-        <li><a href="#222-using-a-standalone-docker-container">2.2.2 Using a Standalone Docker Container</a></li>
-        <li><a href="#223-using-standalone-methods">2.2.3 Using Standalone methods</a></li>
+        <li><a href="#22-installation">2.2 Installation</a></li>
       </ul>
     </li>
     <li><a href="#3-writing-plugins">3. Writing Plugins</a>
       <ul>
         <li><a href="#31-naming-convention">3.1 Naming convention</a></li>
+        <li><a href="#32-basic-structure">3.2 Basic structure</a></li>
+        <li><a href="#33-submit">3.3 Submit</a></li>
+        <li><a href="#34-download">3.4 Download</a></li>
+        <li><a href="#35-writing-an-app-by-copying-the-examples">3.5 Writing an app by copying the examples</a></li>
       </ul>
     </li>
-    <li><a href="#32-basic-structure">3.2 Basic structure</a>
+    <li><a href="#4-using-a-virtual-environment">4. Using a Virtual Environment</a>
       <ul>
-        <li><a href="#321-visual">3.2.1 Visual</a></li>
-      </ul>
-    </li>
-    <li><a href="#33-submit">3.3 Submit</a>
-      <ul>
-        <li><a href="#331-status">3.3.1 Status</a></li>
-        <li><a href="#332-evaluate">3.3.2 Evaluate</a></li>
-        <li><a href="#333-run">3.3.3 Run</a></li>
-        <li><a href="#334-examples">3.3.4 Examples</a></li>
-      </ul>
-    </li>
-    <li><a href="#34-download">3.4 Download</a>
-      <ul>
-        <li><a href="#341-status">3.4.1 Status</a></li>
-        <li><a href="#342-evaluate">3.4.2 Evaluate</a></li>
-        <li><a href="#343-run">3.4.3 Run</a></li>
-        <li><a href="#334-examples-1">3.3.4 Examples</a></li>
-      </ul>
-    </li>
-    <li><a href="#35-writing-an-app-by-copying-the-examples">3.5 Writing an app by copying the examples</a></li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#41-for-anaconda">4.1 For Anaconda:</a></li>
+        <li><a href="#41-for-anaconda">4.1 For Anaconda</a></li>
       </ul>
     </li>
     <li><a href="#5-without-a-virtual-environment">5. Without a Virtual Environment</a></li>
@@ -156,14 +129,11 @@
         <li><a href="#81-simple-overview-of-docker">8.1 Simple overview of docker</a></li>
         <li><a href="#82--idea-of-architecture">8.2  Idea of architecture:</a></li>
         <li><a href="#83-steps-for-dockerising-a-plugin">8.3 Steps for dockerising a plugin</a></li>
+        <li><a href="#84-useful-commands-for-docker-debug">8.4 Useful commands for docker debug</a></li>
       </ul>
     </li>
-    <li><a href="#84-useful-commands-for-docker-debug">8.4 Useful commands for docker debug</a>
-      <ul>
-        <li><a href="#9-genetic-logic-lab-synbiohub-plugins">9. Genetic Logic Lab Synbiohub plugins</a></li>
-        <li><a href="#10-plugins-table">10. Plugins-Table</a></li>
-      </ul>
-    </li>
+    <li><a href="#9-genetic-logic-lab-synbiohub-plugins">9. Genetic Logic Lab Synbiohub plugins</a></li>
+    <li><a href="#10-plugins-table">10. Plugins-Table</a></li>
   </ul>
 </nav>
 </div>
@@ -202,12 +172,12 @@
 <p>Note that plugins are asynchronous meaning that the full SynBioHub page can load without having to wait for the plugin to have returned the  results. Subsequently, when the results are returned SynBioHub substitutes the received information for the placeholder it had used when loading the page initially.</p>
 </li>
 </ul>
-<h2 id="22-installation">2.2 Installation</h2>
+<h3 id="22-installation">2.2 Installation</h3>
 <p>As the plugins are standalone servers &amp; they don&rsquo;t have to be used in conjunction with SynBioHub. Though plugins have been developed to interface directly with SynBioHub, it is possible to install them and then interact with them via the API (from the command line or via a GUI interface such as <a href="https://www.postman.com/">Postman</a>). Different methods of installation are discussed below. For those who&rsquo;re less-experienced with Programming, it is suggested that you should be using plugins with SynBioHub.</p>
-<h3 id="221-using-synbiohub">2.2.1 Using SynBioHub</h3>
+<h4 id="221-using-synbiohub">2.2.1 Using SynBioHub</h4>
 <p>A detailed explaination on how to install SynBioHub on various Operating Systems is written <a href="https://synbiohub.github.io/installation/">here</a>
 A full list of plugin file names and their descriptions can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
-<h4 id="2211-common-problems">2.2.1.1 Common problems</h4>
+<h5 id="2211-common-problems">2.2.1.1 Common problems</h5>
 <p>The most common problems that you may face while executing the commands mentioned above are as follows:-</p>
 <ol>
 <li>
@@ -218,7 +188,7 @@ If you now see the image(s) you were missing with the status ‘created’ it su
 <p>If you&rsquo;ve locally installed SynBioHub using the above commands it might cause issues in some plugins, that will receive urls that look like: <code>http://localhost:7777/xxxxxxx</code>. Localhost in docker containers refers to the container itself. The problem is explained further <a href="https://medium.com/it-dead-inside/docker-containers-and-localhost-cannot-assign-requested-address-6ac7bc0d042b">here</a>. On Linux this problem is solvable and the solution cab be found on <a href="https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container">stack overflow</a> and on <a href="https://docs.docker.com/network/host/">docker</a>.</p>
 </li>
 </ol>
-<h4 id="2212-adding-plugins-to-the-admin-panel">2.2.1.2 Adding plugins to the admin panel</h4>
+<h5 id="2212-adding-plugins-to-the-admin-panel">2.2.1.2 Adding plugins to the admin panel</h5>
 <p>After getting the plugins up and running you still have to add them to the admin panel in SynBioHub. Navigate to the plugin section of the admin panel. Choose the appropriate section i.e, rendering, submit, or download and give the plugin a descriptive name. Then in the url section there are several different options depending on exactly how the plugin was brought up:</p>
 <ul>
 <li>
@@ -235,7 +205,7 @@ Use <code>http://localhost:&lt;port&gt;/</code> e.g. <code>http://localhost:8093
 <p>If in the case that plugins are hosted elsewhere on a public server then simply use the url to access them e.g.: <a href="https://seqviz.synbiohub.org/">https://seqviz.synbiohub.org/</a> for the seqviz plugin (this method is also possible if you have named and exposed internal ports from your docker compose (this requires <a href="https://caddyserver.com/">caddy</a>).</p>
 </li>
 </ul>
-<h3 id="222-using-a-standalone-docker-container">2.2.2 Using a Standalone Docker Container</h3>
+<h4 id="222-using-a-standalone-docker-container">2.2.2 Using a Standalone Docker Container</h4>
 <p>If you just want to bring up the plugin as a stand-alone Docker container you can simply pull the image from docker hub.</p>
 <ul>
 <li>
@@ -247,16 +217,16 @@ Use <code>http://localhost:&lt;port&gt;/</code> e.g. <code>http://localhost:8093
 </ul>
 <p>e.g: <code>docker run --publish 8093:5000 --detach --name submit-plug synbiohub/plugin-submit-excel-library:snapshot</code> for the excel library submit plugin.
 It is suggested that the same publish ports are used when using docker compose. The list of those ports can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
-<h4 id="2221-common-problems">2.2.2.1 Common Problems</h4>
+<h5 id="2221-common-problems">2.2.2.1 Common Problems</h5>
 <p>The most common problems that you may face while executing the commands mentioned above are as follows:-</p>
 <ol>
 <li>Localhost:-  If the plugin is being run as a docker container that localhost may cause problems as localhost is considered within the container and won’t point to the localhost on your computer. The problem is explained further <a href="https://medium.com/it-dead-inside/docker-containers-and-localhost-cannot-assign-requested-address-6ac7bc0d042b">here</a>. On Linux this problem is solvable and solution can be found on [stack-overflow](<a href="https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container">https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container</a> and <a href="https://docs.docker.com/network/host/)">https://docs.docker.com/network/host/)</a>.</li>
 </ol>
-<h3 id="223-using-standalone-methods">2.2.3 Using Standalone methods</h3>
+<h4 id="223-using-standalone-methods">2.2.3 Using Standalone methods</h4>
 <p>Plugins can also be run without using docker. How this is done depends on the programming language and packages used to create the server. We&rsquo;ve provided the documentation for two of the most common server choices, i.e python using flask and javascript using express.</p>
-<h4 id="2231-python-flask-servers">2.2.3.1 Python Flask Servers</h4>
+<h5 id="2231-python-flask-servers">2.2.3.1 Python Flask Servers</h5>
 <p><strong>NOTE</strong>: You might have to add pandas to the requirements if you are running the plugins as standalone (this is not needed if you are running the plugin via docker since, we use a base image which contains pandas pre-installed as it is extremely difficult and highly buggy to install via docker on a python base image).</p>
-<h5 id="22311-for-anaconda">2.2.3.1.1 For Anaconda</h5>
+<h6 id="22311-for-anaconda">2.2.3.1.1 For Anaconda</h6>
 <ol>
 <li>Open the terminal</li>
 <li>Clone the repository for the plugin (For example:-  <code>git clone https://github.com/SynBioHub/Plugin-Submit-Excel-Library.git</code>)</li>
@@ -268,8 +238,8 @@ Now, open the anaconda prompt and carry out the rest of the commands in the anac
 <li>Finally, enter <code>flask run --port 5000</code> (the &ndash; port 5000 is optional instead of 5000 there any port numbercan be entered)</li>
 <li>The server should then be accessible at http://localhost:5000/status. Hence, open your browser an the enter<code>http://localhost:5000/status</code>.</li>
 </ol>
-<h5 id="22312-for-python">2.2.3.1.2 For Python</h5>
-<h6 id="223121-mac-oslinux">2.2.3.1.2.1 Mac OS/Linux</h6>
+<h6 id="22312-for-python">2.2.3.1.2 For Python</h6>
+<p>####### 2.2.3.1.2.1 Mac OS/Linux</p>
 <ol>
 <li>Open the terminal.</li>
 <li>Clone the repository using the command <code>git clone &lt;Repo-Link&gt;</code>(For Example:<code>git clone https://github.com/SynBioHub/Plugin-Submit-ExcelLibrary.git</code>)</li>
@@ -279,7 +249,7 @@ Now, open the anaconda prompt and carry out the rest of the commands in the anac
 <li>Finally to start flask, enter the following command: <code>flask run</code></li>
 <li>The server should then be accessible at http://localhost:5000/status. Hence open your browser and enter <code>http://localhost:5000/status</code></li>
 </ol>
-<h6 id="223122-windows-os">2.2.3.1.2.2 Windows OS</h6>
+<p>####### 2.2.3.1.2.2 Windows OS</p>
 <ol>
 <li>Open the terminal</li>
 <li>Clone the repository using <code>git clone &lt;Repo-link&gt;</code> (For Example <code>git clone https://github.com/SynBioHub/Plugin-Submit-Excel-Library.git</code>)</li>
@@ -290,7 +260,7 @@ Now, open the anaconda prompt and carry out the rest of the commands in the anac
 <li>The server should then be accessible at http://localhost:5000/status. Hence open your browser and enter <code>http://localhost:5000/status</code>.</li>
 </ol>
 <p>For more information see <a href="https://flask.palletsprojects.com/en/1.1.x/cli/">this</a>.</p>
-<h4 id="2232-javascript-nodejs-with-express-servers">2.2.3.2 Javascript Node.js with Express Servers</h4>
+<h5 id="2232-javascript-nodejs-with-express-servers">2.2.3.2 Javascript Node.js with Express Servers</h5>
 <p>The following steps should be followed:-</p>
 <ol>
 <li>Open the terminal.</li>
@@ -323,16 +293,16 @@ Repository: Plugin-Visual-Component-Use</p>
 <p>Docker Compose File: docker-compose.pluginVisualComponentUse.yml</p>
 <p>(Note that the plugin is lowercase and then the rest of the words are capitalized but there aren&rsquo;t any spaces or dashes).</p>
 <p>Docker Image Name: synbiohub/plugin-visual-component-use:snapshot (Note that there are no capitals in the docker image name).</p>
-<h2 id="32-basic-structure">3.2 Basic structure</h2>
+<h3 id="32-basic-structure">3.2 Basic structure</h3>
 <p>In this section <em>what the server receives</em> and the <em>format of its response</em> is defined. Below is a section about writing a server/plugin by simply copying and editing the example type.</p>
-<h3 id="321-visual">3.2.1 Visual</h3>
-<h4 id="3211-status">3.2.1.1 Status</h4>
-<h5 id="recieves">Recieves</h5>
+<h4 id="321-visual">3.2.1 Visual</h4>
+<h5 id="3211-status">3.2.1.1 Status</h5>
+<h6 id="recieves">Recieves</h6>
 <p>Nothing is received (It is just a simple get request).</p>
-<h5 id="returns">Returns</h5>
+<h6 id="returns">Returns</h6>
 <p>If it is up and running, then it should return a 200 status to a get request.</p>
-<h4 id="3212-evaluate">3.2.1.2 Evaluate</h4>
-<h5 id="recieves-1">Recieves</h5>
+<h5 id="3212-evaluate">3.2.1.2 Evaluate</h5>
+<h6 id="recieves-1">Recieves</h6>
 <p>type: The RDF type of the top-level object
 Common RDF types are:</p>
 <p>&lsquo;Activity&rsquo;, &lsquo;Agent&rsquo;, &lsquo;Association&rsquo;, &lsquo;Attachment&rsquo;, &lsquo;Collection&rsquo;, &lsquo;CombinatorialDerivation&rsquo;, &lsquo;Component&rsquo;, &lsquo;ComponentDefinition&rsquo;, &lsquo;Cut&rsquo;, &lsquo;Experiment&rsquo;, &lsquo;ExperimentalData&rsquo;, &lsquo;FunctionalComponent&rsquo;,&lsquo;GenericLocation&rsquo;, &lsquo;Implementation&rsquo;, &lsquo;Interaction&rsquo;, &lsquo;Location&rsquo;, &lsquo;MapsTo&rsquo;, &lsquo;Measure&rsquo;, &lsquo;Model&rsquo;, &lsquo;Module&rsquo;, &lsquo;ModuleDefinition&rsquo;, &lsquo;Participation&rsquo;, &lsquo;Plan&rsquo;, &lsquo;Range&rsquo;, &lsquo;Sequence&rsquo;, &lsquo;SequenceAnnotation&rsquo;, &lsquo;SequenceConstraint&rsquo;, &lsquo;Usage&rsquo;, &lsquo;VariableComponent&rsquo;</p>
@@ -340,10 +310,10 @@ Common RDF types are:</p>
 <li>Example 1:
 {&lsquo;type&rsquo;: &lsquo;Component&rsquo;}</li>
 </ul>
-<h5 id="returns-1">Returns</h5>
+<h6 id="returns-1">Returns</h6>
 <p>Return a status of 200 if the type is acceptable and a 4xx status if it isn’t.</p>
-<h4 id="3123-run">3.1.2.3 Run</h4>
-<h5 id="recieves-2">Recieves</h5>
+<h5 id="3123-run">3.1.2.3 Run</h5>
+<h6 id="recieves-2">Recieves</h6>
 <ol>
 <li>complete_sbol: The single-use URL for the complete object to operate on</li>
 <li>shallow_sbol: The single-use URL for a summarized or truncated view of the object</li>
@@ -377,21 +347,21 @@ Common RDF types are:</p>
 &lsquo;instanceUrl&rsquo;: &lsquo;<a href="https://synbiohub.org/'%7D">https://synbiohub.org/'}</a></p>
 </li>
 </ul>
-<h5 id="returns-2">Returns</h5>
+<h6 id="returns-2">Returns</h6>
 <p>The plugin should respond with an HTML page to be rendered <em>in-frame</em> on the corresponding SynBioHub page.</p>
-<h4 id="3124-examples">3.1.2.4 Examples</h4>
-<h5 id="python">Python</h5>
+<h5 id="3124-examples">3.1.2.4 Examples</h5>
+<h6 id="python">Python</h6>
 <p>A full example of a visual plugin can be found at: <code>https://github.com/SynBioHub/Plugin-Visual-Test</code></p>
-<h5 id="javascript">Javascript</h5>
+<h6 id="javascript">Javascript</h6>
 <p>A full example of a visual plugin can be found at: <code>https://github.com/SynBioHub/Plugin-Visual-Test-js</code></p>
-<h2 id="33-submit">3.3 Submit</h2>
-<h3 id="331-status">3.3.1 Status</h3>
-<h4 id="recieves-3">Recieves</h4>
+<h3 id="33-submit">3.3 Submit</h3>
+<h4 id="331-status">3.3.1 Status</h4>
+<h5 id="recieves-3">Recieves</h5>
 <p>Nothing is received (It is just a simple get request)</p>
-<h4 id="returns-3">Returns</h4>
+<h5 id="returns-3">Returns</h5>
 <p>If it is up and running it should return a 200 status to a get request</p>
-<h3 id="332-evaluate">3.3.2 Evaluate</h3>
-<h4 id="recieves-4">Recieves</h4>
+<h4 id="332-evaluate">3.3.2 Evaluate</h4>
+<h5 id="recieves-4">Recieves</h5>
 <p>A dictionary with entries:
 {‘manifest’</p>
 <pre><code>{‘files’
@@ -421,7 +391,7 @@ Common RDF types are:</p>
 </ul>
 <p>{&ldquo;files&rdquo;:[</p>
 <p>{&ldquo;url&rdquo;: &ldquo;<a href="http://synbiohub.org/expose/93c25d15-9fe2-4862-b602-ddbdac2c4333%22,">http://synbiohub.org/expose/93c25d15-9fe2-4862-b602-ddbdac2c4333&quot;,</a> &ldquo;filename&rdquo;: &ldquo;mbr5wW6CIseoq-0Y4MkM8DTM.xml&rdquo;, &ldquo;type&rdquo;: &ldquo;application/xml&rdquo;}]}}</p>
-<h4 id="returns-4">Returns</h4>
+<h5 id="returns-4">Returns</h5>
 <p>{‘manifest’:[
 Dictionaries each of which contains
 ‘filename’: the encrypted file name (with correct extension) that matches the original filename sent in the manifest from synbiohub
@@ -465,8 +435,8 @@ Dictionaries each of which contains
 }</p>
 </li>
 </ul>
-<h3 id="333-run">3.3.3 Run</h3>
-<h4 id="recieves-5">Recieves</h4>
+<h4 id="333-run">3.3.3 Run</h4>
+<h5 id="recieves-5">Recieves</h5>
 <p>A dictionary with entries:
 {‘manifest’
 {‘files’</p>
@@ -508,7 +478,7 @@ Dictionaries each of which contains
 </code></pre>
 </li>
 </ul>
-<h4 id="returns-5">Returns</h4>
+<h5 id="returns-5">Returns</h5>
 <p>A zip file which contains the generated SBOL files and a file called manifest.json which contains a json response manifest of the form:
 {‘results’</p>
 <p>[List of dictionaries (one for every file). Each dictionary has the keys:</p>
@@ -529,19 +499,19 @@ Dictionaries each of which contains
 <p>{&lsquo;filename&rsquo;: ' as9d8j0asd9j23fc.dna.converted&rsquo;,</p>
 <p>&lsquo;sources&rsquo;: [&rsquo; as9d8j0asd9j23fc.dna’]}]}</p>
 <p><strong>NOTE</strong>: list of sources could contain more than one file (if any of the files in the evaluate endpoint were flagged as 1 they might be added to the sources for one of the other file conversions)</p>
-<h3 id="334-examples">3.3.4 Examples</h3>
-<h4 id="python-1">Python</h4>
+<h4 id="334-examples">3.3.4 Examples</h4>
+<h5 id="python-1">Python</h5>
 <p>A full example of a submit plugin can be found at: <a href="https://github.com/SynBioHub/Plugin-Submit-Test">https://github.com/SynBioHub/Plugin-Submit-Test</a></p>
-<h4 id="javascript-1">Javascript</h4>
+<h5 id="javascript-1">Javascript</h5>
 <p>A full example of a submit plugin can be found at: <a href="https://github.com/SynBioHub/Plugin-Submit-Test-js">https://github.com/SynBioHub/Plugin-Submit-Test-js</a></p>
-<h2 id="34-download">3.4 Download</h2>
-<h3 id="341-status">3.4.1 Status</h3>
-<h4 id="recieves-6">Recieves</h4>
+<h3 id="34-download">3.4 Download</h3>
+<h4 id="341-status">3.4.1 Status</h4>
+<h5 id="recieves-6">Recieves</h5>
 <p>Nothing is received (it is a simple get request)</p>
 <h4 id="returns-6">Returns</h4>
 <p>If it is up and running it should return a 200 status to a get request</p>
-<h3 id="342-evaluate">3.4.2 Evaluate</h3>
-<h4 id="recieves-7">Recieves</h4>
+<h4 id="342-evaluate">3.4.2 Evaluate</h4>
+<h5 id="recieves-7">Recieves</h5>
 <p>type: The RDF type of the top-level object</p>
 <p>Common RDF types are:
 &lsquo;Activity&rsquo;, &lsquo;Agent&rsquo;, &lsquo;Association&rsquo;, &lsquo;Attachment&rsquo;, &lsquo;Collection&rsquo;, &lsquo;CombinatorialDerivation&rsquo;, &lsquo;Component&rsquo;, &lsquo;ComponentDefinition&rsquo;, &lsquo;Cut&rsquo;, &lsquo;Experiment&rsquo;, &lsquo;ExperimentalData&rsquo;, &lsquo;FunctionalComponent&rsquo;,&lsquo;GenericLocation&rsquo;, &lsquo;Implementation&rsquo;, &lsquo;Interaction&rsquo;, &lsquo;Location&rsquo;, &lsquo;MapsTo&rsquo;, &lsquo;Measure&rsquo;, &lsquo;Model&rsquo;, &lsquo;Module&rsquo;, &lsquo;ModuleDefinition&rsquo;, &lsquo;Participation&rsquo;, &lsquo;Plan&rsquo;, &lsquo;Range&rsquo;, &lsquo;Sequence&rsquo;, &lsquo;SequenceAnnotation&rsquo;, &lsquo;SequenceConstraint&rsquo;, &lsquo;Usage&rsquo;, &lsquo;VariableComponent&rsquo;</p>
@@ -549,10 +519,10 @@ Dictionaries each of which contains
 <li>Example 1:
 {&lsquo;type&rsquo;: &lsquo;Component&rsquo;}</li>
 </ul>
-<h4 id="returns-7">Returns</h4>
+<h5 id="returns-7">Returns</h5>
 <p>Return a status of 200 if the type is acceptable and a 4xx status if it isn’t</p>
-<h3 id="343-run">3.4.3 Run</h3>
-<h4 id="recieves-8">Recieves</h4>
+<h4 id="343-run">3.4.3 Run</h4>
+<h5 id="recieves-8">Recieves</h5>
 <p>complete_sbol: the single-use URL for the complete object to operate on</p>
 <p>shallow_sbol: the single-use URL for a summarized or truncated view of the object</p>
 <p>genbank: the single-use URL for the Genbank of the object (Note this will be a blank website for all types other than Component)</p>
@@ -572,14 +542,14 @@ Dictionaries each of which contains
 {&lsquo;complete_sbol&rsquo;: &lsquo;https:// synbiohub.org/public/igem/BBa_E0240/1/sbol&rsquo;, &lsquo;shallow_sbol&rsquo;: &lsquo;https:// synbiohub.org/public/igem/BBa_E0240/1/sbolnr&rsquo;, &lsquo;genbank&rsquo;: &lsquo;https:// synbiohub.org/public/igem/BBa_E0240/1/gb&rsquo;, &lsquo;top_level&rsquo;: &lsquo;<a href="https://synbiohub.org/public/igem/BBa_E0240/1',">https://synbiohub.org/public/igem/BBa_E0240/1',</a> &lsquo;size&rsquo;: 39, &lsquo;type&rsquo;: &lsquo;Component&rsquo;, &lsquo;instanceUrl&rsquo;: &lsquo;https:// synbiohub.org/'}</p>
 </li>
 </ul>
-<h4 id="returns-8">Returns</h4>
+<h5 id="returns-8">Returns</h5>
 <p>The plugin should respond with an HTTP request and file attachment which represents the object.</p>
-<h3 id="334-examples-1">3.3.4 Examples</h3>
-<h4 id="python-2">Python</h4>
+<h4 id="334-examples-1">3.3.4 Examples</h4>
+<h5 id="python-2">Python</h5>
 <p>A full example of a download plugin can be found <a href="https://github.com/SynBioHub/Plugin-Download-Test">here</a>.</p>
-<h4 id="javascript-2">Javascript</h4>
+<h5 id="javascript-2">Javascript</h5>
 <p>A full example of a download plugin can be found <a href="https://github.com/SynBioHub/Plugin-Download-Test-js">here</a>.</p>
-<h2 id="35-writing-an-app-by-copying-the-examples">3.5 Writing an app by copying the examples</h2>
+<h3 id="35-writing-an-app-by-copying-the-examples">3.5 Writing an app by copying the examples</h3>
 <ol>
 <li>Copy the relevant repository (make sure it includes the docker actions to automatically build)</li>
 <li>Change the docker image name in release.yml in line 17 and 24</li>
@@ -589,8 +559,8 @@ Dictionaries each of which contains
 <li>Edit the sections of the code in app.py that say edit within here (should be a section under the evaluate endpoint and under the run endpoint). Can import further functions at the top of the file and do most of the code writing in a second file to leave the structure between plugins as similar as possible</li>
 <li>Create a new requirements.txt or packages.json to match what you now have (packages.json should happen mostly automatically). For requirements.txt there are several methods:</li>
 </ol>
-<h1 id="4-using-a-virtual-environment">4. Using a Virtual Environment</h1>
-<h3 id="41-for-anaconda">4.1 For Anaconda:</h3>
+<h2 id="4-using-a-virtual-environment">4. Using a Virtual Environment</h2>
+<h3 id="41-for-anaconda">4.1 For Anaconda</h3>
 <p>The following steps should be followed:-</p>
 <ol>
 <li>pip3 install virtualenv</li>
@@ -650,7 +620,7 @@ Dictionaries each of which contains
 <li>update the readme and wait for the new image to push to docker hub (you will see a green check next to commit when this has happened)</li>
 <li>check the uploaded image works by downloading and running it ( docker run &ndash;publish 8080:5000 &ndash;detach &ndash;name <!-- raw HTML omitted --> synbiohub/<!-- raw HTML omitted -->:snapshot ) and repeating steps 9-12.</li>
 </ol>
-<h2 id="84-useful-commands-for-docker-debug">8.4 Useful commands for docker debug</h2>
+<h3 id="84-useful-commands-for-docker-debug">8.4 Useful commands for docker debug</h3>
 <ul>
 <li>docker system prune -a &ndash;volumes</li>
 <li>docker system prune -a</li>
@@ -663,7 +633,7 @@ Dictionaries each of which contains
 <li>docker volume ls</li>
 <li>docker volume prune</li>
 </ul>
-<h3 id="9-genetic-logic-lab-synbiohub-plugins">9. Genetic Logic Lab Synbiohub plugins</h3>
+<h2 id="9-genetic-logic-lab-synbiohub-plugins">9. Genetic Logic Lab Synbiohub plugins</h2>
 <p>To get access to genetic logic lab SynBioHub plugins, follow the following steps:</p>
 <ol>
 <li>ssh <a href="mailto:editors@sbolstandard.org">editors@sbolstandard.org</a></li>
@@ -716,7 +686,7 @@ Dictionaries each of which contains
 <li>sudo systemctl restart synbiohub</li>
 <li>can check the plugin is okay using: curl localhost:<!-- raw HTML omitted -->/status</li>
 </ol>
-<h3 id="10-plugins-table">10. Plugins-Table</h3>
+<h2 id="10-plugins-table">10. Plugins-Table</h2>
 <p>The sortable table has already been implemented and can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
 
 
