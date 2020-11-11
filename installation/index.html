@@ -150,7 +150,7 @@ The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docke
 <p><code>git clone https://github.com/synbiohub/synbiohub-docker</code></p>
 </li>
 <li>
-<p>Then, enter the follwoing commands to start the local instance of SynBioHub:</p>
+<p>Then, enter the following commands to start the local instance of SynBioHub:</p>
 </li>
 </ol>
 <ul>
@@ -159,8 +159,7 @@ The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docke
 <p>1st Method:</p>
 <p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml up</code></p>
 <p>2nd Method:</p>
-<p><code>sysctl -w vm.max_map_count=262144</code></p>
-<p><code>docker-compose --file ./synbiohub-docker/docker-compose.yml --file ./synbiohub-docker/docker-compose.explorer.yml up</code>.</p>
+<p>This has been explained <a href="https://synbiohub.github.io/installation/#with-sbolexplorer">here</a>.</p>
 </li>
 <li>
 <p>For Windows OS:</p>
@@ -176,7 +175,11 @@ The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docke
 </ol>
 <h3 id="with-sbolexplorer">With SBOLExplorer</h3>
 <p>To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 3 run the following command:</p>
-<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up</code></p>
+<pre><code>`sysctl -w vm.max_map_count=262144`
+
+
+`docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up`
+</code></pre>
 <h3 id="with-plugins">With Plugins</h3>
 <p>To add plugins to the configuration, change the command mentioned in step 3 to:</p>
 <p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
