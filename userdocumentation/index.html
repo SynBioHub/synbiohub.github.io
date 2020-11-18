@@ -98,22 +98,23 @@
   <ul>
     <li><a href="#1-searching-for-information">1. Searching for Information</a>
       <ul>
-        <li><a href="#11-searching-using-keywords">1.1 Searching using keywords</a></li>
+        <li><a href="#11-keyword-search">1.1 Keyword Search</a></li>
         <li><a href="#12-sequence-search">1.2 Sequence Search</a></li>
         <li><a href="#13-advanced-search">1.3 Advanced Search</a></li>
         <li><a href="#14-sparql-search">1.4 SPARQL Search</a></li>
+        <li><a href="#15-searching-on-a-record-page">1.5 Searching on a record page</a></li>
       </ul>
     </li>
-    <li><a href="#2-registering--updating-an-account">2. Registering &amp; Updating an account</a>
+    <li><a href="#2-viewing--downloading-the-information">2. Viewing &amp; Downloading the Information</a>
       <ul>
-        <li><a href="#21-registering-an-account">2.1 Registering an account</a></li>
-        <li><a href="#22-updating-an-account">2.2 Updating an Account</a></li>
+        <li><a href="#21-viewing-the-information">2.1 Viewing the Information</a></li>
+        <li><a href="#22-downloading-the-information">2.2 Downloading the Information</a></li>
       </ul>
     </li>
-    <li><a href="#3-viewing--downloading-the-information">3. Viewing &amp; Downloading the Information</a>
+    <li><a href="#3-registering--updating-an-account">3. Registering &amp; Updating an account</a>
       <ul>
-        <li><a href="#31-viewing-the-information">3.1 Viewing the Information</a></li>
-        <li><a href="#32-downloading-the-information">3.2 Downloading the Information</a></li>
+        <li><a href="#31-registering-an-account">3.1 Registering an account</a></li>
+        <li><a href="#32-updating-an-account">3.2 Updating an Account</a></li>
       </ul>
     </li>
     <li><a href="#4-submitting-managing--updating-submissions">4. Submitting, Managing &amp; Updating Submissions</a>
@@ -144,22 +145,23 @@
 
 <h1>User Documentation</h1>
 
-<p>This section contains instructions on how you can implement various operations ranging from registering onto SynBioHub to uploading your genetic designs on SynBioHub, by using the user interface of SynBiohub. The sub-sections are as follows:</p>
+<p>This section contains instructions on how you can implement various operations ranging from registering onto SynBioHub to uploading your genetic designs on SynBioHub, by using the user interface of SynBioHub. The sub-sections are as follows:</p>
 <h2 id="1-searching-for-information">1. Searching for Information</h2>
-<h3 id="11-searching-using-keywords">1.1 Searching using keywords</h3>
-<p>To search amongst various resources, follow these steps:</p>
+<p>There are a variety of ways to search for information in SynBioHub, such as using keywords, sequences as well as SPARQL queries. They&rsquo;re explained in detail as follows:</p>
+<h3 id="11-keyword-search">1.1 Keyword Search</h3>
+<p>To search amongst various records, follow these steps:</p>
 <ol>
 <li>
 <p>Navigate to SynBioHub&rsquo;s home page.</p>
 </li>
 <li>
-<p>In the search box, enter the keywords for the resource you want to search for and click on the search button.</p>
+<p>In the search box, enter the keywords for the record you want to search for and click on the search button.</p>
 </li>
 <li>
-<p>Subsequently, a list of resources matching the keywords that you&rsquo;ve entered shall appear on your screen.</p>
+<p>Subsequently, a list of records matching the keywords that you&rsquo;ve entered shall appear on your screen.</p>
 </li>
 <li>
-<p>Select the desired resource from the list.</p>
+<p>Select the desired record from the list.</p>
 </li>
 </ol>
 <h3 id="12-sequence-search">1.2 Sequence Search</h3>
@@ -169,25 +171,28 @@
 <p>Navigate to SynBioHub&rsquo;s home page.</p>
 </li>
 <li>
-<p>Click on the <em>search</em> option. It&rsquo;ll direct you to a page containing a list of resources.</p>
+<p>Click on the <em>search</em> option. It&rsquo;ll direct you to a page containing a list of records.</p>
 </li>
 <li>
-<p>Located just below the search box are the various means through which you can search for the desired resources. In this case, click on <em>sequence search</em>.</p>
+<p>Located just below the search box are the various means through which you can search for the desired records. In this case, click on <em>sequence search</em>.</p>
 </li>
 <li>
-<p>Enter the sequence or upload a <em>FASTA/FASTQ</em> file, by clicking the choose file option just below the box. This shall search only for exact matches of the sequence. Your entry must be the first key/value pair. To know more about about FASTA files, click <a href="https://en.wikipedia.org/wikiFASTA_format#:~:text=In%20bioinformatics%20and%20biochemistry%2C%20the,comments%20to%20precede%20the%20sequences">here</a>.</p>
+<p>Enter the sequence or upload a <strong><a href="https://en.wikipedia.org/wiki/FASTA">FASTA</a>/<a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a></strong> file, by clicking the choose file option just below the box. This shall search only for exact matches of the sequence. Your entry must be the first key/value pair.</p>
 </li>
 <li>
-<p>Then, you can choose the perspective of your search. You can perform a <strong>global</strong> search or an <strong>exact</strong> search. The exact search shall display, those resources which are really close to the sequences that you&rsquo;ve entered and the global search search will display those results which have even the smallest of the similarities to the sequence that you&rsquo;ve entered.</p>
+<p>Then, you can choose the perspective of your search. You can perform a <strong>global</strong> search or an <strong>exact</strong> search. The exact search shall display, those records which are an exact match to the sequences that you&rsquo;ve entered and the global search search will display those results which have even the smallest of the similarities to the sequence that you&rsquo;ve entered.</p>
 </li>
 <li>
-<p>Subsequently, you may customise the number of results, the value for which must not exceed 10,000. Then you need to enter the minimum and the maximum length of the sequence for which you want to search for. Values for both of these parameters should not exceed 100,000.</p>
+<p>Subsequently, you may customise the number of results, the value for which must not exceed 10,000. This translates into the maximum number of hits to accept before stopping the search. Kindly note that, higher the value, the longer the runtime.</p>
+</li>
+<li>
+<p>Then you need to enter the minimum and the maximum length of the sequence for which you want to search for. Values for both of these parameters should not exceed 100,000.</p>
 </li>
 <li>
 <p>Then, you need to enter the maximum number of non-matching target sequences, that are to be considered before the search is halted. This option works in pair with the flag above. The search process sorts the target sequences by decreasing number of k-mers they have in common with the query sequence, using that information as a proxy for sequence similarity. After pairwise alignments, if none of the first x examined target sequences pass the acceptation criteria, the search process stops for that query (no hit). If this flag is set to a higher value, more target sequences are considered. If the flag above and this flag are both set to 0, the complete database is searched.</p>
 </li>
 <li>
-<p>Fill up the <em>percentage match</em>, by entering a value between 0 &amp; 1. This depicts the percentage that you want the result to match your query.</p>
+<p>Fill up the <em>percentage match</em>, by entering a value between 0 and 1. This is the value of pairwise identity that must match with the sequence, otherwise the sequence is rejected.</p>
 </li>
 <li>
 <p>Finally, select the <em>pairwise identity definition</em>. You may select the value for this attribute from the following options:</p>
@@ -220,66 +225,47 @@
 </tbody>
 </table>
 <h3 id="13-advanced-search">1.3 Advanced Search</h3>
-<p>To perform an Advanced Search, follow these steps:</p>
+<p>On this search page, you can select from a variety of search criteria, which are as follows:</p>
 <ol>
 <li>
 <p>Navigate to SynBioHub&rsquo;s home page.</p>
 </li>
 <li>
-<p>Click on the <em>search</em> option. It&rsquo;ll direct you to a page containing a list of resources.</p>
+<p>Click on the <em>search</em> option. It&rsquo;ll direct you to a page containing a list of records.</p>
 </li>
 <li>
-<p>Located just below the search box are the various means through which you can search for the desired resources. In this case, click on <em>advanced search</em>.</p>
+<p>Located just below the search box are the various means through which you can search for the desired records. In this case, click on <em>advanced search</em>.</p>
 </li>
 <li>
-<p>Now, select the type of the resource you want to search for i.e, a collection, design, activity or a sequence.</p>
+<p>Now, select the type of the record you want to search for i.e, a collection, design, activity, etc&hellip;</p>
 </li>
 <li>
-<p>Then, select the username of the design&rsquo;s creator.</p>
+<p>Then, select the username of the record&rsquo;s creator.</p>
 </li>
 <li>
-<p>Enter the timeframe between which the resource was created, by entering the <em>created after</em> and <em>created before</em> attributes. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format.</p>
+<p>Enter the timeframe between which the record was created, by entering the <em>created after</em> and <em>created before</em> attributes. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format.</p>
 </li>
 <li>
-<p>If the resource has been modified, make sure to enter the <em>modified after</em> and <em>modified before</em> attributes as well. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format.</p>
+<p>If the record has been modified, make sure to enter the <em>modified after</em> and <em>modified before</em> attributes as well. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format.</p>
 </li>
 <li>
-<p>Enter the ID or the name or the description of the resource, which you want to search for.</p>
+<p>Enter the ID or the name or the description of the record, which you want to search for.</p>
 </li>
 <li>
-<p>Select the <em>type</em> of the resource, from the following available options in the dropdown menu:</p>
+<p>Select the <em>type</em> of the record, from the following available options in the dropdown menu, for an example: No filter, biopax:Complex, biopax:DnaRegion, biopax:Protein, so:circular, etc&hellip;</p>
+<p>Subsequently, select the <strong>role</strong> of the record from this dropdown menu. It contains various sub-categories of <strong><a href="https://igem.org/Main_Page">igem</a></strong> or <strong><a href="http://www.sequenceontology.org/miso/current_release/term/SO:0000316">SO</a></strong>.</p>
 </li>
-</ol>
-<ul>
-<li>
-<p>No filter</p>
-</li>
-<li>
-<p>biopax:Complex</p>
-</li>
-<li>
-<p>biopax:DnaRegion</p>
-</li>
-<li>
-<p>biopax:Protein</p>
-</li>
-<li>
-<p>so:circular</p>
-<p>Subsequently, select the <em>role</em> of the resource from this dropdown menu. It contains various sub-categories of igem or 	SO.
-To learn more about <strong>igem</strong>, visit <a href="https://igem.org/Main_Page">this page</a> and for <strong>SO</strong>, visit <a href="http://www.sequenceontology.org/miso/current_release/term/SO:0000316">this page</a></p>
-</li>
-</ul>
-<ol start="10">
 <li>
 <p>You may select any number of collections, based on your convenience. To select a collection, click on the value attribute of collection and select it from the drop down menu.</p>
 </li>
 <li>
 <p>You may apply customised filters for the design you want to search for. For that purpose, a few blank filtering columns have been provided.
-As soon as you&rsquo;ll click on an empty filter, a drop down menu shall appear having various parameters for filtering. Select your preference, and then click on filter. This shall reload the page and then select the value of the filter, from the drop down on the right hand side. You may provide as many as 5 customised filters which&rsquo;er optional.</p>
+As soon as you&rsquo;ll click on an empty filter on the left hand side, a drop down menu shall appear having various parameters for filtering. These parameters are basically, the properties for filtering the records. Select the property that you want your record to be filtered by, and then click on filter.
+This shall reload the page and then select the value of the filter, from the drop down on the right hand side. You may provide as many as 5 customised filters which&rsquo;er optional.</p>
 </li>
 </ol>
 <h3 id="14-sparql-search">1.4 SPARQL Search</h3>
-<p>To perform a SPARQL Search, the following steps should be followed:</p>
+<p>To perform a <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a></strong> Search, the following steps should be followed:</p>
 <ol>
 <li>
 <p>Navigate to SynBioHub&rsquo;s SPARQL Search Page.</p>
@@ -303,10 +289,7 @@ As soon as you&rsquo;ll click on an empty filter, a drop down menu shall appear 
 	
         ?role # displays the role of the design    
 
-</code></pre><ol start="4">
-<li>Next, you need to provide a <strong>Where</strong> statement, which shall contain all the specific details with respect to the <strong>SELECT</strong> statement. The Syntax is as follows:</li>
-</ol>
-<pre><code>WHERE { 
+  WHERE { 
   	 ?s sbol:component ?comp # Searching for **sbol** components
 
   	 ?comp sbol:definition ?def # provides the link to that component
@@ -315,63 +298,24 @@ As soon as you&rsquo;ll click on an empty filter, a drop down menu shall appear 
 
 	 OPTIONAL {?def sbol:role ?role} # Defines the role
 
-	 OPTIONAL {?def sbol:displayId ?displayId} # gives the ID of the design
+	 OPTIONAL {?def sbol:displayId ?displayId} # gives the ID of that particular record
 
 	 OPTIONAL {?def dcterms:title ?title} 
   }
-</code></pre><p><em>The query selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your prefered type.</em></p>
-<p>To learn more about SPARQL, visit <a href="https://www.w3.org/TR/sparql11-query/">this page</a>.</p>
-<h2 id="2-registering--updating-an-account">2. Registering &amp; Updating an account</h2>
-<h3 id="21-registering-an-account">2.1 Registering an account</h3>
-<p>Following Steps need to be followed for registering onto SynBioHub:</p>
-<ol>
-<li>
-<p>Navigate to SynBioHub&rsquo;s home page.</p>
-</li>
-<li>
-<p>Click on the <strong>Login or Register</strong> option on the top right hand side of your Screen.</p>
-</li>
-<li>
-<p>Enter the following details to complete your registration process:</p>
-</li>
-</ol>
-<ul>
-<li>
-<p>Full Name,</p>
-</li>
-<li>
-<p>Affiliation(Optional),</p>
-</li>
-<li>
-<p>Email Address,</p>
-</li>
-<li>
-<p>Username &amp;</p>
-</li>
-<li>
-<p>Password</p>
-</li>
-</ul>
-<ol start="4">
-<li>When you need to login into your SynBioHub account, click on the &ldquo;login or Register&rdquo; option. Then you need to enter your email address and your password to access your account.</li>
-</ol>
-<h3 id="22-updating-an-account">2.2 Updating an Account</h3>
-<p>If you ever need to update your account, the following steps need to be followed:</p>
-<ol>
-<li>
-<p>You need to be logged in order to update your account. Follow the previous set of steps to login, if you aren&rsquo;t logged in to your account.</p>
-</li>
-<li>
-<p>Then, click on the <strong>profile</strong> option. It&rsquo;ll redirect you onto a page, which contains your profile.</p>
-</li>
-<li>
-<p>On this page, update whichever section you want to, and then click on the <strong>save</strong> option at the bottom to successfully update your profile.</p>
-</li>
-</ol>
-<h2 id="3-viewing--downloading-the-information">3. Viewing &amp; Downloading the Information</h2>
-<h3 id="31-viewing-the-information">3.1 Viewing the Information</h3>
-<p>There are various types of resources on SynBioHub. They&rsquo;ve been divided into the following sub-categories:</p>
-<h4 id="311-viewing-a-collection">3.1.1 Viewing a collection</h4>
+</code></pre><p><em>The query selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your preferred type.</em></p>
+<hr>
+<h3 id="15-searching-on-a-record-page">1.5 Searching on a record page</h3>
+<p>On a record page, under the search button, you can find the following options:-</p>
+<h4 id="151-searching-for-the-uses">1.5.1 Searching for the uses</h4>
+<p>This returns any other object that refers to this object that the user has given as an input, for example, if this is an engineered region, then it will return all other components that use this as a sub-component.</p>
+<h4 id="152-searching-for-the-twins">1.5.2 Searching for the twins</h4>
+<p>This returns other components, if and only if they have the same sequence as the input by the user.</p>
+<h4 id="153-searching-for-the-similar-ones">1.5.3 Searching for the similar ones</h4>
+<p>This returns other components that have similar sequences.</p>
+<h2 id="2-viewing--downloading-the-information">2. Viewing &amp; Downloading the Information</h2>
+<h3 id="21-viewing-the-information">2.1 Viewing the Information</h3>
+<p>There are various types of records on SynBioHub. They&rsquo;ve been divided into the following sub-categories:</p>
+<h4 id="211-viewing-a-collection">2.1.1 Viewing a collection</h4>
 <ol>
 <li>
 <p>Navigate to SynBioHub&rsquo;s home page.</p>
@@ -394,57 +338,20 @@ As soon as you&rsquo;ll click on an empty filter, a drop down menu shall appear 
 <p>ID and version: The next line represents the ID and the version of the collection. Every collection has a specific ID associated with it and a version which represents the number of times; it has been modified.</p>
 </li>
 <li>
-<p>Resource type: This represents the type of resource. For this section, it should be a <strong>collection</strong>.</p>
+<p>Resource type: This represents the type of record. For this section, it should be a <strong>collection</strong>.</p>
 </li>
 <li>
 <p>Created by: Displays the name of the collection&rsquo;s creator.</p>
 </li>
 <li>
-<p>Date created: Displays the date and time when the design was created.</p>
+<p>Date created: Displays the date and time when the record was created.</p>
 </li>
 <li>
 <p>Subsequently, we have a brief description of the collection that is provided by the creator of the collection.</p>
 </li>
 <li>
-<p>Then, we&rsquo;ve got two clickable options, that are <strong>download</strong> and <strong>back</strong>. Back navigates you to the search page and the download option consists of the ways in which you can download the collection. They&rsquo;re as follows:</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SBOL</td>
-<td>The Synthetic Biology Open Language (SBOL) has been developed as a standard to support the         specification and exchange of biological design information in synthetic biology. To know more about SBOl, visit <a href="https://sbolstandard.org/datamodel-about/">this page</a></td>
-</tr>
-<tr>
-<td>Combine Archive</td>
-<td>A COMBINE archive is a single file containing the various documents (and in the future, references to documents), necessary for the description of a model and all associated data and procedures. This includes for instance, but not limited to, simulation experiment descriptions, all models needed to run the simulations and associated data files. The archive is encoded using the Open Modeling EXchange format (OMEX). To know more about Combine archive, visit <a href="http://co.mbine.org/documents/archive">this page</a>.</td>
-</tr>
-<tr>
-<td>Annotated Genbank</td>
-<td>GenBank format (GenBank Flat File Format) consists of an annotation section and a sequence section. The start of the annotation section is marked by a line beginning with the word &ldquo;LOCUS&rdquo;. The start of sequence section is marked by a line beginning with the word &ldquo;ORIGIN&rdquo; and the end of the section is marked by a line with only &ldquo;//&rdquo; To know more about Annotated genbank format, visit <a href="http://quma.cdb.riken.jp/help/gbHelp.html">this page</a>,</td>
-</tr>
-<tr>
-<td>Annotated Plasmid Map</td>
-<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://en.wikipedia.org/wiki/Plasmid">this page</a></td>
-</tr>
-<tr>
-<td>Plasmid map</td>
-<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://www.snapgene.com/resources/plasmid-files/">this page</a>.</td>
-</tr>
-<tr>
-<td>Annotated zip</td>
-<td>ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed. To know more about zip, visit <a href="https://en.wikipedia.org/wiki/Zip_(file_format)">this page</a></td>
-</tr>
-</tbody>
-</table>
+<p>Then, we&rsquo;ve got two clickable options, that are <strong><a href="https://synbiohub.github.io/userdocumentation/#32-downloading-the-information">download</a></strong> and <strong>back</strong>. Back navigates you to the search page.</p>
 </li>
-</ul>
-<hr>
-<ul>
 <li>
 <p>Then, you can view the members of that specific collection. There is also an option to filter the members. Click on the option to filter, and a drop down menu shall appear. You may choose the filters based on your convenience. There is also an option to search for a specific member of the collection by entering the name or ID of the member into the search box and clicking search. You may also choose the number of entries that you want to display on that page.
 The list of members is sortable and can be sorted on the basis of name, identifier, type as well as description.
@@ -460,30 +367,17 @@ The list consists of the name, identifier, type as well as description of respec
 <p>Finally, you can also view the various attachments that are there in that particular collection.</p>
 </li>
 </ul>
-<h4 id="312-viewing-an-engineered-regionpromoteractivator">3.1.2 Viewing an Engineered Region/Promoter/Activator</h4>
-<ol>
-<li>
-<p>Navigate to SynBioHub&rsquo;s home page.</p>
-</li>
-<li>
-<p>Then, you can search for a specific collection or select <strong>browse the collections</strong> option. It&rsquo;ll direct you to a set of collections based on what you&rsquo;ve searched for.</p>
-</li>
-<li>
-<p>Select the collection which you want to view. Then it&rsquo;ll direct you to the collection&rsquo;s home page. You can select the resource, which you want to view.</p>
-</li>
-<li>
-<p>On the resource&rsquo;s page, you&rsquo;ll be able to view to view the following parameters in this order:</p>
-</li>
-</ol>
+<h4 id="212-viewing-a-component">2.1.2 Viewing a component</h4>
+<p>Once you&rsquo;ve successfully navigated to the record&rsquo;s home page, you&rsquo;ll be able to view the parameters in this order:</p>
 <ul>
 <li>
-<p>Name: Represents the name of that particular resource.</p>
+<p>Name: Represents the name of that particular record.</p>
 </li>
 <li>
-<p>ID and version: The next line represents the ID and the version of that resource. Every engineered region has a specific ID associated with it and a version which represents the number of time; it has been modified.</p>
+<p>ID and version: The next line represents the ID and the version of that record. Every record has a specific ID associated with it and a version which represents the number of times; it has been modified.</p>
 </li>
 <li>
-<p>Generated from: Represents the source from where that resource had been generated from.</p>
+<p>Generated from: Represents the source from where that record had been generated from.</p>
 </li>
 <li>
 <p>Then, we&rsquo;ve got five clickable options, that are:</p>
@@ -491,19 +385,19 @@ The list consists of the name, identifier, type as well as description of respec
 </ul>
 <ol>
 <li>
-<p><strong>Download</strong></p>
+<p><strong><a href="https://synbiohub.github.io/userdocumentation/#32-downloading-the-information">Download</a></strong></p>
 </li>
 <li>
-<p><strong>Search</strong></p>
+<p><strong><a href="https://synbiohub.github.io/userdocumentation/#1-searching-for-information">Search</a></strong></p>
 </li>
 <li>
-<p><strong>Share</strong></p>
+<p><strong><a href="https://synbiohub.github.io/userdocumentation/#6-data-sharing-mechanisms">Share</a></strong></p>
 </li>
 <li>
 <p><strong>Back</strong></p>
 </li>
 <li>
-<p><strong>Add to a collection</strong></p>
+<p><strong><a href="https://synbiohub.github.io/userdocumentation/#43-updating">Add to a collection</a></strong></p>
 </li>
 </ol>
 <p>The download option consists of the ways in which you can download the resource. They&rsquo;re as follows:</p>
@@ -554,29 +448,7 @@ The list consists of the name, identifier, type as well as description of respec
 </tbody>
 </table>
 <hr>
-<p>Then is the <strong>search</strong> option. There are three ways you can use the search option. They&rsquo;re as follows:</p>
-<ol>
-<li>
-<p>Find Uses: This returns any other object that refers to this object that the user has given as an input, for example, if this is an engineered region, then it will return all other components that use this as a sub-component.</p>
-</li>
-<li>
-<p>Find Twins:  This returns other components, if and only if they have the same sequence as the input by the user.</p>
-</li>
-<li>
-<p>Find Similar: This returns other components that have similar sequences.</p>
-</li>
-</ol>
-<p>The third option is that of <strong>sharing</strong> your resource. There are 2 ways by which you can share your resource. They&rsquo;re as follows:</p>
-<ol>
-<li>
-<p>Send to Benchling: For using Benchling to share your resource, you need to configure a Benchling remote. The Benchling Life Sciences R&amp;D Cloud is an informatics platform to accelerate, measure, and forecast R&amp;D from discovery through bioprocessing. To know more about Benchling and how you can configure a benching remote, click <a href="https://www.benchling.com/">here</a>.</p>
-</li>
-<li>
-<p>Send to ICE: ICE is a registry platform that provides robust data storage for DNA components, integrated tools for part characterization, as well as mechanisms for secure access and information sharing with other users and software tools.
-ICE is built upon the idea of a Web of Registries, and thus provides strong support for distributed, interconnected use. It includes several useful graphical applications for sequence annotation, manipulation and analysis. To know more about ICE, click <a href="https://public-registry.jbei.org/login">here</a>.</p>
-</li>
-</ol>
-<p>Fourth is the <strong>back</strong> option. This option navigates back to the main page of the collection, which that particular resource is a part of.</p>
+<p>We have the <strong>back</strong> option. This option navigates back to the main page of the collection, which that particular resource is a part of.</p>
 <p>Finally, we have the <strong>Add to collection</strong> option. This option adds your resource to a specific collection. Clicking on this option, would take you to a page that shall display the collections, that you would&rsquo;ve created. Select the collection, to which you want to add this engineered region to and then click on add to collection. This shall add your resource to the selected collection.</p>
 <ul>
 <li>
@@ -588,13 +460,13 @@ ICE is built upon the idea of a Web of Registries, and thus provides strong supp
 </ul>
 <ol>
 <li>
-<p>Type: This specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design. To know more about Type, click <a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">here</a>.</p>
+<p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">Type</a></strong>: This specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design.</p>
 </li>
 <li>
-<p>Role: Clarifies the potential function of an entity in a biochemical or physical context. When it is used for ComponentDefinitions, it MUST identify terms from ontologies that are consistent with the types property of the ComponentDefinition.To know more about role, click <a href="https://dissys.github.io/sbol-owl/sbol-owl.html#role">here</a>.</p>
+<p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#role">Role</a></strong>: Clarifies the potential function of an entity in a biochemical or physical context. When it is used for ComponentDefinitions, it MUST identify terms from ontologies that are consistent with the types property of the ComponentDefinition.</p>
 </li>
 <li>
-<p>Sequence: The purpose of the Sequence class is to represent the primary structure of a ComponentDefinition object and the manner in which it is encoded. This representation is accomplished by means of the elements property and encoding property. To know more about Sequences, click <a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Sequence">here</a>.</p>
+<p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Sequence">Sequence</a></strong>: The purpose of the Sequence class is to represent the primary structure of a ComponentDefinition object and the manner in which it is encoded. This representation is accomplished by means of the elements property and encoding property.</p>
 </li>
 <li>
 <p>Also, you can view reference as well as citations.</p>
@@ -605,10 +477,7 @@ ICE is built upon the idea of a Web of Registries, and thus provides strong supp
 </ul>
 <ol>
 <li>
-<p>Ontology for Biomedical Investigations(OBI): A centrally registered identifier symbol used to uniquely identify objects given by International DOI Foundation. The DOI system is particularly used for electronic documents such as journal articles. To know more about OBI, click <a href="http://www.ontobee.org/ontology/OBI?iri=http://purl.obolibrary.org/obo/OBI_0002110">here</a>.</p>
-</li>
-<li>
-<p>data_1179</p>
+<p><strong><a href="www.ontobee.org/ontology/OBI?iri=http://purl.obolibrary.org/obo/OBI_0002110">Ontology for Biomedical Investigations(OBI)</a></strong>: A centrally registered identifier symbol used to uniquely identify objects given by International DOI Foundation. The DOI system is particularly used for electronic documents such as journal articles.</p>
 </li>
 <li>
 <p>SynBioHub#Owned_by: Username of the design owner.</p>
@@ -625,25 +494,15 @@ ICE is built upon the idea of a Web of Registries, and thus provides strong supp
 <p>Then, we have the <strong>attachments</strong> page. In this section, you can view the various attachments, of a resource.</p>
 </li>
 <li>
-<p>The next 3 sections are <strong>iGEM main page</strong>, <strong>iGEM design page</strong> and the <strong>iGEM experience page</strong>. Then is the section that contains, <strong>Sequence Visualisation</strong> of that particular resource. Finally, we have the <strong>component sankey</strong> and the <strong>component bar</strong>. The iGEM parts are plugins, hence they are not part of every instance and the Sequence Visualization, Sankey, and Component bar are additional plugins, hence they&rsquo;ve been explained in detail in the <a href="https://synbiohub.github.io/plugins/">plugins section</a>.</p>
+<p>There may be additional clickable sections after the attachments menu. They&rsquo;re as follows:</p>
 </li>
 </ul>
-<h3 id="32-downloading-the-information">3.2 Downloading the Information</h3>
-<h4 id="321-downloading-a-collection">3.2.1 Downloading a collection</h4>
 <ol>
-<li>
-<p>Navigate to SynBioHub&rsquo;s home page.</p>
-</li>
-<li>
-<p>Then, you can search for a specific collection or select <strong>browse the collections</strong> option. It&rsquo;ll direct you to a set of collections based on what you&rsquo;ve searched for.</p>
-</li>
-<li>
-<p>Select the collection which you want to download. Then it&rsquo;ll direct you to the collection&rsquo;s home page.</p>
-</li>
-<li>
-<p>On the left there would be an option to download the collection, in drop down format. Following are the types in which you can download the collection:</p>
-</li>
+<li><strong>iGEM main page</strong>, <strong>iGEM design page</strong> and the <strong>iGEM experience page</strong>. Then is the section that contains, <strong>Sequence Visualisation</strong> of that particular resource. Finally, we have the <strong>component sankey</strong> and the <strong>component bar</strong>. The iGEM parts are plugins, hence they are not part of every instance and the Sequence Visualization, Sankey, and Component bar are additional plugins, hence they&rsquo;ve been explained in detail in the <a href="https://synbiohub.github.io/plugins/">plugins section</a>.</li>
 </ol>
+<h3 id="22-downloading-the-information">2.2 Downloading the Information</h3>
+<p>Once you would&rsquo;ve navigated successfully to the records&rsquo;s home page, there would be a download option on the left, in a dropdown format.</p>
+<p>Following are the types in which you can download the collection:</p>
 <table>
 <thead>
 <tr>
@@ -653,98 +512,76 @@ ICE is built upon the idea of a Web of Registries, and thus provides strong supp
 </thead>
 <tbody>
 <tr>
-<td>SBOL</td>
-<td>The Synthetic Biology Open Language (SBOL) has been developed as a standard to support the         specification and exchange of biological design information in synthetic biology. To know more about SBOl, visit <a href="https://sbolstandard.org/datamodel-about/">this page</a></td>
+<td><strong><a href="https://sbolstandard.org/datamodel-about/">SBOL</a></strong></td>
+<td>The Synthetic Biology Open Language (SBOL) has been developed as a standard to support the         specification and exchange of biological design information in synthetic biology.</td>
 </tr>
 <tr>
-<td>Combine Archive</td>
-<td>A COMBINE archive is a single file containing the various documents (and in the future, references to documents), necessary for the description of a model and all associated data and procedures. This includes for instance, but not limited to, simulation experiment descriptions, all models needed to run the simulations and associated data files. The archive is encoded using the Open Modeling EXchange format (OMEX). To know more about Combine archive, visit <a href="http://co.mbine.org/documents/archive">this page</a>.</td>
+<td><strong><a href="http://co.mbine.org/documents/archive">Combine Archive</a></strong></td>
+<td>A COMBINE archive is a single file containing the various documents (and in the future, references to documents), necessary for the description of a model and all associated data and procedures. This includes for instance, but not limited to, simulation experiment descriptions, all models needed to run the simulations and associated data files. The archive is encoded using the Open Modeling EXchange format (OMEX).</td>
 </tr>
 <tr>
-<td>Annotated Genbank</td>
-<td>GenBank format (GenBank Flat File Format) consists of an annotation section and a sequence section. The start of the annotation section is marked by a line beginning with the word &ldquo;LOCUS&rdquo;. The start of sequence section is marked by a line beginning with the word &ldquo;ORIGIN&rdquo; and the end of the section is marked by a line with only &ldquo;//&rdquo; To know more about Annotated genbank format, visit <a href="http://quma.cdb.riken.jp/help/gbHelp.html">this page</a>,</td>
+<td><strong><a href="http://asia.ensembl.org/info/website/upload/gff3.html">GFF3</a></strong></td>
+<td>The GFF (General Feature Format) format consists of one line per feature, each containing 9 columns of data, plus optional track definition lines.</td>
 </tr>
 <tr>
-<td>Annotated Plasmid Map</td>
-<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://en.wikipedia.org/wiki/Plasmid">this page</a></td>
-</tr>
-<tr>
-<td>Plasmid map</td>
-<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://www.snapgene.com/resources/plasmid-files/">this page</a>.</td>
-</tr>
-<tr>
-<td>Annotated zip</td>
-<td>ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed. To know more about zip, visit <a href="https://en.wikipedia.org/wiki/Zip_(file_format)">this page</a></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h4 id="322-downloading-a-module-engineered-region-promoter-activator">3.2.2 Downloading a Module/ Engineered Region/ Promoter/ Activator</h4>
-<ol>
-<li>
-<p>Navigate to SynBioHub&rsquo;s home page.</p>
-</li>
-<li>
-<p>Then, you can search for a specific collection or select <strong>browse the collections</strong> option. It&rsquo;ll direct you to a set of collections based on what you&rsquo;ve searched for.</p>
-</li>
-<li>
-<p>Select the collection which you want to download. Then it&rsquo;ll direct you to the collection&rsquo;s home page. From the collection&rsquo;s home page select resource which you want to download and click on that. This will direct you to the resource&rsquo;s home page.</p>
-</li>
-<li>
-<p>Then, on the left there would be an option to download that resource, in drop down format. Following are the types in which you can download the collection:</p>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SBOL</td>
-<td>The Synthetic Biology Open Language (SBOL) has been developed as a standard to support the         specification and exchange of biological design information in synthetic biology. To know more about SBOl, visit <a href="https://sbolstandard.org/datamodel-about/">this page</a></td>
-</tr>
-<tr>
-<td>Combine Archive</td>
-<td>A COMBINE archive is a single file containing the various documents (and in the future, references to documents), necessary for the description of a model and all associated data and procedures. This includes for instance, but not limited to, simulation experiment descriptions, all models needed to run the simulations and associated data files. The archive is encoded using the Open Modeling EXchange format (OMEX). To know more about Combine archive, visit <a href="http://co.mbine.org/documents/archive">this page</a>.</td>
-</tr>
-<tr>
-<td>Annotated Genbank</td>
-<td>GenBank format (GenBank Flat File Format) consists of an annotation section and a sequence section. The start of the annotation section is marked by a line beginning with the word &ldquo;LOCUS&rdquo;. The start of sequence section is marked by a line beginning with the word &ldquo;ORIGIN&rdquo; and the end of the section is marked by a line with only &ldquo;//&rdquo; To know more about Annotated genbank format, visit <a href="http://quma.cdb.riken.jp/help/gbHelp.html">this page</a>,</td>
-</tr>
-<tr>
-<td>Annotated Plasmid Map</td>
-<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://en.wikipedia.org/wiki/Plasmid">this page</a></td>
-</tr>
-<tr>
-<td>Plasmid map</td>
-<td>Plasmid maps are graphical representation of plasmids, that show the locations of major identifiable landmarks on DNA like restriction enzyme sites, gene of interest, plasmid name and length etc. To know more about plasmid map, visit <a href="https://www.snapgene.com/resources/plasmid-files/">this page</a>.</td>
-</tr>
-<tr>
-<td>Annotated zip</td>
-<td>ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed. To know more about zip, visit <a href="https://en.wikipedia.org/wiki/Zip_(file_format)">this page</a></td>
-</tr>
-<tr>
-<td>GFF3</td>
-<td>The GFF (General Feature Format) format consists of one line per feature, each containing 9 columns of data, plus optional track definition lines. To know more about GFF3, click <a href="http://asia.ensembl.org/info/website/upload/gff3.html">here</a>.</td>
-</tr>
-<tr>
-<td>FASTA</td>
-<td>In bioinformatics and biochemistry, the FASTA format is a text-based format for representing either nucleotide sequences or amino acid (protein) sequences, in which nucleotides or amino acids are represented using single-letter codes. The format also allows for sequence names and comments to precede the sequences. The format originates from the FASTA software package, but has now become a near universal standard in the field of bioinformatics. To know more about FATSA file format, click <a href="https://en.wikipedia.org/wiki/FASTA_format">here</a></td>
+<td><strong><a href="https://en.wikipedia.org/wiki/FASTA_format">FASTA</a></strong></td>
+<td>In bioinformatics and biochemistry, the FASTA format is a text-based format for representing either nucleotide sequences or amino acid (protein) sequences, in which nucleotides or amino acids are represented using single-letter codes. The format also allows for sequence names and comments to precede the sequences. The format originates from the FASTA software package, but has now become a near universal standard in the field of bioinformatics.</td>
 </tr>
 <tr>
 <td>Image</td>
 <td>An image is an artifact that depicts visual perception, such as a photograph or other two-dimensional picture, that resembles a subject—usually a physical object—and thus provides a depiction of it. In the context of signal processing, an image is a distributed amplitude of color(s). A pictorial script is a writing system that employs images as symbols for various semantic entities, rather than the abstract signs used by alphabets</td>
 </tr>
-<tr>
-<td>Annotated Zip</td>
-<td>ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed. To know more about zip, visit <a href="https://en.wikipedia.org/wiki/Zip_(file_format)">this page</a></td>
-</tr>
 </tbody>
 </table>
 <hr>
+<p>Additional download options can be through the use of download plugins.</p>
+<h2 id="3-registering--updating-an-account">3. Registering &amp; Updating an account</h2>
+<h3 id="31-registering-an-account">3.1 Registering an account</h3>
+<p>Following Steps need to be followed for registering onto SynBioHub:</p>
+<ol>
+<li>
+<p>Navigate to SynBioHub&rsquo;s home page.</p>
+</li>
+<li>
+<p>Click on the <strong>Login or Register</strong> option on the top right hand side of your Screen.</p>
+</li>
+<li>
+<p>Enter the following details to complete your registration process:</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Full Name,</p>
+</li>
+<li>
+<p>Affiliation(Optional),</p>
+</li>
+<li>
+<p>Email Address,</p>
+</li>
+<li>
+<p>Username &amp;</p>
+</li>
+<li>
+<p>Password</p>
+</li>
+</ul>
+<ol start="4">
+<li>When you need to login into your SynBioHub account, click on the &ldquo;login or Register&rdquo; option. Then you need to enter your email address and your password to access your account.</li>
+</ol>
+<h3 id="32-updating-an-account">3.2 Updating an Account</h3>
+<p>If you ever need to update your account, the following steps need to be followed:</p>
+<ol>
+<li>
+<p>You need to be logged in order to update your account. Follow the previous set of steps to login, if you aren&rsquo;t logged in to your account.</p>
+</li>
+<li>
+<p>Then, click on the <strong>profile</strong> option. It&rsquo;ll redirect you onto a page, which contains your profile.</p>
+</li>
+<li>
+<p>On this page, update whichever section you want to, and then click on the <strong>save</strong> option at the bottom to successfully update your profile.</p>
+</li>
+</ol>
 <h2 id="4-submitting-managing--updating-submissions">4. Submitting, Managing &amp; Updating Submissions</h2>
 <h3 id="41-submitting">4.1 Submitting</h3>
 <p>For submitting your designs to SynBioHub, following steps need to be followed:</p>
@@ -1065,11 +902,50 @@ The steps to do so are as follows:</p>
 </ol>
 <p>You may use the pointer to view differs types of logs.</p>
 <h4 id="74-mail">7.4 Mail</h4>
-<p>On this page, you have 2 options, that are sendgrid API key and sendgrid from email.</p>
-<p>In the first column, you need to fill the API key, that you&rsquo;d need to generate from sendgrid. SendGrid is a cloud-based SMTP provider that allows you to send email without having to maintain email servers. SendGrid manages all of the technical details, from scaling the infrastructure to ISP outreach and reputation monitoring to whitelist services and real time analytics. To know more about sendgrid, click <a href="https://sendgrid.com/wp-content/uploads/2016/09/SendGrid-Implementation-Review.pdf">here</a>.</p>
+<p>On this page, you have 2 options, that are <a href="https://sendgrid.com/wp-content/uploads/2016/09/SendGrid-Implementation-Review.pdf">sendgrid</a> API key and sendgrid from email.</p>
+<p>In the first column, you need to fill the API key, that you&rsquo;d need to generate from sendgrid. SendGrid is a cloud-based SMTP provider that allows you to send email without having to maintain email servers. SendGrid manages all of the technical details, from scaling the infrastructure to ISP outreach and reputation monitoring to whitelist services and real time analytics.</p>
+<h5 id="741-setting-up-sendgrid">7.4.1 Setting up Sendgrid</h5>
+<p>In order to enable SynBioHub to send account-related emails, you need a sendgrid account and API key. The following steps need to be executed, for setting up sendgrid:-</p>
 <ol>
-<li><strong>SendGrid API key</strong>: For generating an API key, you need to have a sendgrid account. To sign-up for sendgrid and hence generating an API key, click <a href="https://synbiohub.github.io/setup/#setting-up-sendgrid">here</a>.</li>
-<li><strong>SendGrid From Email</strong>:  Here, you can enter the email, which you can use for sending emails.</li>
+<li>
+<p>Visit <a href="www.sendgrid.com">this</a> website.</p>
+</li>
+<li>
+<p>Select the <em>Sign up</em> option, in case you&rsquo;re using it for the first time.</p>
+</li>
+<li>
+<p>Enter you Email Address and password as well as select the captcha for verification.</p>
+</li>
+<li>
+<p>Fill up all the details about yourself on the &ldquo;Tell Us About Yourself&rdquo; page.</p>
+</li>
+<li>
+<p>Then, after filling up all the details correctly it&rsquo;ll re-direct you to your dashboard and send a confirmational Email.</p>
+</li>
+<li>
+<p>Click on the <em>Settings</em> options on left hand side of the page.</p>
+</li>
+<li>
+<p>Then, select the <em>Create an API key option</em>.</p>
+</li>
+<li>
+<p>It&rsquo;ll prompt you to give your API key a name. Also, you can customize the API key permissions.</p>
+</li>
+<li>
+<p>After completing these steps, click on Create and View.</p>
+</li>
+<li>
+<p>The API key is shown only for once due to security reasons, so try to save it at a safe place.</p>
+</li>
+<li>
+<p>Your API key has been created, and hence ready to use!!</p>
+</li>
+<li>
+<p><strong>SendGrid API key</strong>: For generating an API key, you need to have a sendgrid account. To sign-up for sendgrid and hence generating an API key, click <a href="https://synbiohub.github.io/setup/#setting-up-sendgrid">here</a>.</p>
+</li>
+<li>
+<p><strong>SendGrid From Email</strong>:  Here, you can enter the email, which you can use for sending emails.</p>
+</li>
 </ol>
 <h4 id="75-plugins">7.5 Plugins</h4>
 <p>On this page, you can configure the plugins which you want to use. Plugins are modular stand-alone additions to SynBioHub. They function in a way that is similar to browser extensions. They can be installed separately from the browser/SynBioHub and provide additional ‘custom’ functionality to the browser/SynBioHub experience despite having a completely separate code base from the browser/SynBioHub. Though, they seem integrated to the user.</p>
@@ -1099,7 +975,9 @@ The steps to do so are as follows:</p>
 <h4 id="76-registries">7.6 Registries</h4>
 <p>SynBioHub also supports the Web of Registries concept i.e, the idea of multiple separate repositories linked together by shared common semantics. In the case of SynBioHub, SBOL is used to support the common exchange of data, thus positioning SynBioHub to support the development of synthetic biology workflows by acting as a source and a storage facility for designs.</p>
 <p>Hence, Web Of registries enables communication between SynBioHub instances. Sharing designs between instances of SynBioHub is also further facilitated via the Web of Registries service. Federated SynBioHub instances can reference parts in the public graph of other federated instances. In order to support this federation, the Web of Registries service maintains information about all SynBioHub registries, such as their name, description, administrator email, URI prefix, and uniform resource locator(URL).</p>
-<p>To know more about web-of-registries, visit <a href="https://synbiohub.github.io/setup/#web-of-registries-in-synbiohub">this</a> page.</p>
+<p>Any SynBioHub can access the Web Of Registries to determine information about all registered SynBioHub instances. If a design references a part within another synbiohub instance, the information about this part can be fetched in order to render this design information locally and provide links to the corresponding design information page for this part.</p>
+<p>When a new SynBioHub instance wishes to join the Web of Registries, it sends its information to the Web of Registries service, and all the Web of Registries curators are alerted via email that there is a new repository pending approval. Once the repository has been approved, its information is broadcast to all other registries in the Web of Registries. Anybody can access the current list of registries through an HTTP GET request. Once registered, an instance of SynBioHub is able to locate designs within any other instance that is registered with the Web of Registries.</p>
+<p>SynBioHub demonstrates the application of this harmonized data exchange through existing repositories, hence envisaging a wider, integrated ecosystem of biological part information shared across a plethora of different repositories with different capabilities.</p>
 <ul>
 <li>
 <p>On this page, you can configure the registry for your local instance. To configure the registry for your local instance, enter the administrator email in the column just besides the web-of-registries link. After entering the admin email, click on <strong>submit</strong> and this would configure the admin email for the registries.</p>
@@ -1123,10 +1001,10 @@ The steps to do so are as follows:</p>
 <p>There are 2 types of remotes you can configure for SynBioHub i.e, <strong>Benchling</strong> and <strong>ICE</strong>. They&rsquo;re discussed in detail as follows:</p>
 <ol>
 <li>
-<p><strong>Benchling</strong>: Benchling is an integrated software solution for experiment design, note-taking, and molecular biology. It is a free, intelligent research platform with tools for note-taking, molecular biology, and sample tracking. Benchling includes an electronic lab notebook, a molecular biology suite for design and analysis, and a bioregistry to track inventory. To know more about benching, click <a href="http://benchling.com/academic">here</a>.</p>
+<p><strong><a href="http://benchling.com/academic">Benchling</a></strong>: Benchling is an integrated software solution for experiment design, note-taking, and molecular biology. It is a free, intelligent research platform with tools for note-taking, molecular biology, and sample tracking. Benchling includes an electronic lab notebook, a molecular biology suite for design and analysis, and a bioregistry to track inventory.</p>
 </li>
 <li>
-<p><strong>ICE</strong>: ICE is a registry platform that provides robust data storage for DNA components, integrated tools for part characterization, as well as mechanisms for secure access and information sharing with other users and software tools. To know more about ICE, click <a href="https://ice.jbei.org/">here</a>.</p>
+<p><strong><a href="https://ice.jbei.org/">ICE</a></strong>: ICE is a registry platform that provides robust data storage for DNA components, integrated tools for part characterization, as well as mechanisms for secure access and information sharing with other users and software tools.</p>
 </li>
 </ol>
 <p>Upon opening this page for the first time you&rsquo;ll see a message stating: <em>No remotes configured</em>. To configure a remote for your instance, follow the following steps:</p>

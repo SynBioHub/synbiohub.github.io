@@ -103,8 +103,7 @@
         <li><a href="#with-plugins">With Plugins</a></li>
       </ul>
     </li>
-    <li><a href="#plugins">Plugins</a></li>
-    <li><a href="#from-source">From Source</a></li>
+    <li><a href="#installation-from-source">Installation from source</a></li>
   </ul>
 </nav>
 </div>
@@ -150,44 +149,26 @@ The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docke
 <p><code>git clone https://github.com/synbiohub/synbiohub-docker</code></p>
 </li>
 <li>
-<p>Then, enter the following commands to start the local instance of SynBioHub:</p>
+<p>Then, enter the following command to start the local instance of SynBioHub:</p>
+<p><code>docker-compose -f ./synbiohub-docker/docker-compose.yml up</code></p>
 </li>
-</ol>
-<ul>
-<li>
-<p>For Mac/Linux/Unix: There are 2 ways of running the local instance of SynBioHub for these Operating Systems. They&rsquo;re stated as follows:</p>
-<p>1st Method:</p>
-<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml up</code></p>
-<p>2nd Method:</p>
-<p>This has been explained <a href="https://synbiohub.github.io/installation/#with-sbolexplorer">here</a>.</p>
-</li>
-<li>
-<p>For Windows OS:</p>
-</li>
-</ul>
-<p>Enter the following command into the command prompt:</p>
-<p><code>docker-compose --file ./synbiohub-docker/docker-compose.yml --file ./synbiohub-docker/docker-compose.explorer.yml up</code></p>
-<ol start="6">
 <li>
 <p>In your browser search for localhost:7777 and it&rsquo;ll take you to a setup page when you&rsquo;ll run it for the very first time.</p>
 <p>[In case of Linux OS, if you face any permission errors, then simple insert <strong>sudo</strong> before every statement]</p>
 </li>
 </ol>
 <h3 id="with-sbolexplorer">With SBOLExplorer</h3>
-<p>To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 3 run the following command:</p>
-<pre><code>`sysctl -w vm.max_map_count=262144`
-
-
-`docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up`
-</code></pre>
+<p>You can also run SynBioHub, by using SBOlExplorer.
+To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 3 run the following command:</p>
+<p><code>sysctl -w vm.max_map_count=262144</code></p>
+<p><code> docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up</code></p>
 <h3 id="with-plugins">With Plugins</h3>
 <p>To add plugins to the configuration, change the command mentioned in step 3 to:</p>
-<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
+<p><code>docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
 <p>Note that all plugins are added before the <code>up</code> and each is preceeded by <code>-f </code>. For example, to run the configuration with the VisualIgem plugins and the VisualSeqviz plugin run:</p>
-<p><code>docker-compose --f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.pluginVisualIgem.yml -f ./synbiohub-docker/docker-compose.pluginVisualSeqviz.yml up</code></p>
-<h2 id="plugins">Plugins</h2>
-<p>The sortable plugins table can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
-<h2 id="from-source">From Source</h2>
+<p><code>docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.pluginVisualIgem.yml -f ./synbiohub-docker/docker-compose.pluginVisualSeqviz.yml up</code></p>
+<p>A sortable table containing plugins has been implemented <strong><a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a></strong>.</p>
+<h2 id="installation-from-source">Installation from source</h2>
 <p>Follow the instructions on the following <a href="https://github.com/synbiohub/synbiohub">GitHub README</a> to install SynBioHub locally onto your system.</p>
 
 
