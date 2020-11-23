@@ -82,6 +82,11 @@
         
         <a class="nav-link p-0" href="https://synbiohub.github.io/troubleshooting/"><h6>Troubleshooting </h6></a>
     </li>
+    <li data-nav-id="/reportingerrors/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/reportingerrors/"><h6>Reporting Errors</h6></a>
+    </li>
     <li data-nav-id="/references/" class="nav-item my-1
         ">
         
@@ -102,7 +107,7 @@
         <li><a href="#12-sequence-search">1.2 Sequence Search</a></li>
         <li><a href="#13-advanced-search">1.3 Advanced Search</a></li>
         <li><a href="#14-sparql-search">1.4 SPARQL Search</a></li>
-        <li><a href="#15-searching-on-a-record-page">1.5 Searching on a record page</a></li>
+        <li><a href="#15-searching-on-a-record-page">1.5 Searching on a Record Page</a></li>
       </ul>
     </li>
     <li><a href="#2-viewing--downloading-the-information">2. Viewing &amp; Downloading the Information</a>
@@ -111,9 +116,9 @@
         <li><a href="#22-downloading-the-information">2.2 Downloading the Information</a></li>
       </ul>
     </li>
-    <li><a href="#3-registering--updating-an-account">3. Registering &amp; Updating an account</a>
+    <li><a href="#3-registering--updating-an-account">3. Registering &amp; Updating an Account</a>
       <ul>
-        <li><a href="#31-registering-an-account">3.1 Registering an account</a></li>
+        <li><a href="#31-registering-an-account">3.1 Registering an Account</a></li>
         <li><a href="#32-updating-an-account">3.2 Updating an Account</a></li>
       </ul>
     </li>
@@ -147,7 +152,7 @@
 
 <p>This section contains instructions on how you can implement various operations ranging from registering onto SynBioHub to uploading your genetic designs on SynBioHub, by using the user interface of SynBioHub. The sub-sections are as follows:</p>
 <h2 id="1-searching-for-information">1. Searching for Information</h2>
-<p>There are a variety of ways to search for information in SynBioHub, such as using keywords, sequences as well as SPARQL queries. They&rsquo;re explained in detail as follows:</p>
+<p>There are a variety of ways to search for information in SynBioHub, such as using keywords, sequences, advanced searches and  SPARQL queries. They&rsquo;re explained in detail as follows:</p>
 <h3 id="11-keyword-search">1.1 Keyword Search</h3>
 <p>To search amongst various records, follow these steps:</p>
 <ol>
@@ -158,164 +163,186 @@
 <p>In the search box, enter the keywords for the record you want to search for and click on the search button.</p>
 </li>
 <li>
-<p>Subsequently, a list of records matching the keywords that you&rsquo;ve entered shall appear on your screen.</p>
+<p>Subsequently, you shall be directed to a list of records matching the keywords that you&rsquo;ve entered. For each record, the first thing that is displayed is the name. Just below the name, the ID, version and type of the record shall be displayed. Just below, you&rsquo;ll be able to see a brief description about the record provided by the owner of that particular record. On the right hand side, there is an indicator displaying whether it is a <strong>public</strong>, <strong>private</strong> or a <strong>remote</strong> record. Being private means that the record is available on a private repository i.e, to a specific user only and if it is labeled as public means it is available to all the users of SynBioHub. If the record is available to all the users but on another instance of SynBioHub, then it shall be labeled as remote</p>
 </li>
 <li>
-<p>Select the desired record from the list.</p>
+<p>If you see the record you want, you can select it else, you can select next or any of the other page numbers to navigate to the other pages to look for the record you desire amongst other records.</p>
+</li>
+<li>
+<p>On this page, you&rsquo;re also able to see other search options, such as sequence, advanced or SPARQL search, which are described in detail in the upcoming sections.</p>
 </li>
 </ol>
 <h3 id="12-sequence-search">1.2 Sequence Search</h3>
-<p>To search using a sequence, follow these steps:</p>
-<ol>
-<li>
-<p>Navigate to SynBioHub&rsquo;s home page.</p>
-</li>
-<li>
-<p>Click on the <em>search</em> option. It&rsquo;ll direct you to a page containing a list of records.</p>
-</li>
-<li>
-<p>Located just below the search box are the various means through which you can search for the desired records. In this case, click on <em>sequence search</em>.</p>
-</li>
-<li>
-<p>Enter the sequence or upload a <strong><a href="https://en.wikipedia.org/wiki/FASTA">FASTA</a>/<a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a></strong> file, by clicking the choose file option just below the box. This shall search only for exact matches of the sequence. Your entry must be the first key/value pair.</p>
-</li>
-<li>
-<p>Then, you can choose the perspective of your search. You can perform a <strong>global</strong> search or an <strong>exact</strong> search. The exact search shall display, those records which are an exact match to the sequences that you&rsquo;ve entered and the global search search will display those results which have even the smallest of the similarities to the sequence that you&rsquo;ve entered.</p>
-</li>
-<li>
-<p>Subsequently, you may customise the number of results, the value for which must not exceed 10,000. This translates into the maximum number of hits to accept before stopping the search. Kindly note that, higher the value, the longer the runtime.</p>
-</li>
-<li>
-<p>Then you need to enter the minimum and the maximum length of the sequence for which you want to search for. Values for both of these parameters should not exceed 100,000.</p>
-</li>
-<li>
-<p>Then, you need to enter the maximum number of non-matching target sequences, that are to be considered before the search is halted. This option works in pair with the flag above. The search process sorts the target sequences by decreasing number of k-mers they have in common with the query sequence, using that information as a proxy for sequence similarity. After pairwise alignments, if none of the first x examined target sequences pass the acceptation criteria, the search process stops for that query (no hit). If this flag is set to a higher value, more target sequences are considered. If the flag above and this flag are both set to 0, the complete database is searched.</p>
-</li>
-<li>
-<p>Fill up the <em>percentage match</em>, by entering a value between 0 and 1. This is the value of pairwise identity that must match with the sequence, otherwise the sequence is rejected.</p>
-</li>
-<li>
-<p>Finally, select the <em>pairwise identity definition</em>. You may select the value for this attribute from the following options:</p>
-</li>
-</ol>
+<p>On the search results page, there is button labeled as <strong>sequence search</strong>. Clicking on that button will direct you to a page containing a list of sequence search options. To search using a sequence, you can provide the values for the options, as described in the table below:</p>
 <table>
 <thead>
 <tr>
-<th>Value</th>
+<th>Option Name</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Default</td>
-<td>Edits distance excluding the terminal gaps</td>
+<td>Enter Sequence</td>
+<td>Enter the sequence or upload a <strong><a href="https://en.wikipedia.org/wiki/FASTA">FASTA</a>/<a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a></strong> file, by clicking the choose file option just below the box. This shall search only for exact matches of the sequence. Your entry must be the first key/value pair</td>
 </tr>
 <tr>
-<td>CD-HIT definition</td>
-<td>Considers the following ratio: (matching columns) / (shortest sequence length)</td>
+<td>Search Method</td>
+<td>You can choose the perspective of your search. You can perform a <strong>global</strong> search or an <strong>exact</strong> search. The exact search shall display, those records which are an exact match to the sequences that you&rsquo;ve entered and the global search search will display those results which have even the smallest of the similarities to the sequence that you&rsquo;ve entered.</td>
 </tr>
 <tr>
-<td>Marine Biological Lab definition</td>
-<td>counts each gap opening (internal or terminal) as a single mismatch, whether or not the gap was extended: 1.0 - [(mismatches + gap openings)/(longest sequence length)]</td>
+<td>Number of Results</td>
+<td>You may customise the number of results, the value for which must not exceed 10,000. This translates into the maximum number of hits to accept before stopping the search. Kindly note that, higher the value, the longer the runtime.</td>
 </tr>
 <tr>
-<td>BLAST Definition</td>
-<td>equivalent to edit distance for global pairwise alignments</td>
+<td>Minimum Sequence Length</td>
+<td>You need to enter the minimum sequence length. This value basically specifies the minimum length of the sequence, which you want to search for. Values for this parameter should not exceed 100,000.</td>
+</tr>
+<tr>
+<td>Maximum Sequence Length</td>
+<td>You need to enter the maximum sequence length. This value basically specifies the maximum length of the sequence, which you want to search for. Values for this parameter should not exceed 100,000.</td>
+</tr>
+<tr>
+<td># of failed hits before stopping</td>
+<td>Then, you need to enter the maximum number of non-matching target sequences, that are to be considered before the search is halted. This option works in pair with the flag above. The search process sorts the target sequences by decreasing number of k-mers they have in common with the query sequence, using that information as a proxy for sequence similarity. After pairwise alignments, if none of the first x examined target sequences pass the acceptation criteria, the search process stops for that query (no hit). If this flag is set to a higher value, more target sequences are considered. If the flag above and this flag are both set to 0, the complete database is searched.</td>
+</tr>
+<tr>
+<td>Percent Match</td>
+<td>Then, we have is the <em>percentage match</em>, which has a value between 0 and 1. This is the value of pairwise identity that must match with the sequence, otherwise the sequence is rejected.</td>
+</tr>
+<tr>
+<td>Pairwise Identity Definition</td>
+<td>You may select the value for this attribute from the following options: 1) <strong>Default</strong>: Edits distance excluding the terminal gaps,   2) <strong>CD-HIT definition</strong>: Considers the following ratio: (matching columns) / (shortest sequence length),   3) <strong>Marine Biological Lab definition</strong>: counts each gap opening (internal or terminal) as a single mismatch, whether or not the gap was extended: 1.0 - [(mismatches + gap openings)/(longest sequence length)],   4) <strong>BLAST Definition</strong>: equivalent to edit distance for global pairwise alignments</td>
 </tr>
 </tbody>
 </table>
-<h3 id="13-advanced-search">1.3 Advanced Search</h3>
-<p>On this search page, you can select from a variety of search criteria, which are as follows:</p>
-<ol>
-<li>
-<p>Navigate to SynBioHub&rsquo;s home page.</p>
-</li>
-<li>
-<p>Click on the <em>search</em> option. It&rsquo;ll direct you to a page containing a list of records.</p>
-</li>
-<li>
-<p>Located just below the search box are the various means through which you can search for the desired records. In this case, click on <em>advanced search</em>.</p>
-</li>
-<li>
-<p>Now, select the type of the record you want to search for i.e, a collection, design, activity, etc&hellip;</p>
-</li>
-<li>
-<p>Then, select the username of the record&rsquo;s creator.</p>
-</li>
-<li>
-<p>Enter the timeframe between which the record was created, by entering the <em>created after</em> and <em>created before</em> attributes. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format.</p>
-</li>
-<li>
-<p>If the record has been modified, make sure to enter the <em>modified after</em> and <em>modified before</em> attributes as well. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format.</p>
-</li>
-<li>
-<p>Enter the ID or the name or the description of the record, which you want to search for.</p>
-</li>
-<li>
-<p>Select the <em>type</em> of the record, from the following available options in the dropdown menu, for an example: No filter, biopax:Complex, biopax:DnaRegion, biopax:Protein, so:circular, etc&hellip;</p>
-<p>Subsequently, select the <strong>role</strong> of the record from this dropdown menu. It contains various sub-categories of <strong><a href="https://igem.org/Main_Page">igem</a></strong> or <strong><a href="http://www.sequenceontology.org/miso/current_release/term/SO:0000316">SO</a></strong>.</p>
-</li>
-<li>
-<p>You may select any number of collections, based on your convenience. To select a collection, click on the value attribute of collection and select it from the drop down menu.</p>
-</li>
-<li>
-<p>You may apply customised filters for the design you want to search for. For that purpose, a few blank filtering columns have been provided.
-As soon as you&rsquo;ll click on an empty filter on the left hand side, a drop down menu shall appear having various parameters for filtering. These parameters are basically, the properties for filtering the records. Select the property that you want your record to be filtered by, and then click on filter.
-This shall reload the page and then select the value of the filter, from the drop down on the right hand side. You may provide as many as 5 customised filters which&rsquo;er optional.</p>
-</li>
-</ol>
-<h3 id="14-sparql-search">1.4 SPARQL Search</h3>
-<p>To perform a <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a></strong> Search, the following steps should be followed:</p>
-<ol>
-<li>
-<p>Navigate to SynBioHub&rsquo;s SPARQL Search Page.</p>
-</li>
-<li>
-<p>Since, SPARQL is a query language, hence it&rsquo;ll query Synbiohub&rsquo;s databases for the designs that you&rsquo;re looking for.</p>
-</li>
-<li>
-<p>Following is an example how a sample SPARQL query is written:</p>
-</li>
-</ol>
-<pre><code>  SELECT  # makes up the headers of the table
-	
-        ?def # directs you to the design for which you're looking for 
-	
-        ?displayId # This statement displays the Id the design
-	
-        ?title # displays the title of the design
-	
-        (count(?def) as ?count) # displays the count parameter for the design
-	
-        ?role # displays the role of the design    
-
-  WHERE { 
-  	 ?s sbol:component ?comp # Searching for **sbol** components
-
-  	 ?comp sbol:definition ?def # provides the link to that component
-
-         filter (regex(?role, 'http://identifiers.org/so/SO:')) 
-
-	 OPTIONAL {?def sbol:role ?role} # Defines the role
-
-	 OPTIONAL {?def sbol:displayId ?displayId} # gives the ID of that particular record
-
-	 OPTIONAL {?def dcterms:title ?title} 
-  }
-</code></pre><p><em>The query selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your preferred type.</em></p>
 <hr>
-<h3 id="15-searching-on-a-record-page">1.5 Searching on a record page</h3>
-<p>On a record page, under the search button, you can find the following options:-</p>
-<h4 id="151-searching-for-the-uses">1.5.1 Searching for the uses</h4>
-<p>This returns any other object that refers to this object that the user has given as an input, for example, if this is an engineered region, then it will return all other components that use this as a sub-component.</p>
-<h4 id="152-searching-for-the-twins">1.5.2 Searching for the twins</h4>
-<p>This returns other components, if and only if they have the same sequence as the input by the user.</p>
-<h4 id="153-searching-for-the-similar-ones">1.5.3 Searching for the similar ones</h4>
-<p>This returns other components that have similar sequences.</p>
+<p>After filling up the desired options, press the <strong>search</strong> button to get the search results.</p>
+<h3 id="13-advanced-search">1.3 Advanced Search</h3>
+<p>On the search results page, there is button labeled as <strong>advanced search</strong>. Clicking on that button will direct you to a page containing a list of advanced search options. To search using advanced parameters, you can provide the values for the option as described in the table below. The records that&rsquo;ll be displayed will match all of the criteria, that you&rsquo;ll fill in. Kindly note that you <strong>don&rsquo;t</strong> need to fill in all of the options. The options are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Option Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object Type</td>
+<td>The type of the record you want to search for i.e, a collection, design, activity, etc&hellip;</td>
+</tr>
+<tr>
+<td>Creator</td>
+<td>The username of the record&rsquo;s creator</td>
+</tr>
+<tr>
+<td>Created After and Created Before</td>
+<td>the timeframe between which the record was created. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format</td>
+</tr>
+<tr>
+<td>Modified After Modified Before</td>
+<td>The timeframe between the record may had been modified. Make sure to enter the dates in the <strong>YYYY-MM-DD</strong> format</td>
+</tr>
+<tr>
+<td>ID/Name/Description</td>
+<td>Enter the ID or the name or the description of the record, which you want to search for</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Select the <em>type</em> of the record, from the following available options in the dropdown menu, for an example: No filter, biopax:Complex, biopax:DnaRegion, biopax:Protein, so:circular, etc&hellip;</td>
+</tr>
+<tr>
+<td>Role</td>
+<td>select the <strong>role</strong> of the record from this dropdown menu. It contains various sub-categories of <strong><a href="https://igem.org/Main_Page">igem</a></strong> or <strong><a href="http://www.sequenceontology.org/miso/current_release/term/SO:0000316">SO</a></strong>.</td>
+</tr>
+<tr>
+<td>Collections</td>
+<td>You may select any number of collections, based on your convenience. To select a collection, click on the value attribute of collection and select it from the drop down menu</td>
+</tr>
+<tr>
+<td>Customisable Filters</td>
+<td>You may apply customised filters for the design you want to search for. For that purpose, a few blank filtering columns have been provided. As soon as you&rsquo;ll click on an empty filter on the left hand side, a drop down menu shall appear having various parameters for filtering. These parameters are basically, the properties for filtering the records. Select the property that you want your record to be filtered by, and then click on filter. This shall reload the page and then select the value of the filter, from the drop down on the right hand side. You may provide as many as 5 customised filters which&rsquo;er optional</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>After selecting the desired options for performing a search using advanced parameters, click <strong>search</strong>. This will return the records after comprehending all the details that you&rsquo;ve entered.</p>
+<ul>
+<li>Just below, there is an option to create a <strong>new collection</strong> as well. If you wish to create a collection from your search results, you need to fill in the following items:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Option Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collection Name</td>
+<td>This is the name string that’ll be assigned to the submission.</td>
+</tr>
+<tr>
+<td>Collection Description</td>
+<td>This is the description string that briefly explains your submission.</td>
+</tr>
+<tr>
+<td>Collection ID</td>
+<td>This is a user-defined alphanumeric string identifier for the submission and it should contain alphanumeric and underscores characters only.</td>
+</tr>
+<tr>
+<td>Collection Version</td>
+<td>This is the alphanumeric string which is associated with the submission.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>After you&rsquo;ve filled in all the available options, click on <strong>create collection</strong>. This will return the search results to you, in the form a private collection.</p>
+<h3 id="14-sparql-search">1.4 SPARQL Search</h3>
+<p>On the search results page, there is button labeled as <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a></strong>. Clicking on that button will direct you to the SPARQL page. Since, SPARQL is a query language, hence it&rsquo;ll query Synbiohub&rsquo;s databases for the designs that you&rsquo;re looking for. On the SPARQL page, you can select the graph that is from <strong>private</strong> or <strong>public</strong>. Here, <strong>public</strong> means searching amongst the public submissions, that can be viewed by and <strong>private</strong> means, the ones that are your personal collections.</p>
+<p>In the box provided just below graphs dropdown, enter the SPARQL query. Following is an example that selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your preferred type:</p>
+<pre><code>
+# Some common prefix's are also provided below, which you can use in your SPARQL queries.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;
+PREFIX sbh: &lt;http://wiki.synbiohub.org/wiki/Terms/synbiohub#&gt;
+PREFIX prov: &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX sbol: &lt;http://sbols.org/v2#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX purl: &lt;http://purl.obolibrary.org/obo/&gt;
+SELECT  # makes up the headers of the table
+?def # directs you to the design for which you're looking for 
+?displayId # This statement displays the Id the design
+?title # displays the title of the design
+(count(?def) as ?count) # displays the count parameter for the design
+?role # displays the role of the design    
+WHERE { 
+?s sbol:component ?comp # Searching for **sbol** components
+?comp sbol:definition ?def # provides the link to that component
+filter (regex(?role, 'http://identifiers.org/so/SO:')) 
+OPTIONAL {?def sbol:role ?role} # Defines the role
+OPTIONAL {?def sbol:displayId ?displayId} # gives the ID of that particular record
+OPTIONAL {?def dcterms:title ?title} 
+  }
+
+</code></pre><p>After writing your SPARQL query, just click <strong>submit query</strong>. After you click on <strong>submit query</strong>, a list of records matching with SPARQL query shall be displayed.</p>
+<h3 id="15-searching-on-a-record-page">1.5 Searching on a Record Page</h3>
+<p>On a record page, under the search button, you may find the following options:-</p>
+<h4 id="151-searching-for-uses">1.5.1 Searching for Uses</h4>
+<p>This returns other records that refers to this particular record which you&rsquo;re currently viewing. For example, if this is an engineered region, then it will return all other components that use this as a sub-component.</p>
+<h4 id="152-search-for-twin-components">1.5.2 Search for Twin Components</h4>
+<p>If the record being viewed is a component, then you&rsquo;ll also have the option to search for <strong>twin</strong> components. A twin is another component that has the same sequence as the object being viewed. So, selecting this option will return all the records having the same sequence as the object that you&rsquo;d be currently viewing.</p>
+<h4 id="153-search-for-similar-components">1.5.3 Search for Similar Components</h4>
+<p>If the record being viewed is a component and SBOLExplorer is being run on that particular SynBioHub instance, then you&rsquo;ll also have the option to search for <strong>similar</strong> components. A component is similar, when the sequences are close enough, that SBOlExplorer has clustered those 2 components together into the same cluster.</p>
 <h2 id="2-viewing--downloading-the-information">2. Viewing &amp; Downloading the Information</h2>
 <h3 id="21-viewing-the-information">2.1 Viewing the Information</h3>
 <p>There are various types of records on SynBioHub. They&rsquo;ve been divided into the following sub-categories:</p>
-<h4 id="211-viewing-a-collection">2.1.1 Viewing a collection</h4>
+<h4 id="211-viewing-a-record">2.1.1. Viewing a Record</h4>
+<p>This page consists of a general description of</p>
+<h4 id="212-viewing-a-collection">2.1.2 Viewing a collection</h4>
 <p>Once you&rsquo;ve navigated successfully to the collections home page, the following steps need to be followed:</p>
 <ol>
 <li>On the collection&rsquo;s home page, you&rsquo;ll be able to view to view the following parameters in this order:</li>
@@ -357,7 +384,7 @@ The list consists of the name, identifier, type as well as description of respec
 <p>Finally, you can also view the various attachments that are there in that particular collection.</p>
 </li>
 </ul>
-<h4 id="212-viewing-a-component">2.1.2 Viewing a component</h4>
+<h4 id="213-viewing-a-component">2.1.3 Viewing a component</h4>
 <p>Once you&rsquo;ve successfully navigated to the record&rsquo;s home page, you&rsquo;ll be able to view the parameters in this order:</p>
 <ul>
 <li>
@@ -371,9 +398,7 @@ The list consists of the name, identifier, type as well as description of respec
 </li>
 <li>
 <p>Then, we&rsquo;ve got five clickable options, that are:</p>
-</li>
-</ul>
-<ol>
+<ul>
 <li>
 <p><strong><a href="https://synbiohub.github.io/userdocumentation/#32-downloading-the-information">Download</a></strong></p>
 </li>
@@ -389,16 +414,14 @@ The list consists of the name, identifier, type as well as description of respec
 <li>
 <p><strong><a href="https://synbiohub.github.io/userdocumentation/#43-updating">Add to a collection</a></strong></p>
 </li>
-</ol>
-<ul>
+</ul>
+</li>
 <li>
 <p>Next we have is the VisBOL Navigator, with zooming capabilities. This, graphically represents the structure of the engineered region. By hovering your pointer over this structure, you can view the following attributes of that particular engineered region: type of resource, identifier, name and role of the engineered region.</p>
 </li>
 <li>
 <p>Then we have the details of that engineered region. This consists of the following:</p>
-</li>
-</ul>
-<ol>
+<ul>
 <li>
 <p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">Type</a></strong>: This specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design.</p>
 </li>
@@ -411,11 +434,11 @@ The list consists of the name, identifier, type as well as description of respec
 <li>
 <p>Also, you can view reference as well as citations.</p>
 </li>
-</ol>
-<ul>
-<li>Then, we have the section named, <strong>other properties</strong>. This consists of the following attributes:</li>
 </ul>
-<ol>
+</li>
+<li>
+<p>Then, we have the section named, <strong>other properties</strong>. This consists of the following attributes:</p>
+<ul>
 <li>
 <p><strong><a href="www.ontobee.org/ontology/OBI?iri=http://purl.obolibrary.org/obo/OBI_0002110">Ontology for Biomedical Investigations(OBI)</a></strong>: A centrally registered identifier symbol used to uniquely identify objects given by International DOI Foundation. The DOI system is particularly used for electronic documents such as journal articles.</p>
 </li>
@@ -425,8 +448,8 @@ The list consists of the name, identifier, type as well as description of respec
 <li>
 <p>SynBioHub#TopLevel</p>
 </li>
-</ol>
-<ul>
+</ul>
+</li>
 <li>
 <p>Subsequently, we have the section titled as, <strong>Member of these collections</strong>. This section contains the list of collection&rsquo;s to which that particular resource belongs to.</p>
 </li>
@@ -450,9 +473,7 @@ Role basically clarifies the potential function of an entity in a biochemical or
 </li>
 <li>
 <p>There may be additional clickable sections after the attachments menu. These have been added via, <strong><a href="https://github.com/SynBioHub/Plugin-Visual-Seqviz">visualisation plugins</a></strong> and they&rsquo;re as follows:</p>
-</li>
-</ul>
-<ol>
+<ul>
 <li>
 <p><strong>iGEM main page</strong>,</p>
 </li>
@@ -468,10 +489,13 @@ Role basically clarifies the potential function of an entity in a biochemical or
 <li>
 <p>Then is the section that contains, <strong>Sequence Visualisation</strong> of that particular resource. Finally, we have the <strong>component sankey</strong> and the <strong>component bar</strong>. The iGEM parts are plugins, hence they are not part of every instance and the Sequence Visualization, Sankey, and Component bar are additional plugins, hence they&rsquo;ve been explained in detail <a href="https://github.com/SynBioHub/Plugin-Visual-Seqviz">here</a>.</p>
 </li>
-</ol>
+</ul>
+</li>
+</ul>
 <h3 id="22-downloading-the-information">2.2 Downloading the Information</h3>
 <p>Once you would&rsquo;ve navigated successfully to the records&rsquo;s home page, there would be a download option on the left, in a dropdown format.</p>
-<p>Following are the types in which you can download the collection:</p>
+<p>Following are the types of formats that you may be able to download a record:</p>
+<p><strong>Note: Not all the record types may be downloaded in all formats.</strong></p>
 <table>
 <thead>
 <tr>
@@ -503,21 +527,9 @@ Role basically clarifies the potential function of an entity in a biochemical or
 </tbody>
 </table>
 <hr>
-<p>Additional download options can be through the use of plugins, which are as follows:</p>
-<ol>
-<li>
-<p><strong><a href="https://synbiohub.github.io/plugins/#32-basic-structure">Visual Plugins</a></strong></p>
-</li>
-<li>
-<p><strong><a href="https://synbiohub.github.io/plugins/#33-submit">Submit Plugins</a></strong></p>
-</li>
-<li>
-<p><strong><a href="https://synbiohub.github.io/plugins/#34-download">Download Plugins</a></strong></p>
-</li>
-</ol>
-<p>To view some example plugins visit the example section of each of these sections.</p>
-<h2 id="3-registering--updating-an-account">3. Registering &amp; Updating an account</h2>
-<h3 id="31-registering-an-account">3.1 Registering an account</h3>
+<p>Additional download options can be through the use of <strong><a href="https://synbiohub.github.io/plugins/#34-download">download plugins</a></strong>.</p>
+<h2 id="3-registering--updating-an-account">3. Registering &amp; Updating an Account</h2>
+<h3 id="31-registering-an-account">3.1 Registering an Account</h3>
 <p>Following Steps need to be followed for registering onto SynBioHub:</p>
 <ol>
 <li>
@@ -530,23 +542,37 @@ Role basically clarifies the potential function of an entity in a biochemical or
 <p>Enter the following details to complete your registration process:</p>
 </li>
 </ol>
-<ul>
-<li>
-<p>Full Name,</p>
-</li>
-<li>
-<p>Affiliation(Optional),</p>
-</li>
-<li>
-<p>Email Address,</p>
-</li>
-<li>
-<p>Username &amp;</p>
-</li>
-<li>
-<p>Password</p>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Option Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full Name</td>
+<td>Enter the name of the user</td>
+</tr>
+<tr>
+<td>Affiliation(Optional)</td>
+<td>You can enter the name of the university/institute that you&rsquo;re currently affiliated to</td>
+</tr>
+<tr>
+<td>Email Address</td>
+<td>Enter the Email Address, through which you want to get registered. If in future you forget your login credentials, then this shall be used for sending a recovery password for your account</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>You have to enter a username of your own choice. This shall be displayed on the record page of every record that you submit</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Enter a password (preferably a strong one) for keeping your user account safe</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <ol start="4">
 <li>When you need to login into your SynBioHub account, click on the &ldquo;login or Register&rdquo; option. Then you need to enter your email address and your password to access your account.</li>
 </ol>
@@ -1375,27 +1401,19 @@ To grant this particular access, check the grant curator privileges box.</p>
 
             </div> 
 
-        </div> 
-<script src="https://synbiohub.github.iolib/jquery.min.js"></script> 
-<script src="https://synbiohub.github.iolib/popper.min.js"></script> 
-
-<script src="https://synbiohub.github.iojs/bootstrap.min.js"></script> 
-
-
-<script type="text/javascript" src="https://synbiohub.github.io/plugins/lunr.min.js"></script>
-<script type="text/javascript" src="https://synbiohub.github.io/plugins/auto-complete.js"></script>
-<link href="https://synbiohub.github.io/plugins/auto-complete.css" rel="stylesheet">
-<script type="text/javascript">
-  
-      var baseurl = "https:\/\/synbiohub.github.io";
-  
-</script>
-<script type="text/javascript" src="https://synbiohub.github.io/plugins/search.js"></script>
-
-
-<script type="text/javascript" src="https://synbiohub.github.io/plugins/clipboard.js"></script>
-<script>
-  new ClipboardJS('.btn');
-</script>
+        </div> <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.6">
+  <style type="text/css">
+  </style>
+</head>
+<body>
+</body>
+</html>
 </body>
 </html>

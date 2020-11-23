@@ -82,6 +82,11 @@
         
         <a class="nav-link p-0" href="https://synbiohub.github.io/troubleshooting/"><h6>Troubleshooting </h6></a>
     </li>
+    <li data-nav-id="/reportingerrors/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/reportingerrors/"><h6>Reporting Errors</h6></a>
+    </li>
     <li data-nav-id="/references/" class="nav-item my-1
         ">
         
@@ -156,18 +161,23 @@ The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docke
 <p>In your browser search for localhost:7777 and it&rsquo;ll take you to a setup page when you&rsquo;ll run it for the very first time.</p>
 <p>[In case of Linux OS, if you face any permission errors, then simple insert <strong>sudo</strong> before every statement]</p>
 </li>
+<li>
+<p>The following command stops a local instance of SynBioHub:</p>
+<p><code>docker-compose -f ./synbiohub-docker/docker-compose.yml down</code></p>
+</li>
 </ol>
 <h3 id="with-sbolexplorer">With SBOLExplorer</h3>
 <p>You can also run SynBioHub, by using SBOlExplorer.
 To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 3 run the following command:</p>
 <p><code>sysctl -w vm.max_map_count=262144</code></p>
 <p><code> docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up</code></p>
+<p><strong>Presently, the command <code>sysctl -w vm.max_map_count=262144</code> runs only on linux, due to OS upgrades on Mac OS</strong>*</p>
 <h3 id="with-plugins">With Plugins</h3>
 <p>To add plugins to the configuration, change the command mentioned in step 3 to:</p>
 <p><code>docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
 <p>Note that all plugins are added before the <code>up</code> and each is preceeded by <code>-f </code>. For example, to run the configuration with the VisualIgem plugins and the VisualSeqviz plugin run:</p>
 <p><code>docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.pluginVisualIgem.yml -f ./synbiohub-docker/docker-compose.pluginVisualSeqviz.yml up</code></p>
-<p>A sortable table containing plugins has been implemented <strong><a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a></strong>.</p>
+<p>A table of currently available plugins can be found <strong><a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a></strong>.</p>
 <h2 id="installation-from-source">Installation from source</h2>
 <p>Follow the instructions on the following <a href="https://github.com/synbiohub/synbiohub">GitHub README</a> to install SynBioHub locally onto your system.</p>
 
@@ -193,27 +203,19 @@ To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, 
 
             </div> 
 
-        </div> 
-<script src="https://synbiohub.github.iolib/jquery.min.js"></script> 
-<script src="https://synbiohub.github.iolib/popper.min.js"></script> 
-
-<script src="https://synbiohub.github.iojs/bootstrap.min.js"></script> 
-
-
-<script type="text/javascript" src="https://synbiohub.github.io/plugins/lunr.min.js"></script>
-<script type="text/javascript" src="https://synbiohub.github.io/plugins/auto-complete.js"></script>
-<link href="https://synbiohub.github.io/plugins/auto-complete.css" rel="stylesheet">
-<script type="text/javascript">
-  
-      var baseurl = "https:\/\/synbiohub.github.io";
-  
-</script>
-<script type="text/javascript" src="https://synbiohub.github.io/plugins/search.js"></script>
-
-
-<script type="text/javascript" src="https://synbiohub.github.io/plugins/clipboard.js"></script>
-<script>
-  new ClipboardJS('.btn');
-</script>
+        </div> <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.6">
+  <style type="text/css">
+  </style>
+</head>
+<body>
+</body>
+</html>
 </body>
 </html>
