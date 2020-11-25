@@ -43,9 +43,6 @@
     </button>
 
      <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
-            <form class="form-inline my-2 my-lg-0 searchbox">
-                <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
-            </form>
          <ul class="navbar-nav flex-column pt-3">
     <li data-nav-id="/aboutsynbiohub/" class="nav-item my-1
         ">
@@ -125,13 +122,14 @@
       </ul>
     </li>
     <li><a href="#5-editing-a-submission">5. Editing a Submission</a></li>
-    <li><a href="#6-data-sharing-mechanisms">6. Data Sharing Mechanisms</a>
+    <li><a href="#6-add-to-an-existing-collection">6. Add to an existing collection</a></li>
+    <li><a href="#7-data-sharing-mechanisms">7. Data Sharing Mechanisms</a>
       <ul>
-        <li><a href="#61-using-the-share-option">6.1 Using the Share option</a></li>
-        <li><a href="#62-adding-an-owner">6.2 Adding an owner</a></li>
+        <li><a href="#71-using-the-share-option">7.1 Using the Share option</a></li>
+        <li><a href="#72-adding-an-owner">7.2 Adding an owner</a></li>
       </ul>
     </li>
-    <li><a href="#7-administration">7. Administration</a>
+    <li><a href="#8-administration">8. Administration</a>
       <ul>
         <li></li>
       </ul>
@@ -336,57 +334,17 @@ OPTIONAL {?def dcterms:title ?title}
 <h3 id="21-viewing-the-information">2.1 Viewing the Information</h3>
 <p>There are various types of records on SynBioHub. They&rsquo;ve been divided into the following sub-categories:</p>
 <h4 id="211-viewing-a-record">2.1.1. Viewing a Record</h4>
-<p>This page consists of a general description of</p>
-<h4 id="212-viewing-a-collection">2.1.2 Viewing a collection</h4>
-<p>Once you&rsquo;ve navigated successfully to the collections home page, the following steps need to be followed:</p>
-<ol>
-<li>On the collection&rsquo;s home page, you&rsquo;ll be able to view to view the following parameters in this order:</li>
-</ol>
-<ul>
-<li>
-<p>Name: Represents the name of the collection, which you want to view.</p>
-</li>
-<li>
-<p>ID and version: The next line represents the ID and the version of the collection. Every collection has a specific ID associated with it and a version which represents the number of times; it has been modified.</p>
-</li>
-<li>
-<p>Resource type: This represents the type of record. For this section, it should be a <strong>collection</strong>.</p>
-</li>
-<li>
-<p>Created by: Displays the name of the collection&rsquo;s creator.</p>
-</li>
-<li>
-<p>Date created: Displays the date and time when the record was created.</p>
-</li>
-<li>
-<p>Subsequently, we have a brief description of the collection that is provided by the creator of the collection.</p>
-</li>
-<li>
-<p>Then, we&rsquo;ve got two clickable options, that are <strong><a href="https://synbiohub.github.io/userdocumentation/#32-downloading-the-information">download</a></strong> and <strong>back</strong>. Back navigates you to the search page.</p>
-</li>
-<li>
-<p>Then, you can view the members of that specific collection. There is also an option to filter the members. Click on the option to filter, and a drop down menu shall appear. You may choose the filters based on your convenience. There is also an option to search for a specific member of the collection by entering the name or ID of the member into the search box and clicking search. You may also choose the number of entries that you want to display on that page.
-The list of members is sortable and can be sorted on the basis of name, identifier, type as well as description.
-The list consists of the name, identifier, type as well as description of respective the members.</p>
-</li>
-<li>
-<p>You can also view details about that specific collection, in the next section. This section contains references as well as citations.</p>
-</li>
-<li>
-<p>Subsequently, you can also view various other properties concerning a particular collection. This specifically conatains information about the various owners of that collection.</p>
-</li>
-<li>
-<p>Finally, you can also view the various attachments that are there in that particular collection.</p>
-</li>
-</ul>
-<h4 id="213-viewing-a-component">2.1.3 Viewing a component</h4>
-<p>Once you&rsquo;ve successfully navigated to the record&rsquo;s home page, you&rsquo;ll be able to view the parameters in this order:</p>
+<p>This section consists of a general description of all record pages i.e, this is what a general record page looks like. Additional sections (if any), are further explained in the further sections, under the respective record types.
+Once you&rsquo;ve successfully navigated to the record&rsquo;s home page, you&rsquo;ll be able to view the parameters in this order:</p>
 <ul>
 <li>
 <p>Name: Represents the name of that particular record.</p>
 </li>
 <li>
 <p>ID and version: The next line represents the ID and the version of that record. Every record has a specific ID associated with it and a version which represents the number of times; it has been modified.</p>
+</li>
+<li>
+<p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">Type</a></strong>: This specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design.</p>
 </li>
 <li>
 <p>Generated from: Represents the source from where that record had been generated from.</p>
@@ -407,15 +365,12 @@ The list consists of the name, identifier, type as well as description of respec
 <p><strong>Back</strong>: This option navigates back to the main page of the collection, which that particular record is a part of.</p>
 </li>
 <li>
-<p><strong><a href="https://synbiohub.github.io/userdocumentation/#43-updating">Add to a collection</a></strong></p>
+<p><strong><a href="">Add to a collection</a></strong></p>
 </li>
 </ul>
 </li>
 <li>
-<p>Next we have is the VisBOL Navigator, with zooming capabilities. This, graphically represents the structure of the engineered region. By hovering your pointer over this structure, you can view the following attributes of that particular engineered region: type of resource, identifier, name and role of the engineered region.</p>
-</li>
-<li>
-<p>Then we have the details of that engineered region. This consists of the following:</p>
+<p>Then we have the details of that record. This consists of the following:</p>
 <ul>
 <li>
 <p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">Type</a></strong>: This specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design.</p>
@@ -452,31 +407,34 @@ The list consists of the name, identifier, type as well as description of respec
 <p>Then, we have the <strong>attachments</strong> page. In this section, you can view the various attachments, of a resource.</p>
 </li>
 <li>
-<p>Then, we have the clickable option of <strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Interaction">interactions</a></strong>. Interactions Provide more detailed description of how the FunctionalComponent objects of a ModuleDefinition are intended to work together. This section is further divided into 3 sections, which are as follows:</p>
-<ul>
-<li>
-<p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Interaction">Interaction</a>/<a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Participation">Participation</a></strong>: <em>Interaction</em> basically provides more detailed description of how the FunctionalComponent objects of a ModuleDefinition are intended to work together whereas each <em>participation</em> represents how a particular FunctionalComponent behaves in its parent Interaction.</p>
-</li>
-<li>
-<p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#definition">Participant Definition</a></strong>:The definition property is a REQUIRED URI that refers to the ComponentDefinition of the ComponentInstance. As described in the previous section, this ComponentDefinition effectively provides information about the types and roles of the ComponentInstance.</p>
-</li>
-<li>
-<p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">Type</a>/<a href="https://dissys.github.io/sbol-owl/sbol-owl.html#role">Role</a></strong>: Type specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design. For DNA or RNA entities, additional types fields are used to describe nucleic acid topology (circular / linear) and strandedness (double- or single-stranded).
-Role basically clarifies the potential function of an entity in a biochemical or physical context. When it is used for ComponentDefinitions, it MUST identify terms from ontologies that are consistent with the types property of the ComponentDefinition. For example, the roles property of a DNA or RNA ComponentDefinition could contain URIs identifying terms from the Sequence Ontology (SO).</p>
+<p>Then, we have the <strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Interaction">Interactions</a></strong> section. Interaction basically, provides a more detailed description of how the FunctionalComponent objects of a ModuleDefinition are intended to work together. It has a table consisting of the following attributes:</p>
 </li>
 </ul>
-</li>
-<li>
-<p>There may be additional clickable sections after the attachments menu. These have been added via, <strong><a href="https://github.com/SynBioHub/Plugin-Visual-Seqviz">visualisation plugins</a></strong> and they&rsquo;re as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Interaction">Interaction</a></strong>/<strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Participation">Participation</a></strong></td>
+<td>1) <strong>Interaction</strong>: Provides more detailed description of how the FunctionalComponent objects of a ModuleDefinition are intended to work together.   2) <strong>Participation</strong>: Each Participation represents how a particular FunctionalComponent behaves in its parent Interaction.</td>
+</tr>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#definition">Participant Definition</a></strong></td>
+<td>The definition property is a REQUIRED URI that refers to the ComponentDefinition of the ComponentInstance. As described in the previous section, this ComponentDefinition effectively provides information about the types and roles of the ComponentInstance.</td>
+</tr>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">Type</a></strong>/<strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#role">Role</a></strong></td>
+<td>1) <strong>Type</strong>: Specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design. For DNA or RNA entities, additional types fields are used to describe nucleic acid topology (circular / linear) and strandedness (double- or single-stranded).  2) <strong>Role</strong>: Clarifies the potential function of an entity in a biochemical or physical context. When it is used for ComponentDefinitions, it MUST identify terms from ontologies that are consistent with the types property of the ComponentDefinition. For example, the roles property of a DNA or RNA ComponentDefinition could contain URIs identifying terms from the Sequence Ontology (SO). It may be a product, genetic production, template, etc.</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>
-<p><strong>iGEM main page</strong>,</p>
-</li>
-<li>
-<p><strong>iGEM design page</strong> and</p>
-</li>
-<li>
-<p><strong>iGEM experience page</strong>.</p>
+<p>There may be additional clickable sections after the attachments menu. These have been added via, <strong><a href="https://github.com/SynBioHub/Plugin-Visual-Seqviz">visualisation plugins</a></strong>.</p>
 </li>
 <li>
 <p>Then, we have a section, titled <strong>Member of these collection</strong>, which displays the collection, of which that particular record is a part of.</p>
@@ -485,8 +443,107 @@ Role basically clarifies the potential function of an entity in a biochemical or
 <p>Then is the section that contains, <strong>Sequence Visualisation</strong> of that particular resource. Finally, we have the <strong>component sankey</strong> and the <strong>component bar</strong>. The iGEM parts are plugins, hence they are not part of every instance and the Sequence Visualization, Sankey, and Component bar are additional plugins, hence they&rsquo;ve been explained in detail <a href="https://github.com/SynBioHub/Plugin-Visual-Seqviz">here</a>.</p>
 </li>
 </ul>
+<h4 id="212-viewing-a-collection">2.1.2 Viewing a collection</h4>
+<p><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Collection">Collection</a></strong>, basically groups together a set of TopLevel objects that have something in common.</p>
+<p>On a collection&rsquo;s home page, other than the details mentioned in the general section, you&rsquo;ll be able to view a section titled, <strong>members</strong>.
+This sections basically contains, the list of records that is included in this particular section.
+A general description of this section is as follows:</p>
+<ul>
+<li>
+<p><strong>Filtering the Table</strong>: The first parameter in this section is of filtering the table of contents. This is basically a dropdown menu, which contains various parameters base upon which the table of contents can be filtered. It contains various options such as showing all objects, showing only root objects, biopic:complex, etc..  You may select the option of your choice, from this dropdown menu and then click on filter. This will filter the table and display only those contents which&rsquo;er as per the parameter that you have selected.</p>
+</li>
+<li>
+<p><strong>Number of Entries</strong>: This is also a dropdown menu, which contains certain integer strings. The number of records you want to be displayed on a single page, can be controlled by this option. So, you can choose the value as per your own convenience, which in turn shall display that many records on a single page.</p>
+</li>
+<li>
+<p><strong>Search</strong>: By using this search option, you can search for the records of your own choice, just by providing its name. Therefore, for searching a record contained in the table, you need to provide its exact name string.</p>
+</li>
+<li>
+<p><strong>Table</strong>: Then we have is the table of contents. It contains the records that are in that very particular collection. This is a sortable table and can be sorted on the basis of multiple parameters ranging from identifier, type or description.</p>
 </li>
 </ul>
+<p>The header of the table as explained as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Table Header</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>This contains the name of each and every record that is in that collection, that is provided by the user who had submitted that particular record. Just besides the header there is small figure, clicking on which shall sort this table on the basis of reverse priority of alphabets i.e, Z-A</td>
+</tr>
+<tr>
+<td>Identifier</td>
+<td>This contains the ID or the identifier of that particular record,that is provided by the user who had submitted that particular record. ust besides the header there is small figure, clicking on which shall sort this table on the basis of reverse priority of alphabets i.e, Z-A</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>This represents the type of the record, i.e. whether it is a module, sequence, activity, etc.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>This is a brief description, that is provided by the user, who&rsquo;d submitted that particular records. This description, in brief describes, what that particular record does.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="213-viewing-a-module">2.1.3 Viewing a Module</h4>
+<p>A <strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#ModuleDefinition">Module</a></strong>, basically represents a grouping of structural and functional entities in a biological design.
+Once you&rsquo;ve successfully navigated to the Module&rsquo;s home page, other than the parameters described in the general section,you&rsquo;ll be able to view a few other the parameters, as follows:</p>
+<ul>
+<li>Type: The record type, as is obvious will be displayed as <strong>Module</strong>. A <strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#ModuleDefinition">Module</a></strong>, basically represents a grouping of structural and functional entities in a biological design.</li>
+</ul>
+<p>Just below the clickable options, the VisBol navigates is located, which displays the structure of that particular module. VisBOL Navigator also has zooming capabilities. This, graphically represents the structure of the module. By hovering your pointer over this structure, you can view the following attributes of that particular module i.e, type of resource, identifier, name and role of the module.</p>
+<p>Then, what we have is the section titled, <strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#FunctionalComponent">functional components</a></strong>. A FunctionalComponent is an instance of a ComponentDefinition being used as part of a ModuleDefinition. The ModuleDefinition describes how the that describes how the FunctionalComponent interacts with others and summarizes their aggregate function. The parameters included in this section are described in the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#access">Access</a>/<a href="https://dissys.github.io/sbol-owl/sbol-owl.html#direction">Direction</a></strong></td>
+<td>1) <strong>Access</strong>: The access property is a REQUIRED URI that indicates whether the ComponentInstance can be referred to remotely by a MapsTo on another ComponentInstance or Module contained by a different parent ComponentDefinition or ModuleDefinition (one that does not contain this ComponentInstance).  2) <strong>Direction</strong>:Each FunctionalComponent MUST specify via the direction property whether it serves as an input, output, both, or neither for its parent ModuleDefinition object.</td>
+</tr>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#definition">Definition</a></strong> and <strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#MapsTo">MapsTo</a></strong></td>
+<td>1) <strong>Definition</strong>: The definition property is a REQUIRED URI that refers to the ComponentDefinition of the ComponentInstance. ComponentDefinition effectively provides information about the types and roles of the ComponentInstance.  2) <strong>MapsTo</strong>: When ComponentDefinition and ModuleDefinition objects are composed into structural and functional hierarchies using ComponentInstance and Module objects, it is often the case that some ComponentInstance objects are intended to represent the same entity in the overall design. The purpose of the MapsTo class is to make these identity relationships clear and explicit. For example, consider a ModuleDefinition for a genetic inverter that includes a FunctionalComponent for an abstract repressor protein. When this ModuleDefinition is instantiated within a “higher level” ModuleDefinition that includes a FunctionalComponent for a LacI protein, the MapsTo object can be used to indicate that the repressor protein in the first ModuleDefinition is LacI in the context of the composite design.</td>
+</tr>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#public">Public</a></strong> and <strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#inout">Inout</a></strong></td>
+<td>1) <strong>Public</strong>: Indicates that a ComponentInstance MAY be referred to by remote MapsTo objects. 2) <strong>Inout</strong>: Indicates that the FunctionalComponent is both an input and output.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Subsequently, just below the functional components we have the <strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Interaction">Interactions</a></strong> section. Interaction basically, provides a more detailed description of how the FunctionalComponent objects of a ModuleDefinition are intended to work together. It has a table consisting of the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Interaction">Interaction</a></strong>/<strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#Participation">Participation</a></strong></td>
+<td>1) <strong>Interaction</strong>: Provides more detailed description of how the FunctionalComponent objects of a ModuleDefinition are intended to work together.   2) <strong>Participation</strong>: Each Participation represents how a particular FunctionalComponent behaves in its parent Interaction.</td>
+</tr>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#definition">Participant Definition</a></strong></td>
+<td>The definition property is a REQUIRED URI that refers to the ComponentDefinition of the ComponentInstance. As described in the previous section, this ComponentDefinition effectively provides information about the types and roles of the ComponentInstance.</td>
+</tr>
+<tr>
+<td><strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#type">Type</a></strong>/<strong><a href="https://dissys.github.io/sbol-owl/sbol-owl.html#role">Role</a></strong></td>
+<td>1) <strong>Type</strong>: Specifies the category of biochemical or physical entity. For example DNA, protein, or small molecule that a ComponentDefinition object abstracts for the purpose of engineering design. For DNA or RNA entities, additional types fields are used to describe nucleic acid topology (circular / linear) and strandedness (double- or single-stranded).  2) <strong>Role</strong>: Clarifies the potential function of an entity in a biochemical or physical context. When it is used for ComponentDefinitions, it MUST identify terms from ontologies that are consistent with the types property of the ComponentDefinition. For example, the roles property of a DNA or RNA ComponentDefinition could contain URIs identifying terms from the Sequence Ontology (SO). It may be a product, genetic production, template, etc.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="22-downloading-the-information">2.2 Downloading the Information</h3>
 <p>Once you would&rsquo;ve navigated successfully to the records&rsquo;s home page, there would be a download option on the left, in a dropdown format.</p>
 <p>Following are the types of formats that you may be able to download a record:</p>
@@ -815,9 +872,26 @@ Role basically clarifies the potential function of an entity in a biochemical or
 <p><strong>Lookup attachment</strong>: Under this option, you can search for attachments. For this, you need to provide a URL for the attachment as well as its name. Then you need to select the type of attachment, for which you want to search for. The types are as follows: .nib, 2bit, A2M, ABI, etc&hellip;</p>
 </li>
 </ol>
-<h2 id="6-data-sharing-mechanisms">6. Data Sharing Mechanisms</h2>
+<h2 id="6-add-to-an-existing-collection">6. Add to an existing collection</h2>
+<p>On some record pages you might find an option titled, <strong>add to an existing collection</strong>. Using this option, you can add the record which you&rsquo;re currently viewing to a collection that is already there. For that, simply follow the following steps:</p>
+<ul>
+<li>
+<p>Click <strong>add to collection</strong>. This will direct you to page, consisting of a dropdown menu.</p>
+</li>
+<li>
+<p>Then, click on that dropdown menu. This will contain a list of collections, that&rsquo;er already existing and the record which you&rsquo;re currently viewing can be added to it.</p>
+</li>
+<li>
+<p>Then, select the collection as per your convenience, from the dropdown menu.</p>
+</li>
+<li>
+<p>Finally, click <strong>add to collection</strong>.</p>
+</li>
+</ul>
+<p>This shall add the the record or the collection which you&rsquo;re currently viewing to the collection, which you&rsquo;ve selected.</p>
+<h2 id="7-data-sharing-mechanisms">7. Data Sharing Mechanisms</h2>
 <p>There are a couple of ways to share data in SynBioHub. They&rsquo;re mentioned as follows:</p>
-<h3 id="61-using-the-share-option">6.1 Using the Share option</h3>
+<h3 id="71-using-the-share-option">7.1 Using the Share option</h3>
 <ol>
 <li>
 <p>Select the collection/design that you want to share.</p>
@@ -829,7 +903,7 @@ Role basically clarifies the potential function of an entity in a biochemical or
 <p>Now, copy that link &amp; you can share the link, thereby sharing the resource.</p>
 </li>
 </ol>
-<h3 id="62-adding-an-owner">6.2 Adding an owner</h3>
+<h3 id="72-adding-an-owner">7.2 Adding an owner</h3>
 <p>You can also share your design by giving any number of persons access by adding them as an owner for your design. This will give them full administrative access to your resources.
 The steps to do so are as follows:</p>
 <ol>
@@ -846,7 +920,7 @@ The steps to do so are as follows:</p>
 <p>Click on <strong>grant ownership</strong>.</p>
 </li>
 </ol>
-<h2 id="7-administration">7. Administration</h2>
+<h2 id="8-administration">8. Administration</h2>
 <p>Note: <strong>The administration section will only be available, if you&rsquo;re using a SynBioHub local instance. If you&rsquo;re using a global instance, such as <a href="https://synbiohub.org/">this</a> one, then the administration section won&rsquo;t be available unless you have privileged access to SynBioHub.</strong></p>
 <p>To access the admin page, the following steps need to be followed:</p>
 <ol>
@@ -857,7 +931,7 @@ The steps to do so are as follows:</p>
 <p>Click on <strong>admin</strong>, in order to access the administrative settings of your instance. This will direct you to the administrative page. It has been divided into several sub-sections, for your convenience. They&rsquo;re discussed in detail, as follows:</p>
 </li>
 </ol>
-<h4 id="71-status">7.1 Status</h4>
+<h4 id="81-status">8.1 Status</h4>
 <p>Several parameters essential for the smooth functioning of SynBioHub, are mentioned in this sub-section. They&rsquo;re as follows:</p>
 <table>
 <thead>
@@ -909,9 +983,9 @@ The steps to do so are as follows:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="72-graphs">7.2 Graphs</h4>
+<h4 id="82-graphs">8.2 Graphs</h4>
 <p>This section basically displays the graph URI and its corresponding triples. You can select the number of graphs you want to view on one page as well as search for any specific graphs, with the help of search box. You can also sort the graphs on the basis of number of triples.</p>
-<h4 id="73-log">7.3 Log</h4>
+<h4 id="83-log">8.3 Log</h4>
 <p>This section displays the log file for your SynBioHub local instance. You can view 4 types of logs, which are as follows:</p>
 <ol>
 <li>
@@ -928,10 +1002,10 @@ The steps to do so are as follows:</p>
 </li>
 </ol>
 <p>You may use the pointer to view differs types of logs.</p>
-<h4 id="74-mail">7.4 Mail</h4>
+<h4 id="84-mail">8.4 Mail</h4>
 <p>On this page, you have 2 options, that are <a href="https://sendgrid.com/wp-content/uploads/2016/09/SendGrid-Implementation-Review.pdf">sendgrid</a> API key and sendgrid from email.</p>
 <p>In the first column, you need to fill the API key, that you&rsquo;d need to generate from sendgrid. SendGrid is a cloud-based SMTP provider that allows you to send email without having to maintain email servers. SendGrid manages all of the technical details, from scaling the infrastructure to ISP outreach and reputation monitoring to whitelist services and real time analytics.</p>
-<h5 id="741-setting-up-sendgrid">7.4.1 Setting up Sendgrid</h5>
+<h5 id="841-setting-up-sendgrid">8.4.1 Setting up Sendgrid</h5>
 <p>In order to enable SynBioHub to send account-related emails, you need a sendgrid account and API key. The following steps need to be executed, for setting up sendgrid:-</p>
 <ol>
 <li>
@@ -974,7 +1048,7 @@ The steps to do so are as follows:</p>
 <p><strong>SendGrid From Email</strong>:  Here, you can enter the email, which you can use for sending emails.</p>
 </li>
 </ol>
-<h4 id="75-plugins">7.5 Plugins</h4>
+<h4 id="85-plugins">8.5 Plugins</h4>
 <p>On this page, you can configure the <strong><a href="https://synbiohub.github.io/plugins/">plugins </a></strong> which you want to use. Plugins are modular stand-alone additions to SynBioHub. They function in a way that is similar to browser extensions. They can be installed separately from the browser/SynBioHub and provide additional ‘custom’ functionality to the browser/SynBioHub experience despite having a completely separate code base from the browser/SynBioHub. Though, they seem integrated to the user.</p>
 <p>They&rsquo;re broadly classified into 3 types, which are as follows:</p>
 <ol>
@@ -998,7 +1072,7 @@ The steps to do so are as follows:</p>
 </li>
 </ul>
 <p>After filling both of the columns click on <strong>save</strong>, in order to save your plugin.</p>
-<h4 id="76-registries">7.6 Registries</h4>
+<h4 id="86-registries">8.6 Registries</h4>
 <p>SynBioHub also supports the Web of Registries concept i.e, the idea of multiple separate repositories linked together by shared common semantics. In the case of SynBioHub, SBOL is used to support the common exchange of data, thus positioning SynBioHub to support the development of synthetic biology workflows by acting as a source and a storage facility for designs.</p>
 <p>Hence, Web Of registries enables communication between SynBioHub instances. Sharing designs between instances of SynBioHub is also further facilitated via the Web of Registries service. Federated SynBioHub instances can reference parts in the public graph of other federated instances. In order to support this federation, the Web of Registries service maintains information about all SynBioHub registries, such as their name, description, administrator email, URI prefix, and uniform resource locator(URL).</p>
 <p>Any SynBioHub can access the Web Of Registries to determine information about all registered SynBioHub instances. If a design references a part within another synbiohub instance, the information about this part can be fetched in order to render this design information locally and provide links to the corresponding design information page for this part.</p>
@@ -1023,7 +1097,7 @@ The steps to do so are as follows:</p>
 <ul>
 <li>Several local web-of-registries are also given on this page alongside their Synbiohub URL. Here, you have an option to <strong>save</strong> as well as <strong>delete</strong> the already existing registries.</li>
 </ul>
-<h4 id="77-remotes">7.7 Remotes</h4>
+<h4 id="87-remotes">8.7 Remotes</h4>
 <p>There are 2 types of remotes you can configure for SynBioHub i.e, <strong>Benchling</strong> and <strong>ICE</strong>. They&rsquo;re discussed in detail as follows:</p>
 <ol>
 <li>
@@ -1034,7 +1108,7 @@ The steps to do so are as follows:</p>
 </li>
 </ol>
 <p>Upon opening this page for the first time you&rsquo;ll see a message stating: <em>No remotes configured</em>. To configure a remote for your instance, follow the following steps:</p>
-<h5 id="771-configuring-a-benchling-remote">7.7.1 Configuring a benchling remote</h5>
+<h5 id="871-configuring-a-benchling-remote">8.7.1 Configuring a benchling remote</h5>
 <ol>
 <li>
 <p>When you&rsquo;ll click on the type box, a dropdown menu shall appear containing 2 options, ice and benchling. For configuring a benchling remote, select <strong>benchling</strong>. Then click on <strong>add remote</strong>.</p>
@@ -1106,7 +1180,7 @@ The steps to do so are as follows:</p>
 <ol start="3">
 <li>Once you&rsquo;ve clicked on submit, you&rsquo;ll be able to see a fully configured remote on the left. You can also delete and edit your remote. To delete any of your configured remotes, click on delete. To edit any of the information, click on edit. Once you&rsquo;ve edited the information, click on submit.</li>
 </ol>
-<h5 id="772-configuring-an-ice-remote">7.7.2 Configuring an ICE remote</h5>
+<h5 id="872-configuring-an-ice-remote">8.7.2 Configuring an ICE remote</h5>
 <ol>
 <li>
 <p>When you&rsquo;ll click on the type box, a dropdown menu shall appear containing 2 options, ice and benchling. For configuring an ICE remote, select <strong>ICE</strong> and then click on <strong>add remote</strong>.</p>
@@ -1205,7 +1279,7 @@ The steps to do so are as follows:</p>
 <ol start="3">
 <li>Once you&rsquo;ve clicked on submit, you&rsquo;ll be able to see a fully configured remote on the left. You can also delete and edit your remote. To delete any of your configured remotes, click on delete. To edit any of the information, click on edit. Once you&rsquo;ve edited the information, click on submit.</li>
 </ol>
-<h4 id="78-sbolexplorer">7.8 SBOLExplorer</h4>
+<h4 id="88-sbolexplorer">8.8 SBOLExplorer</h4>
 <p>SBOLExplorer is a service that simplifies the process of analysing and searching for parts within genetic design repositories.</p>
 <p>Once you click on the <strong>SBOLExplorer</strong> option, you can view the following options:</p>
 <ol>
@@ -1247,47 +1321,37 @@ The steps to do so are as follows:</p>
 <p>Then, click on the <strong>save</strong> button to save all the details for the SBOLExplorer.</p>
 </li>
 </ol>
-<h4 id="79-sparql">7.9 SPARQL</h4>
-<p>To perform a <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a></strong> Search, the following steps should be followed:</p>
-<ol>
-<li>
-<p>Navigate to SynBioHub&rsquo;s SPARQL Search Page.</p>
-</li>
-<li>
-<p>Since, SPARQL is a query language, hence it&rsquo;ll query Synbiohub&rsquo;s databases for the designs that you&rsquo;re looking for.</p>
-</li>
-<li>
-<p>Following is an example how a sample SPARQL query is written:</p>
-</li>
-</ol>
-<pre><code>  SELECT  # makes up the headers of the table
-	
-        ?def # directs you to the design for which you're looking for 
-	
-        ?displayId # This statement displays the Id the design
-	
-        ?title # displays the title of the design
-	
-        (count(?def) as ?count) # displays the count parameter for the design
-	
-        ?role # displays the role of the design    
-
-  WHERE { 
-  	 ?s sbol:component ?comp # Searching for **sbol** components
-
-  	 ?comp sbol:definition ?def # provides the link to that component
-
-         filter (regex(?role, 'http://identifiers.org/so/SO:')) 
-
-	 OPTIONAL {?def sbol:role ?role} # Defines the role
-
-	 OPTIONAL {?def sbol:displayId ?displayId} # gives the ID of that particular record
-
-	 OPTIONAL {?def dcterms:title ?title} 
+<h4 id="89-sparql">8.9 SPARQL</h4>
+<p>On the search results page, there is button labeled as <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a></strong>. Clicking on that button will direct you to the SPARQL page. Since, SPARQL is a query language, hence it&rsquo;ll query Synbiohub&rsquo;s databases for the designs that you&rsquo;re looking for. On the SPARQL page, you can select the graph that is from <strong>private</strong> or <strong>public</strong>. Here, <strong>public</strong> means searching amongst the public submissions, that can be viewed by and <strong>private</strong> means, the ones that are your personal collections.</p>
+<p>In the box provided just below graphs dropdown, enter the SPARQL query. Following is an example that selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your preferred type:</p>
+<pre><code>
+# Some common prefix's are also provided below, which you can use in your SPARQL queries.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;
+PREFIX sbh: &lt;http://wiki.synbiohub.org/wiki/Terms/synbiohub#&gt;
+PREFIX prov: &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX sbol: &lt;http://sbols.org/v2#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX purl: &lt;http://purl.obolibrary.org/obo/&gt;
+SELECT  # makes up the headers of the table
+?def # directs you to the design for which you're looking for 
+?displayId # This statement displays the Id the design
+?title # displays the title of the design
+(count(?def) as ?count) # displays the count parameter for the design
+?role # displays the role of the design    
+WHERE { 
+?s sbol:component ?comp # Searching for **sbol** components
+?comp sbol:definition ?def # provides the link to that component
+filter (regex(?role, 'http://identifiers.org/so/SO:')) 
+OPTIONAL {?def sbol:role ?role} # Defines the role
+OPTIONAL {?def sbol:displayId ?displayId} # gives the ID of that particular record
+OPTIONAL {?def dcterms:title ?title} 
   }
-</code></pre><p><em>The query selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your preferred type.</em></p>
-<hr>
-<h4 id="710-theme">7.10 Theme</h4>
+
+</code></pre><p>After writing your SPARQL query, just click <strong>submit query</strong>. After you click on <strong>submit query</strong>, a list of records matching with SPARQL query shall be displayed.</p>
+<h4 id="810-theme">8.10 Theme</h4>
 <p>On this several options are available to alter the User interface of your local instance.</p>
 <ul>
 <li>
@@ -1305,7 +1369,7 @@ Also, you can also enable module interactions as well as remove the public enabl
 </li>
 </ul>
 <p>To save all changes click on <strong>save</strong>.</p>
-<h4 id="711-users">7.11 Users</h4>
+<h4 id="811-users">8.11 Users</h4>
 <p>This page basically lists all the users currently registered onto your local instance.</p>
 <ul>
 <li>There is an option to add a user for your local instance. To do so, click on <strong>add user</strong>. This&rsquo;ll direct you to page, wherein you&rsquo;ll be required to fill the following details:</li>

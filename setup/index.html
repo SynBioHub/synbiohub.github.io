@@ -43,9 +43,6 @@
     </button>
 
      <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
-            <form class="form-inline my-2 my-lg-0 searchbox">
-                <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
-            </form>
          <ul class="navbar-nav flex-column pt-3">
     <li data-nav-id="/aboutsynbiohub/" class="nav-item my-1
         ">
@@ -109,7 +106,7 @@
 
 <h1>Setup</h1>
 
-<p>When you&rsquo;ll first install your SynBioHub locally and navigate to <code>http://localhost:7777/</code>, you shall be directed to the setup page.</p>
+<p>When you&rsquo;ll first install SynBioHub locally and navigate to <code>http://localhost:7777/</code>, you shall be directed to the setup page.</p>
 <p>Over there you&rsquo;ll see a welcome message saying, <strong>Congratulations, SynBioHub is successfully installed!</strong></p>
 <p>Then, you need to fill out some details for configuring your local instance, which are as follows:</p>
 <h2 id="1-branding-your-synbiohub">1. Branding Your SynBioHub</h2>
@@ -207,7 +204,32 @@
 <hr>
 <h2 id="4-setting-up-external-authorisation-provider">4. Setting up External Authorisation Provider</h2>
 <p>External authentication basically, is the use of third-party authentication sources to decide whether a user should be allowed access to a system, and often what level of access an authenticated user enjoys on a system.</p>
-<p>For a SynBioHub local instance, you&rsquo;ve got 2 options i.e, <strong>none</strong> or <strong>google</strong>. If you&rsquo;ll select none as your preferred authorisation provider nothing shall happen. If you select google as your authorisation provider, the following</p>
+<p>For a SynBioHub local instance, you&rsquo;ve got 2 options i.e, <strong>none</strong> or <strong>google</strong>. If you&rsquo;ll select none as your preferred authorisation provider then, you simply have to click <strong>continue</strong>.</p>
+<p>To be able to use Google for authentication, you first need to register with them. This is done at their developer <strong><a href="https://console.developers.google.com/">console</a></strong>. To learn more about using google as your service provider, click <strong><a href="https://docs.identityserver.io/en/release/quickstarts/4_external_authentication.html#adding-google-support">here</a></strong>. Now, if you select google as your preferred authorisation provider, then the you have to provide certain values for the following options:</p>
+<table>
+<thead>
+<tr>
+<th>Option Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client ID</td>
+<td>This is an identification string that is provided to every user by google. This number is unique for each user. For an example: <strong>XXXXXXXXXXXXXXXXXXXX.apps.googleusercontent.com</strong>, this is how a client ID provided by google looks.</td>
+</tr>
+<tr>
+<td>Client Secret</td>
+<td>Client secret values are created for the app by the external authentication provider when the app is registered with the provider and it is a unique identification string.</td>
+</tr>
+<tr>
+<td>Redirect URL</td>
+<td>This is the path in your application that users are redirected to after they have authenticated with Google. The path will be appended with the authorisation code for access. It must have a protocol and cannot contain URL fragments or relative paths. Also, make sure it is not a public IP address.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Once, you&rsquo;ve filled all the details, click <strong>continue</strong>. This will redirect you to the home page of your SynBioHub local instance.</p>
 
 
     
