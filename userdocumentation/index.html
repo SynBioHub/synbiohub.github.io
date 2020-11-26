@@ -336,7 +336,7 @@ OPTIONAL {?def dcterms:title ?title}
 <h4 id="152-search-for-twin-components">1.5.2 Search for Twin Components</h4>
 <p>If the record being viewed is a component, then you&rsquo;ll also have the option to search for <strong>twin</strong> components. A twin is another component that has the same sequence as the object being viewed. So, selecting this option will return all the records having the same sequence as the object that you&rsquo;d be currently viewing.</p>
 <h4 id="153-search-for-similar-components">1.5.3 Search for Similar Components</h4>
-<p>If the record being viewed is a component and SBOLExplorer is being run on that particular SynBioHub instance, then you&rsquo;ll also have the option to search for <strong>similar</strong> components. A component is similar, when the sequences are close enough, that SBOlExplorer has clustered those 2 components together into the same cluster.</p>
+<p>If the record being viewed is a component and SBOLExplorer is being run on that particular SynBioHub instance, then you&rsquo;ll also have the option to search for <strong>similar</strong> components. A component is similar, when the sequences are close enough, that SBOLExplorer has clustered those 2 components together into the same cluster.</p>
 <h2 id="2-viewing--downloading-the-information">2. Viewing &amp; Downloading the Information</h2>
 <h3 id="21-viewing-the-information">2.1 Viewing the Information</h3>
 <p>There are various types of records on SynBioHub. They&rsquo;ve been divided into the following sub-categories:</p>
@@ -445,9 +445,6 @@ Once you&rsquo;ve successfully navigated to the record&rsquo;s home page, you&rs
 </li>
 <li>
 <p>Then, we have a section, titled <strong>Member of these collection</strong>, which displays the collection, of which that particular record is a part of.</p>
-</li>
-<li>
-<p>Then is the section that contains, <strong>Sequence Visualisation</strong> of that particular resource. Finally, we have the <strong>component sankey</strong> and the <strong>component bar</strong>. The iGEM parts are plugins, hence they are not part of every instance and the Sequence Visualization, Sankey, and Component bar are additional plugins, hence they&rsquo;ve been explained in detail <a href="https://github.com/SynBioHub/Plugin-Visual-Seqviz">here</a>.</p>
 </li>
 </ul>
 <h4 id="212-viewing-a-collection">2.1.2 Viewing a collection</h4>
@@ -980,20 +977,33 @@ The steps to do so are as follows:</p>
 <p>This section basically displays the graph URI and its corresponding triples. You can select the number of graphs you want to view on one page as well as search for any specific graphs, with the help of search box. You can also sort the graphs on the basis of number of triples.</p>
 <h4 id="83-log">8.3 Log</h4>
 <p>This section displays the log file for your SynBioHub local instance. You can view 4 types of logs, which are as follows:</p>
-<ol>
-<li>
-<p><strong>Error</strong></p>
-</li>
-<li>
-<p><strong>Warn</strong></p>
-</li>
-<li>
-<p><strong>Info</strong></p>
-</li>
-<li>
-<p><strong>Debug</strong></p>
-</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>Name of the Log</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://www.techopedia.com/definition/26306/error-log#:~:text=Definition%20%2D%20What%20does%20Error%20Log,table%20corruption%20and%20configuration%20corruption.">Error</a></strong></td>
+<td>Error log is a record of critical errors that are encountered by SynBioHub, while in operation. Some of the common entries in an error log include table corruption and configuration corruption. Error logs in many cases serve as extremely useful tools for troubleshooting and managing systems, servers and even networks.</td>
+</tr>
+<tr>
+<td><strong><a href="https://library.netapp.com/ecmdocs/ECMP1650312/html/GUID-C0F52B5A-8391-40E9-95CC-82BC465B3CB8.html">Warn</a></strong></td>
+<td>Used just to draw your attention, but it is considered to be a normal activity usually and does not require any action</td>
+</tr>
+<tr>
+<td><strong><a href="https://library.netapp.com/ecmdocs/ECMP1650312/html/GUID-C0F52B5A-8391-40E9-95CC-82BC465B3CB8.html">Info</a></strong></td>
+<td>For standard, normally occurring operations.</td>
+</tr>
+<tr>
+<td><strong><a href="https://library.netapp.com/ecmdocs/ECMP1650312/html/GUID-C0F52B5A-8391-40E9-95CC-82BC465B3CB8.html">Debug</a></strong></td>
+<td>These types of logs just give out the debug information.</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <p>You may use the pointer to view differs types of logs.</p>
 <h4 id="84-mail">8.4 Mail</h4>
 <p>On this page, you have 2 options, that are <a href="https://sendgrid.com/wp-content/uploads/2016/09/SendGrid-Implementation-Review.pdf">sendgrid</a> API key and sendgrid from email.</p>
@@ -1084,7 +1094,7 @@ The steps to do so are as follows:</p>
 <p><strong>Retrieve from web of registries</strong>: This option shall retrieve the web of registries that are already existing globally, locally onto you instance, if in case you delete them.</p>
 </li>
 <li>
-<p><strong>Add registry</strong>: This shall enable you to add a registry onto your instance. For adding, click on this option. Then, a popup shall appear. Subsequently, enter the registry URI prefix and the Registry URL. Finally, click on <strong>submit</strong>.</p>
+<p><strong>Add registry</strong>: This shall enable you to add a registry onto your instance. For adding, click on this option. Then, a popup shall appear. Subsequently, enter the registry URI prefix and the Registry URL. Finally, click on <strong>submit</strong>. This will add an already existing registry of SynBioHub, to the list of registries on you SynBioHub local instance.</p>
 </li>
 </ol>
 <ul>
