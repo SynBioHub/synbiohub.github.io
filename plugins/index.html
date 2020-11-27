@@ -183,7 +183,6 @@
         <li><a href="#81-simple-overview-of-docker">8.1 Simple overview of docker</a></li>
         <li><a href="#82--idea-of-architecture">8.2  Idea of architecture:</a></li>
         <li><a href="#83-steps-for-dockerising-a-plugin">8.3 Steps for dockerising a plugin</a></li>
-        <li><a href="#84-useful-commands-for-docker-debug">8.4 Useful commands for docker debug</a></li>
       </ul>
     </li>
     <li><a href="#9-plugins-table">9. Plugins-Table</a></li>
@@ -676,43 +675,8 @@ Dictionaries each of which contains
 <li>update the readme and wait for the new image to push to docker hub (you will see a green check next to commit when this has happened)</li>
 <li>check the uploaded image works by downloading and running it ( docker run &ndash;publish 8080:5000 &ndash;detach &ndash;name <!-- raw HTML omitted --> synbiohub/<!-- raw HTML omitted -->:snapshot ) and repeating steps 9-12.</li>
 </ol>
-<h3 id="84-useful-commands-for-docker-debug">8.4 Useful commands for docker debug</h3>
-<ul>
-<li>
-<p>docker system prune -a &ndash;volumes</p>
-</li>
-<li>
-<p>docker system prune -a</p>
-</li>
-<li>
-<p>docker images purge</p>
-</li>
-<li>
-<p>docker network inspect synbiohub-docker_default</p>
-</li>
-<li>
-<p>copy docker files to local location to debug: docker cp <!-- raw HTML omitted -->:<!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
-</li>
-<li>
-<p>Enter into a docker file to edit it: docker exec -it synbiohub-docker_pluginVisualSeqviz_1 /bin/bash</p>
-<ul>
-<li>
-<p>exit by simply typing: exit</p>
-</li>
-<li>
-<p>for synbiohub testing look at plugin.js or view.js in home directory</p>
-</li>
-</ul>
-</li>
-<li>
-<p>docker volume ls</p>
-</li>
-<li>
-<p>docker volume prune</p>
-</li>
-</ul>
 <h2 id="9-plugins-table">9. Plugins-Table</h2>
-<p>The sortable table has already been implemented and can be found <a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a>.</p>
+<p>A table of currently available plugins can be found <strong><a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a></strong>.</p>
 
 
     

@@ -217,12 +217,12 @@ The files can be layered with Docker Compose&rsquo;s <a href="https://docs.docke
 </ol>
 <h3 id="with-sbolexplorer">With SBOLExplorer</h3>
 <p>You can also run SynBioHub, by using SBOlExplorer.
-To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 3 run the following command:</p>
+To add <a href="https://github.com/michael13162/SBOLExplorer">SBOLExplorer</a>, add the <code>docker-compose.explorer.yml</code> to the main docker-compose, i.e. for step 5 run the following command:</p>
 <p><code>sysctl -w vm.max_map_count=262144</code></p>
 <p><code> docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml up</code></p>
 <p><strong>Presently, the command <code>sysctl -w vm.max_map_count=262144</code> runs only on linux, due to OS upgrades on Mac OS</strong>*</p>
 <h3 id="with-plugins">With Plugins</h3>
-<p>To add plugins to the configuration, change the command mentioned in step 3 to:</p>
+<p>To add plugins to the configuration, change the command mentioned in step 5 to:</p>
 <p><code>docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 1 File Name&gt;.yml -f ./synbiohub-docker/docker-compose.&lt;Plugin 2 File Name&gt;.yml up</code></p>
 <p>Note that all plugins are added before the <code>up</code> and each is preceeded by <code>-f </code>. For example, to run the configuration with the VisualIgem plugins and the VisualSeqviz plugin run:</p>
 <p><code>docker-compose -f ./synbiohub-docker/docker-compose.yml -f ./synbiohub-docker/docker-compose.explorer.yml -f ./synbiohub-docker/docker-compose.pluginVisualIgem.yml -f ./synbiohub-docker/docker-compose.pluginVisualSeqviz.yml up</code></p>
