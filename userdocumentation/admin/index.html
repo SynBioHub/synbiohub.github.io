@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://synbiohub.github.io/userdocumentation/admin/">
+
+    <title>
+        
+        Administration | SynBioHub-Documentation
+        
+    </title>
+
+    
+    <link href="https://synbiohub.github.iocss/fontawesome.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://synbiohub.github.io/css/ace.min.css">
+
+    
+
+    
+    
+        
+    
+
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="https://synbiohub.github.io/">
+                
+                SynBioHub-Documentation
+            </a>
+        </div>
+        
+    </div>
+    </nav>
+<div class="container-fluid">
+            <div class="row">
+
+                <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right"><nav class="navbar navbar-expand-md navbar-light pl-0">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#sidenav-left-collapse" aria-controls="sidenav-left-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
+         <ul class="navbar-nav flex-column pt-3">
+    <li data-nav-id="/aboutsynbiohub/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/aboutsynbiohub/"><h6>About SynBioHub</h6></a>
+    </li>
+    <li data-nav-id="/installation/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/installation/"><h6>Installation</h6></a>
+    </li>
+    <li data-nav-id="/setup/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/setup/"><h6>Setup</h6></a>
+    </li>
+    <li data-nav-id="/userdocumentation/" class="nav-item my-1 parent haschildren
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/userdocumentation/"><h6>User Documentation</h6></a>
+        <ul class="list-unstyled ml-2">
+        <li data-nav-id="/userdocumentation/searchingforinfo/" class="nav-item my-1">
+                
+                 <a href="https://synbiohub.github.io/userdocumentation/searchingforinfo/" class="nav-link p-0">
+                    Searching for Information
+                </a>
+        </li>
+        <li data-nav-id="/userdocumentation/viewinganddownloadinginformation/" class="nav-item my-1">
+                
+                 <a href="https://synbiohub.github.io/userdocumentation/viewinganddownloadinginformation/" class="nav-link p-0">
+                    Viewing and Downloading the Information
+                </a>
+        </li>
+        <li data-nav-id="/userdocumentation/registeringupdatingaccount/" class="nav-item my-1">
+                
+                 <a href="https://synbiohub.github.io/userdocumentation/registeringupdatingaccount/" class="nav-link p-0">
+                    Registering and Updating an Account
+                </a>
+        </li>
+        <li data-nav-id="/userdocumentation/managingsubmitting/" class="nav-item my-1">
+                
+                 <a href="https://synbiohub.github.io/userdocumentation/managingsubmitting/" class="nav-link p-0">
+                    Submitting, Managing and Updating Submissions
+                </a>
+        </li>
+        <li data-nav-id="/userdocumentation/editing/" class="nav-item my-1">
+                
+                 <a href="https://synbiohub.github.io/userdocumentation/editing/" class="nav-link p-0">
+                    Editing a Submission
+                </a>
+        </li>
+        <li data-nav-id="/userdocumentation/addtoanexistingcollection/" class="nav-item my-1">
+                
+                 <a href="https://synbiohub.github.io/userdocumentation/addtoanexistingcollection/" class="nav-link p-0">
+                    Add to an existing collection
+                </a>
+        </li>
+        <li data-nav-id="/userdocumentation/datasharingmech/" class="nav-item my-1">
+                
+                 <a href="https://synbiohub.github.io/userdocumentation/datasharingmech/" class="nav-link p-0">
+                    Data Sharing Mechanism
+                </a>
+        </li>
+        <li data-nav-id="/userdocumentation/admin/" class="nav-item my-1 active">
+                
+                 <a href="https://synbiohub.github.io/userdocumentation/admin/" class="nav-link p-0">
+                    Administration
+                </a>
+        </li>
+        </ul>
+    </li>
+    <li data-nav-id="/apidocumentation/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/apidocumentation/"><h6>API Documentation</h6></a>
+    </li>
+    <li data-nav-id="/plugins/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/plugins/"><h6>Plugins</h6></a>
+    </li>
+    <li data-nav-id="/troubleshooting/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/troubleshooting/"><h6>Troubleshooting </h6></a>
+    </li>
+    <li data-nav-id="/references/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="https://synbiohub.github.io/references/"><h6> References</h6></a>
+    </li>
+        </ul>
+    </div>
+</nav>
+
+
+</div>
+                <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#81-status">8.1 Status</a></li>
+    <li><a href="#82-graphs">8.2 Graphs</a></li>
+    <li><a href="#83-log">8.3 Log</a></li>
+    <li><a href="#84-mail">8.4 Mail</a>
+      <ul>
+        <li><a href="#841-setting-up-sendgrid">8.4.1 Setting up Sendgrid</a></li>
+      </ul>
+    </li>
+    <li><a href="#85-plugins">8.5 Plugins</a></li>
+    <li><a href="#86-registries">8.6 Registries</a></li>
+    <li><a href="#87-remotes">8.7 Remotes</a>
+      <ul>
+        <li><a href="#871-configuring-a-benchling-remote">8.7.1 Configuring a benchling remote</a></li>
+        <li><a href="#872-configuring-an-ice-remote">8.7.2 Configuring an ICE remote</a></li>
+      </ul>
+    </li>
+    <li><a href="#88-sbolexplorer">8.8 SBOLExplorer</a></li>
+    <li><a href="#89-sparql">8.9 SPARQL</a></li>
+    <li><a href="#810-theme">8.10 Theme</a></li>
+    <li><a href="#811-users">8.11 Users</a></li>
+  </ul>
+</nav>
+</div>
+</div>
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                
+
+<h1>Administration</h1>
+
+<p>Note: <strong>The administration section will only be available, if you&rsquo;re using a SynBioHub local instance. If you&rsquo;re using a global instance, such as <a href="https://synbiohub.org/">this</a> one, then the administration section won&rsquo;t be available unless you have privileged access to SynBioHub.</strong></p>
+<p>To access the admin page, the following steps need to be followed:</p>
+<ol>
+<li>
+<p>Navigate to the home page of your SynbioHub local instance.</p>
+</li>
+<li>
+<p>Click on <strong>admin</strong>, in order to access the administrative settings of your instance. This will direct you to the administrative page. It has been divided into several sub-sections, for your convenience. They&rsquo;re discussed in detail, as follows:</p>
+</li>
+</ol>
+<h2 id="81-status">8.1 Status</h2>
+<p>Several parameters essential for the smooth functioning of SynBioHub, are mentioned in this sub-section. They&rsquo;re as follows:</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <strong>Platform</strong>: Linux x64; 4.19.76-linuxkit</td>
+<td>This parameter represents the platform on which SynBioHub was built.</td>
+</tr>
+<tr>
+<td>2. <strong>Node Version</strong>: vXX.X.X</td>
+<td>This represents the node.js version, on which your local instance is running</td>
+</tr>
+<tr>
+<td>3. <strong>Instance Name</strong>:  name_of_your_choice</td>
+<td>This represents the name of your SynBioHub instance. This can be changed based on your convenience.</td>
+</tr>
+<tr>
+<td>4. <strong>Listen Port: 7777</strong></td>
+<td>When Oracle HTTP Server is started, by default, it listens for requests on port 7777 (non-SSL). If port 7777 is occupied, Oracle HTTP Server listens on the next available port number between a range of 7777-7877. Thus, if port 7777 is busy, it would listen on port 7778, and so on. To get more information on this, click <a href="https://docs.oracle.com/cd/B12037_01/server.101/b12255/netconf.htm#:~:text=When%20Oracle%20HTTP%20Server%20is,port%207778%2C%20and%20so%20on.">here</a>.</td>
+</tr>
+<tr>
+<td>5. <strong>SPARQL Endpoint</strong>: http://virtuoso:8890/sparql</td>
+<td>A SPARQL Endpoint is a Point of Presence on an HTTP network that&rsquo;s capable of receiving and processing SPARQL Protocol requests. It is identified by a URL commonly referred to as a SPARQL Endpoint URL. To know more about SPARQl endpoints, click <a href="https://www.w3.org/wiki/SparqlEndpointDescription">here</a>.</td>
+</tr>
+<tr>
+<td>6. <strong>Graph Store Endpoint</strong>: http://virtuoso:8890/sparql-graph-crud-auth/</td>
+<td></td>
+</tr>
+<tr>
+<td>7. <strong>Default Graph</strong>: http://localhost:7777/public</td>
+<td></td>
+</tr>
+<tr>
+<td>8. <strong>Graph Prefix</strong>: http://localhost:7777/</td>
+<td></td>
+</tr>
+<tr>
+<td>9. <strong>Thread Pool Size</strong>:</td>
+<td></td>
+</tr>
+<tr>
+<td>10. <strong>Upload Limit</strong>: X mb</td>
+<td>Shows the maximum limit of files that you can upload at once to your instance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="82-graphs">8.2 Graphs</h2>
+<p>This section basically displays the graph URI and its corresponding triples. You can select the number of graphs you want to view on one page as well as search for any specific graphs, with the help of search box. You can also sort the graphs on the basis of number of triples.</p>
+<h2 id="83-log">8.3 Log</h2>
+<p>This section displays the log file for your SynBioHub local instance. You can view 4 types of logs, which are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Name of the Log</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://www.techopedia.com/definition/26306/error-log#:~:text=Definition%20%2D%20What%20does%20Error%20Log,table%20corruption%20and%20configuration%20corruption.">Error</a></strong></td>
+<td>Error log is a record of critical errors that are encountered by SynBioHub, while in operation. Some of the common entries in an error log include table corruption and configuration corruption. Error logs in many cases serve as extremely useful tools for troubleshooting and managing systems, servers and even networks.</td>
+</tr>
+<tr>
+<td><strong><a href="https://library.netapp.com/ecmdocs/ECMP1650312/html/GUID-C0F52B5A-8391-40E9-95CC-82BC465B3CB8.html">Warn</a></strong></td>
+<td>Used just to draw your attention, but it is considered to be a normal activity usually and does not require any action</td>
+</tr>
+<tr>
+<td><strong><a href="https://library.netapp.com/ecmdocs/ECMP1650312/html/GUID-C0F52B5A-8391-40E9-95CC-82BC465B3CB8.html">Info</a></strong></td>
+<td>For standard, normally occurring operations.</td>
+</tr>
+<tr>
+<td><strong><a href="https://library.netapp.com/ecmdocs/ECMP1650312/html/GUID-C0F52B5A-8391-40E9-95CC-82BC465B3CB8.html">Debug</a></strong></td>
+<td>These types of logs just give out the debug information.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>You may use the pointer to view differs types of logs.</p>
+<h2 id="84-mail">8.4 Mail</h2>
+<p>On this page, you have 2 options, that are <a href="https://sendgrid.com/wp-content/uploads/2016/09/SendGrid-Implementation-Review.pdf">sendgrid</a> API key and sendgrid from email.</p>
+<p>In the first column, you need to fill the API key, that you&rsquo;d need to generate from sendgrid. SendGrid is a cloud-based SMTP provider that allows you to send email without having to maintain email servers. SendGrid manages all of the technical details, from scaling the infrastructure to ISP outreach and reputation monitoring to whitelist services and real time analytics.</p>
+<h3 id="841-setting-up-sendgrid">8.4.1 Setting up Sendgrid</h3>
+<p>In order to enable SynBioHub to send account-related emails, you need a sendgrid account and API key. The following steps need to be executed, for setting up sendgrid:-</p>
+<ol>
+<li>
+<p>Visit <a href="www.sendgrid.com">this</a> website.</p>
+</li>
+<li>
+<p>Select the <em>Sign up</em> option, in case you&rsquo;re using it for the first time.</p>
+</li>
+<li>
+<p>Enter you Email Address and password as well as select the captcha for verification.</p>
+</li>
+<li>
+<p>Fill up all the details about yourself on the &ldquo;Tell Us About Yourself&rdquo; page.</p>
+</li>
+<li>
+<p>Then, after filling up all the details correctly it&rsquo;ll re-direct you to your dashboard and send a confirmational Email.</p>
+</li>
+<li>
+<p>Click on the <em>Settings</em> options on left hand side of the page.</p>
+</li>
+<li>
+<p>Then, select the <em>Create an API key option</em>.</p>
+</li>
+<li>
+<p>It&rsquo;ll prompt you to give your API key a name. Also, you can customize the API key permissions.</p>
+</li>
+<li>
+<p>After completing these steps, click on Create and View.</p>
+</li>
+<li>
+<p>The API key is shown only for once due to security reasons, so try to save it at a safe place.</p>
+</li>
+<li>
+<p>Your API key has been created, and hence ready to use!!</p>
+</li>
+<li>
+<p><strong>SendGrid API key</strong>: For generating an API key, you need to have a sendgrid account. To sign-up for sendgrid and hence generating an API key, click <a href="https://synbiohub.github.io/setup/#setting-up-sendgrid">here</a>.</p>
+</li>
+<li>
+<p><strong>SendGrid From Email</strong>:  Here, you can enter the email, which you can use for sending emails.</p>
+</li>
+</ol>
+<h2 id="85-plugins">8.5 Plugins</h2>
+<p>On this page, you can configure the <strong><a href="https://synbiohub.github.io/plugins/">plugins </a></strong> which you want to use. Plugins are modular stand-alone additions to SynBioHub. They function in a way that is similar to browser extensions. They can be installed separately from the browser/SynBioHub and provide additional ‘custom’ functionality to the browser/SynBioHub experience despite having a completely separate code base from the browser/SynBioHub. Though, they seem integrated to the user.</p>
+<p>They&rsquo;re broadly classified into 3 types, which are as follows:</p>
+<ol>
+<li>
+<p>Submit: Submit plugins are available to use from the submit endpoint. They work by taking in the file that is uploaded in the submit and processing it to return SBOL to the SynBioHub endpoint.</p>
+</li>
+<li>
+<p>Visual: Visual plugins are available on all ‘endpoint’ pages, for example pages for components, sequences, activities, etc. Visual plugins return html to be displayed on the page.</p>
+</li>
+<li>
+<p>Download: Download plugins are available on all ‘endpoint’ pages, for example pages for components, sequences, activities, etc. Download plugins return some kind of file which is downloaded by the user.</p>
+</li>
+</ol>
+<p>As mentioned above, the plugins are divided into 3 categories all having the same attributes. The attributes, which need to be filled up are as follows:</p>
+<ul>
+<li>
+<p>Name: This is the name which you want to give to your plugin.</p>
+</li>
+<li>
+<p>URL: In this column, you need to enter the URL for your plugin.</p>
+</li>
+</ul>
+<p>After filling both of the columns click on <strong>save</strong>, in order to save your plugin.</p>
+<h2 id="86-registries">8.6 Registries</h2>
+<p>SynBioHub also supports the Web of Registries concept i.e, the idea of multiple separate repositories linked together by shared common semantics. In the case of SynBioHub, SBOL is used to support the common exchange of data, thus positioning SynBioHub to support the development of synthetic biology workflows by acting as a source and a storage facility for designs.</p>
+<p>Hence, Web Of registries enables communication between SynBioHub instances. Sharing designs between instances of SynBioHub is also further facilitated via the Web of Registries service. Federated SynBioHub instances can reference parts in the public graph of other federated instances. In order to support this federation, the Web of Registries service maintains information about all SynBioHub registries, such as their name, description, administrator email, URI prefix, and uniform resource locator(URL).</p>
+<p>Any SynBioHub can access the Web Of Registries to determine information about all registered SynBioHub instances. If a design references a part within another synbiohub instance, the information about this part can be fetched in order to render this design information locally and provide links to the corresponding design information page for this part.</p>
+<p>When a new SynBioHub instance wishes to join the Web of Registries, it sends its information to the Web of Registries service, and all the Web of Registries curators are alerted via email that there is a new repository pending approval. Once the repository has been approved, its information is broadcast to all other registries in the Web of Registries. Anybody can access the current list of registries through an HTTP GET request. Once registered, an instance of SynBioHub is able to locate designs within any other instance that is registered with the Web of Registries.</p>
+<p>SynBioHub demonstrates the application of this harmonized data exchange through existing repositories, hence envisaging a wider, integrated ecosystem of biological part information shared across a plethora of different repositories with different capabilities.</p>
+<ul>
+<li>
+<p>On this page, you can configure the registry for your local instance. To configure the registry for your local instance, enter the administrator email in the column just besides the web-of-registries link. After entering the admin email, click on <strong>submit</strong> and this would configure the admin email for the registries.</p>
+</li>
+<li>
+<p>There are 2 options given just below the local web of registries sub-section, which are:</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>Retrieve from web of registries</strong>: This option shall retrieve the web of registries that are already existing globally, locally onto you instance, if in case you delete them.</p>
+</li>
+<li>
+<p><strong>Add registry</strong>: This shall enable you to add a registry onto your instance. For adding, click on this option. Then, a popup shall appear. Subsequently, enter the registry URI prefix and the Registry URL. Finally, click on <strong>submit</strong>. This will add an already existing registry of SynBioHub, to the list of registries on you SynBioHub local instance.</p>
+</li>
+</ol>
+<ul>
+<li>Several local web-of-registries are also given on this page alongside their Synbiohub URL. Here, you have an option to <strong>save</strong> as well as <strong>delete</strong> the already existing registries.</li>
+</ul>
+<h2 id="87-remotes">8.7 Remotes</h2>
+<p>There are 2 types of remotes you can configure for SynBioHub i.e, <strong>Benchling</strong> and <strong>ICE</strong>. They&rsquo;re discussed in detail as follows:</p>
+<ol>
+<li>
+<p><strong><a href="http://benchling.com/academic">Benchling</a></strong>: Benchling is an integrated software solution for experiment design, note-taking, and molecular biology. It is a free, intelligent research platform with tools for note-taking, molecular biology, and sample tracking. Benchling includes an electronic lab notebook, a molecular biology suite for design and analysis, and a bioregistry to track inventory.</p>
+</li>
+<li>
+<p><strong><a href="https://ice.jbei.org/">ICE</a></strong>: ICE is a registry platform that provides robust data storage for DNA components, integrated tools for part characterization, as well as mechanisms for secure access and information sharing with other users and software tools.</p>
+</li>
+</ol>
+<p>Upon opening this page for the first time you&rsquo;ll see a message stating: <em>No remotes configured</em>. To configure a remote for your instance, follow the following steps:</p>
+<h3 id="871-configuring-a-benchling-remote">8.7.1 Configuring a benchling remote</h3>
+<ol>
+<li>
+<p>When you&rsquo;ll click on the type box, a dropdown menu shall appear containing 2 options, ice and benchling. For configuring a benchling remote, select <strong>benchling</strong>. Then click on <strong>add remote</strong>.</p>
+</li>
+<li>
+<p>As soon as you&rsquo;ll click on add remote, a popup shall appear asking you to fill up certain set of attributes. They&rsquo;re as follows:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. ID</td>
+<td>Enter ID of the benchling remote.</td>
+</tr>
+<tr>
+<td>2. Type</td>
+<td>This shall display the type of remote that you would&rsquo;ve chosen, initially.</td>
+</tr>
+<tr>
+<td>3. URL</td>
+<td>Enter the URL for the benchling remote.</td>
+</tr>
+<tr>
+<td>4. Sequence Suffix</td>
+<td>This represents the suffix to use for the sequences found on benchling.</td>
+</tr>
+<tr>
+<td>5. Default Folder ID</td>
+<td>Enter the default folder on benchling to access.</td>
+</tr>
+<tr>
+<td>6. Public</td>
+<td>Should be checked, if you want the remote to be visible publicly. If not, then it should not be checked.</td>
+</tr>
+<tr>
+<td>7. Reject Unauthorized</td>
+<td>Should be checked, if you want to the SSL certificates to be checked. If not, then it should not be checked.</td>
+</tr>
+<tr>
+<td>8. Folder Prefix</td>
+<td>Represents the prefix to use for folders on benchling.</td>
+</tr>
+<tr>
+<td>9. Root Collection Display ID</td>
+<td>Represents the display id for the root collection on the remote.</td>
+</tr>
+<tr>
+<td>10. Root Collection Name</td>
+<td>This represents the name for the root collection on the remote.</td>
+</tr>
+<tr>
+<td>11. Root Collection Description</td>
+<td>A brief description about the root collection on the remote.</td>
+</tr>
+<tr>
+<td>12. Benchling API Token</td>
+<td>The token generated by benchling should be entered here.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Once you are through with all the attributes, click on submit.</p>
+<ol start="3">
+<li>Once you&rsquo;ve clicked on submit, you&rsquo;ll be able to see a fully configured remote on the left. You can also delete and edit your remote. To delete any of your configured remotes, click on delete. To edit any of the information, click on edit. Once you&rsquo;ve edited the information, click on submit.</li>
+</ol>
+<h3 id="872-configuring-an-ice-remote">8.7.2 Configuring an ICE remote</h3>
+<ol>
+<li>
+<p>When you&rsquo;ll click on the type box, a dropdown menu shall appear containing 2 options, ice and benchling. For configuring an ICE remote, select <strong>ICE</strong> and then click on <strong>add remote</strong>.</p>
+</li>
+<li>
+<p>As soon as you&rsquo;ll click on add remote, a popup shall appear asking you to fill up certain set of attributes. They&rsquo;re as follows:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. ID</td>
+<td>Enter ID of the benchling remote.</td>
+</tr>
+<tr>
+<td>2. Type</td>
+<td>This shall display the type of remote that you would&rsquo;ve chosen, initially.</td>
+</tr>
+<tr>
+<td>3. URL</td>
+<td>Enter the URL for the benchling remote.</td>
+</tr>
+<tr>
+<td>4. Sequence Suffix</td>
+<td>This represents the suffix to use for the sequences found on benchling.</td>
+</tr>
+<tr>
+<td>5. Default Folder ID</td>
+<td>Enter the default folder on benchling to access.</td>
+</tr>
+<tr>
+<td>6. Public</td>
+<td>Should be checked, if you want the remote to be visible publicly. If not, then it should not be checked.</td>
+</tr>
+<tr>
+<td>7. Reject Unauthorized</td>
+<td>Should be checked, if you want to the SSL certificates to be checked. If not, then it should not be checked.</td>
+</tr>
+<tr>
+<td>8. Folder Prefix</td>
+<td>Represents the prefix to use for folders on benchling.</td>
+</tr>
+<tr>
+<td>9. Root Collection Display ID</td>
+<td>Represents the display id for the root collection on the remote.</td>
+</tr>
+<tr>
+<td>10. Root Collection Name</td>
+<td>This represents the name for the root collection on the remote.</td>
+</tr>
+<tr>
+<td>11. Root Collection Description</td>
+<td>A brief description about the root collection on the remote.</td>
+</tr>
+<tr>
+<td>12. ICE API Token</td>
+<td>The token generated by ICE should be entered here.</td>
+</tr>
+<tr>
+<td>13. ICE API Token Client</td>
+<td></td>
+</tr>
+<tr>
+<td>14. ICE API Token Owner</td>
+<td></td>
+</tr>
+<tr>
+<td>15. ICE Collection</td>
+<td>Name of the ICE collection.</td>
+</tr>
+<tr>
+<td>16. Group ID</td>
+<td></td>
+</tr>
+<tr>
+<td>17. PI</td>
+<td>Principal Investigator name should be entered.</td>
+</tr>
+<tr>
+<td>18. PI Email</td>
+<td>Principal Investigator email should be entered.</td>
+</tr>
+<tr>
+<td>19. Part Number Prefix</td>
+<td>Prefix that is to be used for the parts.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ol start="3">
+<li>Once you&rsquo;ve clicked on submit, you&rsquo;ll be able to see a fully configured remote on the left. You can also delete and edit your remote. To delete any of your configured remotes, click on delete. To edit any of the information, click on edit. Once you&rsquo;ve edited the information, click on submit.</li>
+</ol>
+<h2 id="88-sbolexplorer">8.8 SBOLExplorer</h2>
+<p>SBOLExplorer is a service that simplifies the process of analysing and searching for parts within genetic design repositories.</p>
+<p>Once you click on the <strong>SBOLExplorer</strong> option, you can view the following options:</p>
+<ol>
+<li>The first option is that of <strong>SBOLExplorer</strong> endpoint. Here, you can enter and save your SBOLExplorer endpoint for your local instance. Also, make sure that any of the endpoints you enter end with <strong>\</strong>.</li>
+<li>Then on the right, you shall see the <strong>searching using SBOL explorer</strong>*. You need to Check the this option to enable the SBOLExplorer.</li>
+<li>Then, you&rsquo;ll be able to see the option of selecting between, <strong><a href="https://academic.oup.com/bioinformatics/article/26/19/2460/230188">Usearch</a></strong> and <strong><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5075697/">Vsearch</a></strong>. They&rsquo;re explained in detail as follows:</li>
+</ol>
+<ul>
+<li>
+<p>Usearch: UBLAST and USEARCH are new algorithms enabling sensitive local and global search of large sequence databases at exceptionally high speeds. They are often orders of magnitude faster than BLAST in practical applications, though sensitivity to distant protein relationships is lower. UCLUST is a new clustering method that exploits USEARCH to assign sequences to clusters. UCLUST offers several advantages over the widely used program CD-HIT, including higher speed, lower memory use, improved sensitivity, clustering at lower identities and classification of much larger datasets.</p>
+</li>
+<li>
+<p>Vsearch: VSEARCH is an open source and free of charge multithreaded 64-bit tool for processing and preparing metagenomics, genomics and population genomics nucleotide sequence data. It is designed as an alternative to the widely used USEARCH tool for which the source code is not publicly available, algorithm details are only rudimentarily described, and only a memory-confined 32-bit version is freely available for academic use.</p>
+</li>
+</ul>
+<ol start="4">
+<li>
+<p>Next, you can view the start and the end of the last index update.</p>
+</li>
+<li>
+<p>Subsequently, you can choose whether you want to allow the automatic updating of index or not. If you check this option, the you&rsquo;ll also have the option of choosing the frequency of index update.'</p>
+</li>
+<li>
+<p>Then, you have the option of, whether you want to allow the option of a distributed search or not.</p>
+</li>
+<li>
+<p>Subsequently, you can select the  value of <strong><a href="https://neo4j.com/docs/graph-algorithms/current/algorithms/page-rank/">page rank tolerance</a></strong>. PageRank basically is an algorithm that measures the transitive influence or connectivity of nodes. It can be computed by either iteratively distributing one node’s rank (originally based on degree) over its neighbours or by randomly traversing the graph and counting the frequency of hitting each node during these walks.</p>
+</li>
+<li>
+<p>There is also an option of choosing a value of <strong><a href="https://en.wikipedia.org/wiki/UCLUST">UClust clustering identity</a></strong>. UCLUST is an algorithm designed to cluster nucleotide or amino-acid sequences into clusters based on sequence similarity. The algorithm was published in 2010 and implemented in a program also named UCLUST. The algorithm is described by the author as following two simple clustering criteria, in regard to the requested similarity threshold T. The first criterion states that any given cluster&rsquo;s centroid sequence will have a similarity smaller than T to any other clusters' centroid sequence. The second criterion states that each member sequence in a given cluster will have similarity to the cluster&rsquo;s centroid sequence that is equal or greater than T.</p>
+</li>
+<li>
+<p>Then you can also input a value for the <strong><a href="https://www.elastic.co/guide/en/cloud-enterprise/1.1/ece-administering-endpoints.html">elasticsearch endpoints</a></strong>. For applications without SSL or HTTPS protocol support, you can use a local endpoint with the HTTP protocol, which in turn connects to your Elastic Cloud Enterprise cluster or to Kibana either using the HTTP or the HTTPS protocol.</p>
+</li>
+<li>
+<p>Finally, you have to input a value for the <strong><a href="https://medium.com/virtuoso-blog/what-is-a-virtuoso-sparql-endpoint-and-why-is-it-important-5244df738a3e">SPARQL/Virtuoso endpoints</a></strong>. A Virtuoso SPARQL Endpoint is a feature of every Virtuoso RDBMS instance that offers an HTTP-based Query Service that operates on Entity Relationship Types (Relations) represented as RDF sentence collections using the SPARQL Query Language. These operations may be read- and/or write-oriented and distributed without compromising security, performance, or scalability.</p>
+</li>
+<li>
+<p>Then, click on the <strong>save</strong> button to save all the details for the SBOLExplorer.</p>
+</li>
+</ol>
+<h2 id="89-sparql">8.9 SPARQL</h2>
+<p>On the search results page, there is button labeled as <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a></strong>. Clicking on that button will direct you to the SPARQL page. Since, SPARQL is a query language, hence it&rsquo;ll query Synbiohub&rsquo;s databases for the designs that you&rsquo;re looking for. On the SPARQL page, you can select the graph that is from <strong>private</strong> or <strong>public</strong>. Here, <strong>public</strong> means searching amongst the public submissions, that can be viewed by and <strong>private</strong> means, the ones that are your personal collections.</p>
+<p>In the box provided just below graphs dropdown, enter the SPARQL query. Following is an example that selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your preferred type:</p>
+<pre><code>
+# Some common prefix's are also provided below, which you can use in your SPARQL queries.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;
+PREFIX sbh: &lt;http://wiki.synbiohub.org/wiki/Terms/synbiohub#&gt;
+PREFIX prov: &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX sbol: &lt;http://sbols.org/v2#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX purl: &lt;http://purl.obolibrary.org/obo/&gt;
+SELECT  # makes up the headers of the table
+?def # directs you to the design for which you're looking for 
+?displayId # This statement displays the Id the design
+?title # displays the title of the design
+(count(?def) as ?count) # displays the count parameter for the design
+?role # displays the role of the design    
+WHERE { 
+?s sbol:component ?comp # Searching for **sbol** components
+?comp sbol:definition ?def # provides the link to that component
+filter (regex(?role, 'http://identifiers.org/so/SO:')) 
+OPTIONAL {?def sbol:role ?role} # Defines the role
+OPTIONAL {?def sbol:displayId ?displayId} # gives the ID of that particular record
+OPTIONAL {?def dcterms:title ?title} 
+  }
+
+</code></pre><p>After writing your SPARQL query, just click <strong>submit query</strong>. After you click on <strong>submit query</strong>, a list of records matching with SPARQL query shall be displayed.</p>
+<h2 id="810-theme">8.10 Theme</h2>
+<p>On this several options are available to alter the User interface of your local instance.</p>
+<ul>
+<li>
+<p>You can choose to change the logo of your local instance i.e, replace it with the desalt one bu uploading a picture of your choice. To do so, click on choose file. On doing so, a popup shall appear displaying the .png or the .jpeg files on your computer. Choose the file offs per your convenience and then click on submit.</p>
+</li>
+<li>
+<p>You can also change the name of your Synbiohub local instance, by typing in the name of your choice in the given <strong>instance name</strong> box.</p>
+</li>
+<li>
+<p>There is also an option to change the text that appears on the front page as soon as you open the front page of your local instance. To edit that text, a box is given, wherein the default text is already written. You can simply edit the text, in that very box with the text of your choice.</p>
+</li>
+<li>
+<p>Subsequently, there is a section titled <strong>instance settings</strong>. Under that, you can change the base colour of your Synbiohub instance, which by default hex. To search for more HTML colour codes, click <a href="https://htmlcolorcodes.com/">here</a>.
+Also, you can also enable module interactions as well as remove the public enabled.</p>
+</li>
+</ul>
+<p>To save all changes click on <strong>save</strong>.</p>
+<h2 id="811-users">8.11 Users</h2>
+<p>This page basically lists all the users currently registered onto your local instance.</p>
+<ul>
+<li>There is an option to add a user for your local instance. To do so, click on <strong>add user</strong>. This&rsquo;ll direct you to page, wherein you&rsquo;ll be required to fill the following details:</li>
+</ul>
+<ol>
+<li>
+<p><strong>Full Name</strong>: Enter the name of the person, whose account you want to add.</p>
+</li>
+<li>
+<p><strong>Affiliation</strong>: This is an optional attribute. Enter the university/college, to which that member belongs to.</p>
+</li>
+<li>
+<p><strong>Email</strong>: Enter the Email of the new member.</p>
+</li>
+<li>
+<p><strong>Username</strong>: Assign a username to the member.</p>
+</li>
+<li>
+<p><strong>Grant Administrative Access</strong>: There is an option to provide the administrator access, to this particular member. This shall enable, him/her to edit each and every setting on your local instance including the admin ones as well. To grant this particular access, check the grant administrative privileges box.</p>
+</li>
+<li>
+<p><strong>Grant Member Privileges</strong>: There is an option to provide the member access.
+To grant this particular access, check the grant member privileges box.</p>
+</li>
+<li>
+<p><strong>Grant Curator Privileges</strong>: There is an option to provide the member access.
+To grant this particular access, check the grant curator privileges box.</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>You can also search for a particular user by entering the username in the search box.</p>
+</li>
+<li>
+<p>You can choose the number of users, that you want to display on a particular page ranging from 10 to 100.</p>
+</li>
+<li>
+<p>Then, a sortable list of users is displayed. Following is the list of details that is mentioned:</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>Full Name</strong>: Enter the name of the person, whose account you want to add.</p>
+</li>
+<li>
+<p><strong>Affiliation</strong>: This is an optional attribute. Enter the university/college, to which that member belongs to.</p>
+</li>
+<li>
+<p><strong>Email</strong>: Enter the Email of the new member.</p>
+</li>
+<li>
+<p><strong>Username</strong>: Assign a username to the member.</p>
+</li>
+<li>
+<p><strong>Member</strong>: A checked or an empty box is displayed. A checked box means, that the user has member rights and if not, that means the user doesn&rsquo;t have member access.</p>
+</li>
+<li>
+<p><strong>Curator</strong>: A checked or an empty box is displayed. A checked box means, that the user has curator rights and if not, that means the user doesn&rsquo;t have curator access.</p>
+</li>
+<li>
+<p><strong>Admin</strong> : A checked or an empty box is displayed. A checked box means, that the user has admin rights and if not, that means the user doesn&rsquo;t have admin access.</p>
+</li>
+<li>
+<p><strong>Save</strong>: Clicking on the save option, will permanently save that profile to your local instance.</p>
+</li>
+</ol>
+<p>Finally, there is a check box at the end corresponding to allowing public account creation. Enabling this option will allow anyone to create an account on your local instance and hence contribute to your design repository.</p>
+
+
+    
+
+
+                    
+                    <div class="row"><div class="position-relative mx-auto col-lg-9">
+                          <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+
+    <h4 class="text-white text-center">Read more</h4>
+
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="https://synbiohub.github.io/userdocumentation/datasharingmech/" title="Data Sharing Mechanism"><i class="fas fa-chevron-left p-1"></i>Data Sharing Mechanism</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="https://synbiohub.github.io/apidocumentation/" title="API Documentation">API Documentation<i class="fas fa-chevron-right p-1"></i></a>
+    </div>
+</div>
+
+
+                        </div></div> 
+
+                </div>
+
+            </div> 
+
+        </div> 
+<script src="https://synbiohub.github.iolib/jquery.min.js"></script> 
+<script src="https://synbiohub.github.iolib/popper.min.js"></script> 
+
+<script src="https://synbiohub.github.iojs/bootstrap.min.js"></script> 
+
+
+<script type="text/javascript" src="https://synbiohub.github.io/plugins/lunr.min.js"></script>
+<script type="text/javascript" src="https://synbiohub.github.io/plugins/auto-complete.js"></script>
+<link href="https://synbiohub.github.io/plugins/auto-complete.css" rel="stylesheet">
+<script type="text/javascript">
+  
+      var baseurl = "https:\/\/synbiohub.github.io";
+  
+</script>
+<script type="text/javascript" src="https://synbiohub.github.io/plugins/search.js"></script>
+
+
+<script type="text/javascript" src="https://synbiohub.github.io/plugins/clipboard.js"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>
+</body>
+</html>

@@ -8,5 +8,104 @@
     <language>en-us</language>
     <copyright>© SynBioHub 2020</copyright>
     <lastBuildDate>Fri, 04 Sep 2020 20:30:59 +0530</lastBuildDate><atom:link href="https://synbiohub.github.io/userdocumentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Searching for Information</title>
+      <link>https://synbiohub.github.io/userdocumentation/searchingforinfo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synbiohub.github.io/userdocumentation/searchingforinfo/</guid>
+      <description>There are a variety of ways to search for information in SynBioHub, such as using keywords, sequences, advanced searches and SPARQL queries. They&amp;rsquo;re explained in detail as follows:
+1.1 Keyword Search To search amongst various records, follow these steps:
+  Navigate to SynBioHub&amp;rsquo;s home page.
+  In the search box, enter the keywords for the record you want to search for and click on the search button.
+  Subsequently, you shall be directed to a list of records matching the keywords that you&amp;rsquo;ve entered.</description>
+    </item>
+    
+    <item>
+      <title>Viewing and Downloading the Information</title>
+      <link>https://synbiohub.github.io/userdocumentation/viewinganddownloadinginformation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synbiohub.github.io/userdocumentation/viewinganddownloadinginformation/</guid>
+      <description>1. Viewing the Information There are various types of records on SynBioHub. They&amp;rsquo;ve been divided into the following sub-categories:
+1.1 Viewing a Record This section consists of a general description of all record pages i.e, this is what a general record page looks like. Additional sections (if any), are further explained in the further sections, under the respective record types. Once you&amp;rsquo;ve successfully navigated to the record&amp;rsquo;s home page, you&amp;rsquo;ll be able to view the parameters in this order:</description>
+    </item>
+    
+    <item>
+      <title>Registering and Updating an Account</title>
+      <link>https://synbiohub.github.io/userdocumentation/registeringupdatingaccount/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synbiohub.github.io/userdocumentation/registeringupdatingaccount/</guid>
+      <description>1. Registering an Account Following Steps need to be followed for registering onto SynBioHub:
+  Navigate to SynBioHub&amp;rsquo;s home page.
+  Click on the Login or Register option on the top right hand side of your Screen.
+  Enter the following details to complete your registration process:
+     Option Name Description     Full Name Enter the name of the user   Affiliation(Optional) You can enter the name of the university/institute that you&amp;rsquo;re currently affiliated to   Email Address Enter the Email Address, through which you want to get registered.</description>
+    </item>
+    
+    <item>
+      <title>Submitting, Managing and Updating Submissions</title>
+      <link>https://synbiohub.github.io/userdocumentation/managingsubmitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synbiohub.github.io/userdocumentation/managingsubmitting/</guid>
+      <description>1. Submitting For submitting your designs to SynBioHub, following steps need to be followed:
+  Navigate to SynBioHub&amp;rsquo;s home page.
+  Click on the Submit option and it&amp;rsquo;ll direct you to the Submit page.
+  Now, there are 2 ways you make your submissions i.e, creating a new collection and then submitting your resource or submitting to an existing collection.
+1.1 Creating a new collection   Select the create a new collection option.</description>
+    </item>
+    
+    <item>
+      <title>Editing a Submission</title>
+      <link>https://synbiohub.github.io/userdocumentation/editing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synbiohub.github.io/userdocumentation/editing/</guid>
+      <description>To edit your submissions, following steps need to be followed:
+  Go to the submissions page.
+  Select the collection that you want to edit.
+  First of all, you can edit the name and description of the record.
+  Then, you can add a source for your record.
+  Subsequently, you may add a brief description for your record.This may contain details that can be described in brief about that particular record.</description>
+    </item>
+    
+    <item>
+      <title>Add to an existing collection</title>
+      <link>https://synbiohub.github.io/userdocumentation/addtoanexistingcollection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synbiohub.github.io/userdocumentation/addtoanexistingcollection/</guid>
+      <description>On some record pages you might find an option titled, add to an existing collection. Using this option, you can add the record which you&amp;rsquo;re currently viewing to a collection that is already there. For that, simply follow the following steps:
+  Click add to collection. This will direct you to page, consisting of a dropdown menu.
+  Then, click on that dropdown menu. This will contain a list of collections, that&amp;rsquo;er already existing and the record which you&amp;rsquo;re currently viewing can be added to it.</description>
+    </item>
+    
+    <item>
+      <title>Data Sharing Mechanism</title>
+      <link>https://synbiohub.github.io/userdocumentation/datasharingmech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synbiohub.github.io/userdocumentation/datasharingmech/</guid>
+      <description>7. Data Sharing Mechanisms There are a couple of ways to share data in SynBioHub. They&amp;rsquo;re mentioned as follows:
+7.1 Using the Share option   Select the collection/design that you want to share.
+  Click the share option. Once you click on the share option, a link shall appear.
+  Now, copy that link &amp;amp; you can share the link, thereby sharing the resource.
+  7.2 Adding an owner You can also share your design by giving any number of persons access by adding them as an owner for your design.</description>
+    </item>
+    
+    <item>
+      <title>Administration</title>
+      <link>https://synbiohub.github.io/userdocumentation/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synbiohub.github.io/userdocumentation/admin/</guid>
+      <description>Note: The administration section will only be available, if you&amp;rsquo;re using a SynBioHub local instance. If you&amp;rsquo;re using a global instance, such as this one, then the administration section won&amp;rsquo;t be available unless you have privileged access to SynBioHub.
+To access the admin page, the following steps need to be followed:
+  Navigate to the home page of your SynbioHub local instance.
+  Click on admin, in order to access the administrative settings of your instance.</description>
+    </item>
+    
   </channel>
 </rss>
