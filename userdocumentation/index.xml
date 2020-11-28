@@ -9,7 +9,7 @@
     <copyright>© SynBioHub 2020</copyright>
     <lastBuildDate>Fri, 04 Sep 2020 20:30:59 +0530</lastBuildDate><atom:link href="https://synbiohub.github.io/userdocumentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Searching for Information</title>
+      <title>1. Searching for Information</title>
       <link>https://synbiohub.github.io/userdocumentation/searchingforinfo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -22,22 +22,22 @@
     </item>
     
     <item>
-      <title>Viewing and Downloading the Information</title>
+      <title>2. Viewing and Downloading the Information</title>
       <link>https://synbiohub.github.io/userdocumentation/viewinganddownloadinginformation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synbiohub.github.io/userdocumentation/viewinganddownloadinginformation/</guid>
-      <description>1. Viewing the Information There are various types of records on SynBioHub. They&amp;rsquo;ve been divided into the following sub-categories:
-1.1 Viewing a Record This section consists of a general description of all record pages i.e, this is what a general record page looks like. Additional sections (if any), are further explained in the further sections, under the respective record types. Once you&amp;rsquo;ve successfully navigated to the record&amp;rsquo;s home page, you&amp;rsquo;ll be able to view the parameters in this order:</description>
+      <description>2.1 Viewing the Information There are various types of records on SynBioHub. They&amp;rsquo;ve been divided into the following sub-categories:
+2.1.1 Viewing a Record This section consists of a general description of all record pages i.e, this is what a general record page looks like. Additional sections (if any), are further explained in the further sections, under the respective record types. Once you&amp;rsquo;ve successfully navigated to the record&amp;rsquo;s home page, you&amp;rsquo;ll be able to view the parameters in this order:</description>
     </item>
     
     <item>
-      <title>Registering and Updating an Account</title>
+      <title>3. Registering and Updating an Account</title>
       <link>https://synbiohub.github.io/userdocumentation/registeringupdatingaccount/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synbiohub.github.io/userdocumentation/registeringupdatingaccount/</guid>
-      <description>1. Registering an Account Following Steps need to be followed for registering onto SynBioHub:
+      <description>3.1 Registering an Account Following Steps need to be followed for registering onto SynBioHub:
   Navigate to SynBioHub&amp;rsquo;s home page.
   Click on the Login or Register option on the top right hand side of your Screen.
   Enter the following details to complete your registration process:
@@ -45,20 +45,20 @@
     </item>
     
     <item>
-      <title>Submitting, Managing and Updating Submissions</title>
+      <title>4. Submitting, Managing and Updating Submissions</title>
       <link>https://synbiohub.github.io/userdocumentation/managingsubmitting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synbiohub.github.io/userdocumentation/managingsubmitting/</guid>
-      <description>1. Submitting For submitting your designs to SynBioHub, following steps need to be followed:
+      <description>4.1 Submitting For submitting your designs to SynBioHub, following steps need to be followed:
   Navigate to SynBioHub&amp;rsquo;s home page.
   Click on the Submit option and it&amp;rsquo;ll direct you to the Submit page.
   Now, there are 2 ways you make your submissions i.e, creating a new collection and then submitting your resource or submitting to an existing collection.
-1.1 Creating a new collection   Select the create a new collection option.</description>
+4.1.1 Creating a new collection   Select the create a new collection option.</description>
     </item>
     
     <item>
-      <title>Editing a Submission</title>
+      <title>5. Editing a Submission</title>
       <link>https://synbiohub.github.io/userdocumentation/editing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -72,7 +72,7 @@
     </item>
     
     <item>
-      <title>Add to an existing collection</title>
+      <title>6. Add to an existing collection</title>
       <link>https://synbiohub.github.io/userdocumentation/addtoanexistingcollection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -83,12 +83,12 @@
     </item>
     
     <item>
-      <title>Data Sharing Mechanism</title>
+      <title>7. Data Sharing Mechanism</title>
       <link>https://synbiohub.github.io/userdocumentation/datasharingmech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://synbiohub.github.io/userdocumentation/datasharingmech/</guid>
-      <description>7. Data Sharing Mechanisms There are a couple of ways to share data in SynBioHub. They&amp;rsquo;re mentioned as follows:
+      <description>There are a couple of ways to share data in SynBioHub. They&amp;rsquo;re mentioned as follows:
 7.1 Using the Share option   Select the collection/design that you want to share.
   Click the share option. Once you click on the share option, a link shall appear.
   Now, copy that link &amp;amp; you can share the link, thereby sharing the resource.
@@ -96,7 +96,7 @@
     </item>
     
     <item>
-      <title>Administration</title>
+      <title>8. Administration</title>
       <link>https://synbiohub.github.io/userdocumentation/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
