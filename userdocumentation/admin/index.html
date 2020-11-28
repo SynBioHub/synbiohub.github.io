@@ -589,35 +589,9 @@
 </li>
 </ol>
 <h2 id="89-sparql">8.9 SPARQL</h2>
-<p>On the search results page, there is button labeled as <strong><a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a></strong>. Clicking on that button will direct you to the SPARQL page. Since, SPARQL is a query language, hence it&rsquo;ll query Synbiohub&rsquo;s databases for the designs that you&rsquo;re looking for. On the SPARQL page, you can select the graph that is from <strong>private</strong> or <strong>public</strong>. Here, <strong>public</strong> means searching amongst the public submissions, that can be viewed by and <strong>private</strong> means, the ones that are your personal collections. This page can be used by administrators to perform any SPARQL query or update. Administrators can select any graph to query or update and not only can they view data, but also delete or insert data using the SPARQL queries. <strong>PLEASE BE EXTREMELY CAREFUL WHEN YOU USE THE UPDATE FEATURE AS YOU CAN CORRUPT THE DATASET</strong>.</p>
-<p>In the box provided just below graphs dropdown, enter the SPARQL query. Following is an example that selects all sbol components that have an SO role type. It returns the part title, part role, part display id, part uri, and the total number of parts returned by the query. If you want to search for other types of designs, just replace SBOL with your preferred type:</p>
-<pre><code>
-# Some common prefix's are also provided below, which you can use in your SPARQL queries.
-PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
-PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;
-PREFIX sbh: &lt;http://wiki.synbiohub.org/wiki/Terms/synbiohub#&gt;
-PREFIX prov: &lt;http://www.w3.org/ns/prov#&gt;
-PREFIX sbol: &lt;http://sbols.org/v2#&gt;
-PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-PREFIX purl: &lt;http://purl.obolibrary.org/obo/&gt;
-SELECT  # makes up the headers of the table
-	?def # directs you to the design for which you're looking for 
-	?displayId # This statement displays the Id the design
-	?title # displays the title of the design
-	(count(?def) as ?count) # displays the count parameter for the design
-	?role # displays the role of the design    
-WHERE { 
-	?s sbol:component ?comp # Searching for **sbol** components
-	?comp sbol:definition ?def # provides the link to that component
-	filter (regex(?role, 'http://identifiers.org/so/SO:')) 
-	OPTIONAL {?def sbol:role ?role} # Defines the role
-	OPTIONAL {?def sbol:displayId ?displayId} # gives the ID of that particular record
-	OPTIONAL {?def dcterms:title ?title} 
-  }
-
-</code></pre><p>After writing your SPARQL query, just click <strong>submit query</strong>. After you click on <strong>submit query</strong>, a list of records matching with SPARQL query shall be displayed.</p>
+<p>This page can be used by administrators to perform any SPARQL query or update. Administrators can select any graph to query or update and not only can they view data, but also delete or insert data using the SPARQL queries. <strong>PLEASE BE EXTREMELY CAREFUL WHEN YOU USE THE UPDATE FEATURE AS YOU CAN CORRUPT THE DATASET</strong>.</p>
+<p>In the box provided just below graphs dropdown, enter the SPARQL query.
+After writing your SPARQL query, just click <strong>submit query</strong>. After you click on <strong>submit query</strong>, a list of records matching with SPARQL query shall be displayed.</p>
 <h2 id="810-theme">8.10 Theme</h2>
 <p>On this several options are available to alter the User interface of your local instance.</p>
 <ul>
