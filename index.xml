@@ -23,10 +23,10 @@
     
     <item>
       <title>Mailing Lists</title>
-      <link>https://synbiohub.github.io/contacts/mailinglists/</link>
+      <link>https://synbiohub.github.io/questions-and-issues/mailinglists/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://synbiohub.github.io/contacts/mailinglists/</guid>
+      <guid>https://synbiohub.github.io/questions-and-issues/mailinglists/</guid>
       <description>If you are a SynBioHub developer with a question about SynBioHub or plugin development, please join the synbiohub-dev mailing list and post your question there.
 If you are a SynBioHub user with a question about how to use SynBioHub, please join the synbiohub-users mailing list and post your question there.
 If you have a suggestion for a new SynBioHub plugin, please make your suggestion here.</description>
@@ -44,10 +44,10 @@ If you have a suggestion for a new SynBioHub plugin, please make your suggestion
     
     <item>
       <title>Report an Issue</title>
-      <link>https://synbiohub.github.io/contacts/reportanissue/</link>
+      <link>https://synbiohub.github.io/questions-and-issues/reportanissue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://synbiohub.github.io/contacts/reportanissue/</guid>
+      <guid>https://synbiohub.github.io/questions-and-issues/reportanissue/</guid>
       <description>If you want to report an error please see the respective pages.
 Note: For enhancements there are contact details in the &amp;ldquo;questions and contact&amp;rdquo; section.
  GUI documentation API documentation SynBioHub SynBioHub plugins: Please log your issue in the appropriate issue tracker for the plugin found in the table.  </description>
