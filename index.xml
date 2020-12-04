@@ -80,32 +80,7 @@ Note: For enhancements there are contact details in the &amp;ldquo;questions and
     </item>
     
     <item>
-      <title>5. Editing a Submission</title>
-      <link>https://synbiohub.github.io/userdocumentation/editing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://synbiohub.github.io/userdocumentation/editing/</guid>
-      <description>To edit your submissions, following steps need to be followed:
-  Go to the submissions page.
-  Select the collection that you want to edit.
-  First of all, you can edit the name and description of the record.
-  Then, you can add a source for your record.
-  Subsequently, you may add a brief description for your record.This may contain details that can be described in brief about that particular record.</description>
-    </item>
-    
-    <item>
-      <title>6. Add to an existing collection</title>
-      <link>https://synbiohub.github.io/userdocumentation/addtoanexistingcollection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://synbiohub.github.io/userdocumentation/addtoanexistingcollection/</guid>
-      <description>On some record pages you might find an option titled, add to an existing collection. Using this option, you can add the record which you&amp;rsquo;re currently viewing to a collection that is already there. For that, simply follow the following steps:
-  Click add to collection. This will direct you to page, consisting of a dropdown menu.
-  Then, click on that dropdown menu. This will contain a list of collections, that&amp;rsquo;er already existing and the record which you&amp;rsquo;re currently viewing can be added to it.</description>
-    </item>
-    
-    <item>
-      <title>7. Data Sharing Mechanism</title>
+      <title>5. Data Sharing Mechanism</title>
       <link>https://synbiohub.github.io/userdocumentation/datasharingmech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -118,7 +93,7 @@ Note: For enhancements there are contact details in the &amp;ldquo;questions and
     </item>
     
     <item>
-      <title>8. Administration</title>
+      <title>6. Administration</title>
       <link>https://synbiohub.github.io/userdocumentation/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
