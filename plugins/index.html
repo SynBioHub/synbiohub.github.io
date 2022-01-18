@@ -295,18 +295,18 @@ Now, open the anaconda prompt and carry out the rest of the commands in the anac
 <li>Then, enter the following command: <code>set FLASK_APP=app.py</code></li>
 <li><strong>OPTIONAL command</strong>:  <code>set FLASK_ENV=development</code></li>
 <li>Finally, enter <code>flask run --port 5000</code> (the &ndash; port 5000 is optional instead of 5000 there any port numbercan be entered)</li>
-<li>The server should then be accessible at http://localhost:5000/status. Hence, open your browser an the enter<code>http://localhost:5000/status</code>.</li>
+<li>The server should then be accessible at <code>http://localhost:5000/status</code>. Hence, open your browser an the enter <code>http://localhost:5000/status</code>.</li>
 </ol>
 <h6 id="22312-for-python">2.2.3.1.2 For Python</h6>
 <h6 id="223121-mac-oslinux">2.2.3.1.2.1 Mac OS/Linux</h6>
 <ol>
 <li>Open the terminal.</li>
-<li>Clone the repository using the command <code>git clone &lt;Repo-Link&gt;</code>(For Example:<code>git clone https://github.com/SynBioHub/Plugin-Submit-ExcelLibrary.git</code>)</li>
+<li>Clone the repository using the command <code>git clone &lt;Repo-Link&gt;</code> (For Example:<code>git clone https://github.com/SynBioHub/Plugin-Submit-ExcelLibrary.git</code>)</li>
 <li>Change directory into the repository folder using the command <code> cd &lt;repo-name&gt;</code>(For repo-name enter your local repository name).</li>
 <li>Enter the following command: <code>pip install -r requirements.txt</code></li>
 <li>Then, enter the following command: <code>export FLASK_APP=app</code></li>
 <li>Finally to start flask, enter the following command: <code>flask run</code></li>
-<li>The server should then be accessible at http://localhost:5000/status. Hence open your browser and enter <code>http://localhost:5000/status</code></li>
+<li>The server should then be accessible at <code>http://localhost:5000/status</code>. Hence open your browser and enter <code>http://localhost:5000/status</code></li>
 </ol>
 <h6 id="223122-windows-os">2.2.3.1.2.2 Windows OS</h6>
 <ol>
@@ -329,7 +329,7 @@ Now, open the anaconda prompt and carry out the rest of the commands in the anac
 <p>Finally to run flask, enter the following commmand: <code>flask run</code></p>
 </li>
 <li>
-<p>The server should then be accessible at http://localhost:5000/status. Hence open your browser and enter <code>http://localhost:5000/status</code>.</p>
+<p>The server should then be accessible at <code>http://localhost:5000/status</code>. Hence open your browser and enter <code>http://localhost:5000/status</code>.</p>
 </li>
 </ol>
 <p>For more information see <a href="https://flask.palletsprojects.com/en/1.1.x/cli/">this</a>.</p>
@@ -341,13 +341,13 @@ Now, open the anaconda prompt and carry out the rest of the commands in the anac
 <li>Change directory into the repository folder using the command <code> cd &lt;repo-name&gt;</code>(For repo-name enter your local repository name).</li>
 <li>Enter <code>npm install</code> (This installs all the requirements that requires npm to be installed onto your system: <a href="https://nodejs.org/en/download/)">https://nodejs.org/en/download/)</a>.</li>
 <li>Enter <code>node app.js</code>
-The server should then be accessible at http://localhost:5000/status. Hence open your browser and enter <code>http://localhost:5000/status</code>.</li>
+The server should then be accessible at <code>http://localhost:5000/status</code>. Hence open your browser and enter <code>http://localhost:5000/status</code>.</li>
 </ol>
 <h2 id="3-writing-plugins">3. Writing Plugins</h2>
 <p>The following section explains everything you need to know about the syntax of writing plugins.</p>
 <h3 id="31-naming-convention">3.1 Naming Convention</h3>
 <p>For github repositories, the naming convention for plugin repositories is:</p>
-<p>Plugin-&laquo;Type&raquo;-&laquo;Description&raquo;-&laquo;Test&raquo;-&laquo;language&raquo;</p>
+<p><code>Plugin-&lt;&lt;Type&gt;&gt;-&lt;&lt;Description&gt;&gt;-&lt;&lt;Test&gt;&gt;-&lt;&lt;language&gt;&gt;</code></p>
 <p><strong>Note</strong>: The words are separated by a dash (-) and every word but the program language is Proper case (Initial letter is capitalized and the further letters aren&rsquo;t).</p>
 <p>For <em>Type</em> it is: Submit, Visual, Download</p>
 <p>For <em>Test</em>: add the Test to the name if it is a framework plugin simply showing off how to write a particular plugin type</p>
@@ -436,7 +436,6 @@ Common RDF types are:</p>
 <p>If it is up and running it should return a 200 status to a get request</p>
 <h4 id="332-evaluate">3.3.2 Evaluate</h4>
 <h5 id="receives-4">Receives</h5>
-<p>A dictionary with entries:</p>
 <p>{‘manifest’</p>
 <pre><code>{‘files’
 
@@ -639,9 +638,9 @@ Dictionaries each of which contains
 <h3 id="41-for-anaconda">4.1 For Anaconda</h3>
 <p>The following steps should be followed:-</p>
 <ol>
-<li>pip3 install virtualenv</li>
-<li>python3 -m venv <!-- raw HTML omitted --></li>
-<li>conda list -e &gt; requirements.txt</li>
+<li><code>pip3 install virtualenv</code></li>
+<li><code>python3 -m venv &lt;myenvname&gt;</code></li>
+<li><code>conda list -e &gt; requirements.txt</code></li>
 </ol>
 <h2 id="5-without-a-virtual-environment">5. Without a Virtual Environment</h2>
 <p>Try the <strong>pipreqs</strong> package (used from anaconda prompt if using anaconda)</p>
@@ -678,23 +677,25 @@ Dictionaries each of which contains
 </ul>
 <p><strong>How to dockerise plugin code</strong> (things in &lt;&gt; signs should be replaced with your specific variable names)</p>
 <ol>
-<li>run command window as admin</li>
-<li>git clone the github repository containing everything into a local directory (git clone <!-- raw HTML omitted -->)</li>
-<li>cd into directory that was just cloned (cd <!-- raw HTML omitted -->)</li>
-<li>create a file named &ldquo;.dockerignore&rdquo; with the contents &ldquo;Dockerfile&rdquo; (echo Dockerfile&gt;.dockerignore )</li>
-<li>create a file named &ldquo;Dockerfile&rdquo; (echo &gt;Dockerfile)</li>
+<li>Run command window as admin.</li>
+<li>git clone the github repository containing everything into a local directory:  <code>git clone &lt;github url&gt;</code>.</li>
+<li>cd into directory that was just cloned: <code>cd &lt;directory name&gt;</code></li>
+<li>create a file named <code>.dockerignore</code> with the contents &ldquo;Dockerfile&rdquo;: <code>echo Dockerfile&gt;.dockerignore</code>.</li>
+<li>create a file named &ldquo;Dockerfile&rdquo;: <code>echo &gt;Dockerfile</code></li>
 <li>Edit the Dockerfile to contain the appropriate text (I use notepad++ for this - note for python plugins a requirements.txt is required and for js plugins a package.json file is required)</li>
-<li>Build your docker image (docker build &ndash;tag synbiohub/<!-- raw HTML omitted -->:snapshot .) Note the full stop at the end of the command!</li>
-<li>Run the docker image (docker run &ndash;publish <!-- raw HTML omitted -->:5000 &ndash;detach &ndash;name <!-- raw HTML omitted --> synbiohub/<!-- raw HTML omitted -->:snapshot)</li>
-<li>check the run was sucessful (docker ps), if not shown there check (docker ps -all) and then check the logs (docker logs <!-- raw HTML omitted -->)</li>
-<li>Based on error logs fix the errors, then remove the current container (docker rm <!-- raw HTML omitted -->) and repeat steps 7 and 8</li>
+<li>Build your docker image: <code>docker build --tag synbiohub/&lt;descriptive name&gt;:snapshot</code>. (<strong>Note the full stop at the end of the command!</strong>)</li>
+<li>Run the docker image: <code>docker run --publish &lt;port number&gt;:5000 --detach --name &lt;short name&gt; synbiohub/&lt;descriptive name&gt;:snapshot</code></li>
+<li>Check the run was sucessful: <code>docker ps</code>,
+if not shown there check: <code>docker ps -all</code>
+and then check the logs: <code>docker logs &lt;short name&gt;</code></li>
+<li>Based on error logs fix the errors, then remove the current container: <code>docker rm &lt;short name&gt;</code> and repeat steps 7 and 8.</li>
 <li>If docker ps shows your plugin running then navigate to localhost:/status. Can also test the run end point using a program like postman to submit a query and look at the response.</li>
-<li>If all is well stop the docker container ( docker stop <!-- raw HTML omitted --> ) and remove it ( docker rm <!-- raw HTML omitted --> )</li>
+<li>If all is well stop the docker container:  <code>docker stop &lt;short name&gt;</code> and remove it <code>docker rm &lt;short name&gt;</code></li>
 <li>Upload the newly added files (Dockerfile and .dockerignore) to the github repo</li>
-<li>Add github action to push image to dockerhub (called release.yml in my plugins)</li>
-<li>under setting&gt;secrets add secrets containing the username and password</li>
-<li>update the readme and wait for the new image to push to docker hub (you will see a green check next to commit when this has happened)</li>
-<li>check the uploaded image works by downloading and running it ( docker run &ndash;publish 8080:5000 &ndash;detach &ndash;name <!-- raw HTML omitted --> synbiohub/<!-- raw HTML omitted -->:snapshot ) and repeating steps 9-12.</li>
+<li>Add github action to push image to dockerhub (called <code>release.yml</code> in my plugins)</li>
+<li>Under <code>setting&gt;secrets</code> add secrets containing the <code>username</code> and <code>password</code></li>
+<li>Update the <strong>readme</strong> and wait for the new image to be pushed to docker hub (you will see a green check next to commit when this has happened)</li>
+<li>check the uploaded image works by downloading and running it: <code>docker run --publish 8080:5000 --detach --name &lt;short name&gt; synbiohub/&lt;descriptive name&gt;:snapshot</code> and repeating steps 9-12.</li>
 </ol>
 <h2 id="9-plugins-table">9. Plugins-Table</h2>
 <p>A table of currently available plugins can be found <strong><a href="https://synbiohub.github.io/synbiohub-docker/#plugins">here</a></strong>.</p>
